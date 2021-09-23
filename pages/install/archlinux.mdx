@@ -1,0 +1,42 @@
+---
+title: Arch Linux Installation
+---
+
+import ChangeOs from "components/changeOs";
+import Button from "components/button";
+import Callout from "nextra-theme-docs/callout";
+
+# Installation instructions
+
+<ChangeOs />
+
+LibreWolf for Arch Linux can be downloaded from the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository).
+There there are two packages,
+[`librewolf`](https://aur.archlinux.org/packages/librewolf)
+and [`librewolf-bin`](https://aur.archlinux.org/packages/librewolf-bin).
+The first one compiles Librewolf from the Firefox source
+code with our patches and modifications while the second one provides
+a binary.
+
+With [`yay`](https://aur.archlinux.org/packages/yay/):
+
+```bash
+yay -S librewolf
+
+# alternatively:
+yay -S librewolf-bin
+```
+
+Without an AUR helper:
+
+```bash
+git clone https://aur.archlinux.org/librewolf-bin.git librewolf
+cd librewolf
+makepkg -si
+```
+
+<Callout emoji="">
+  **Note** The since the `librewolf` version compiles the whole browser from
+  source, the installation will take a long time. For a fast installation,
+  `librewolf-bin` is reccomended.
+</Callout>

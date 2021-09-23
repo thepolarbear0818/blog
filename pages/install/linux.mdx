@@ -1,0 +1,51 @@
+---
+title: Linux Installation
+---
+
+import ChangeOs from "components/changeOs";
+import Button from "components/button";
+
+# Installation instructions
+
+<ChangeOs />
+
+To install LibreWolf on any other Linux Distribution, you have three options
+
+### AppImage
+
+The LibreWolf AppImages are found [here](https://gitlab.com/librewolf-community/browser/appimage/-/releases).
+Choose the file that matches your system's architecture (most modern computers use x86_64).
+
+Then run
+
+```bash
+chmod +x LibreWolf-*.AppImage
+```
+
+to make it executable.
+
+### Flatpak
+
+To install [from Flathub](https://flathub.org/apps/details/io.gitlab.librewolf-community):
+
+```bash
+flatpak install flathub io.gitlab.librewolf-community
+```
+
+To run:
+
+```bash
+flatpak run io.gitlab.librewolf-community
+```
+
+Check out [Set up Flatpak](https://www.flatpak.org/setup/) to find out how to prepare flatpak to use on your distribution.
+
+### Compiling from source
+
+Compiling from source is possible for most versions of LibreWolf,
+just head over to the relevant repository, clone it, and read the
+README.md. As LibreWolf is a community effort, people are trying
+out different things in different browser repositories. In general
+tho, most of the compilation issues come from creating the build
+environment, the actual compilation process by Firefox is standard
+and relatively straightforward.

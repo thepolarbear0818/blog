@@ -1,0 +1,20 @@
+{
+  "index": {
+    "type": "nav",
+    "hidden": true
+  },
+  "docs": {
+    "type": "nav"
+  },
+  "installation": {
+    "type": "nav"
+  },
+  "install": {
+    "type": "nav",
+    "hidden": true
+  },
+  "license": {
+    "type": "nav",
+    "hidden": true
+  }
+}
