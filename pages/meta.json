@@ -16,5 +16,9 @@
   "license": {
     "type": "nav",
     "hidden": true
+  },
+  "404": {
+    "type": "nav",
+    "hidden": true
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "components/logo";
+import Gitlab from "@geist-ui/react-icons/gitlab";
 
 const themeConfig = {
-  github: "https://gitlab.com/librewolf-community/browser", // GitHub link in the navbar
+  projectLink: "https://gitlab.com/librewolf-community/browser",
+  projectLinkIcon: <Gitlab />,
   docsRepositoryBase: "https://github.com/maltejur/librewolf-website", // base URL for the docs repository
   titleSuffix: " – LibreWolf",
   nextLinks: true,
@@ -16,10 +18,16 @@ const themeConfig = {
   footerText: (
     <div style={{ maxWidth: 500 }}>
       <p>
-        <span>LibreWolf is licensed under the </span>
-        <Link href="https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)">
-          Mozilla Public License 2.0
-        </Link>
+        <span>The source code of LibreWolf is licensed under the </span>
+        <Link href="https://www.tldrlegal.com/l/mpl-2.0">MPL 2.0</Link>
+        <br />
+        <span>The source code of this website is licensed under the </span>
+        <Link href="https://www.tldrlegal.com/l/agpl3">GNU AGPL 3.0</Link>
+        <br />
+        <span>
+          The content of the docs (<code>/docs</code>) is licensed under the{" "}
+        </span>
+        <Link href="https://www.tldrlegal.com/l/fdl">GNU FDL 1.3</Link>
       </p>
       <p>
         Please note that we are <b>not</b> affiliated with Mozilla, the creators
