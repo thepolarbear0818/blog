@@ -1,9 +1,14 @@
 import Image from "next/image";
+import React from "react";
 import Button from "./button";
+import Head from "next/head";
 
 export default function Banner() {
   return (
     <div className="root">
+      <Head>
+        <title>LibreWolf</title>
+      </Head>
       <div className="screenshot">
         <div className="hide-light">
           <Image
