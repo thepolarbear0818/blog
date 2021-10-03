@@ -19,15 +19,19 @@ const themeConfig = {
     <div style={{ maxWidth: 500 }}>
       <p>
         <span>The source code of LibreWolf is licensed under the </span>
-        <Link href="https://www.tldrlegal.com/l/mpl-2.0">MPL 2.0</Link>
+        <Link href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</Link>
         <br />
         <span>The source code of this website is licensed under the </span>
-        <Link href="https://www.tldrlegal.com/l/agpl3">GNU AGPL 3.0</Link>
+        <Link href="https://www.gnu.org/licenses/agpl-3.0-standalone.html">
+          GNU AGPL 3.0
+        </Link>
         <br />
         <span>
           The content of the docs (<code>/docs</code>) is licensed under the{" "}
         </span>
-        <Link href="https://www.tldrlegal.com/l/fdl">GNU FDL 1.3</Link>
+        <Link href="https://www.gnu.org/licenses/fdl-1.3-standalone.html">
+          GNU FDL 1.3
+        </Link>
       </p>
       <p>
         Please note that we are <b>not</b> affiliated with Mozilla, the creators

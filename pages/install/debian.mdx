@@ -12,9 +12,20 @@ import Callout from "nextra-theme-docs-patch-maltejur/callout";
 
 There is a repository available for Debian Unstable. Librewolf
 can either be installed using the .deb file or by adding the
-repo as explained on the
-[Open Build Service](https://software.opensuse.org//download.html?project=home%3Abgstack15%3Aaftermozilla&package=librewolf)
-page.
+repo from the
+[Open Build Service](https://software.opensuse.org//download.html?project=home%3Abgstack15%3Aaftermozilla&package=librewolf).
+
+To add the repo, run:
+
+```bash
+echo 'deb http://download.opensuse.org/repositories/home:/bgstack15:/aftermozilla/Debian_Unstable/ /' | sudo tee /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list
+
+curl -fsSL https://download.opensuse.org/repositories/home:bgstack15:aftermozilla/Debian_Unstable/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg > /dev/null
+
+sudo apt update
+
+sudo apt install librewolf
+```
 
 <Callout emoji="">
   **Note** This is for Debian Unstable only - do not try to install this package
