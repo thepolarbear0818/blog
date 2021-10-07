@@ -6,7 +6,7 @@ export default function AutoInstallation() {
 
   useEffect(() => {
     if (navigator.userAgent.toLowerCase().includes("windows")) {
-      router.push("/install/windows");
+      router.push("/installation/windows");
     }
   }, [router]);
 
