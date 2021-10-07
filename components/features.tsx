@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Features() {
   return (
     <div className="features">
-      <h2>Main Features</h2>
       <div className="grid">
         <div className="card">
           <Image
@@ -89,12 +88,8 @@ export default function Features() {
         </div>
       </div>
       <style jsx>{`
-        h2 {
-          margin-bottom: 50px;
-          margin-top: 50px;
-        }
-
         .features {
+          margin-top: 25px;
           display: flex;
           flex-direction: column;
           align-items: center;

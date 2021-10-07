@@ -4,5 +4,8 @@
   },
   "addons": {
     "title": "Recommended Addons"
+  },
+  "security": {
+    "title": "Report a Security Issue"
   }
 }

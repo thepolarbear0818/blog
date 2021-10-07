@@ -7,7 +7,7 @@ export default function ChangeOs() {
   const [os, setOs] = useState(currentOs);
 
   useEffect(() => {
-    if (os !== currentOs) router.push(`/install/${os}`);
+    if (os !== currentOs) router.push(`/installation/${os}`);
   }, [currentOs, os, router]);
 
   return (

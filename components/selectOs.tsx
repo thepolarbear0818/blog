@@ -7,18 +7,22 @@ const systems: {
   logo: string;
   logoDark?: string;
 }[] = [
-  { name: "Windows", href: "/install/windows", logo: "/icons/windows.svg" },
+  {
+    name: "Windows",
+    href: "/installation/windows",
+    logo: "/icons/windows.svg",
+  },
   {
     name: "Arch Linux",
-    href: "/install/archlinux",
+    href: "/installation/archlinux",
     logo: "/icons/archlinux.svg",
   },
-  { name: "Debian", href: "/install/debian", logo: "/icons/debian.svg" },
-  { name: "Gentoo", href: "/install/gentoo", logo: "/icons/gentoo.svg" },
-  { name: "Other Linux", href: "/install/linux", logo: "/icons/tux.png" },
+  { name: "Debian", href: "/installation/debian", logo: "/icons/debian.svg" },
+  { name: "Gentoo", href: "/installation/gentoo", logo: "/icons/gentoo.svg" },
+  { name: "Other Linux", href: "/installation/linux", logo: "/icons/tux.png" },
   {
     name: "macOS",
-    href: "/install/macos",
+    href: "/installation/macos",
     logo: "/icons/apple.svg",
     logoDark: "/icons/apple-white.svg",
   },

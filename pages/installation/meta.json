@@ -4,5 +4,9 @@
   "debian": "Debian",
   "gentoo": "Gentoo",
   "linux": "Other Linux",
-  "macos": "macOS"
+  "macos": "macOS",
+  "index": {
+    "type": "nav",
+    "hidden": true
+  }
 }
