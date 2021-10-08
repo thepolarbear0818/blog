@@ -4,6 +4,36 @@ title: Windows Installation
 
 import ChangeOs from "components/changeOs";
 import Button from "components/button";
+import Callout from "nextra-theme-docs-patch-maltejur/callout";
+import { useSSG } from "nextra/ssg";
+
+export const getStaticProps = (ctx) =>
+  fetch("https://gitlab.com/api/v4/projects/13852981/releases")
+    .then((res) => res.json())
+    .then((res) => {
+      const asset = res[0].assets.links.find((link) =>
+        link.name.endsWith("setup.exe")
+      );
+      return {
+        props: {
+          ssg: {
+            downloadName: asset.name,
+            downloadLink: asset.url,
+          },
+        },
+        // Revalidate every hour
+        revalidate: 3600,
+      };
+    });
+
+export const DownloadButton = () => {
+  const { downloadLink, downloadName } = useSSG();
+  return (
+    <Button primary href={downloadLink}>
+      Download <small>{downloadName}</small>
+    </Button>
+  );
+};
 
 # Installation instructions
 
@@ -11,14 +41,15 @@ import Button from "components/button";
 
 ### Installer
 
-To install LibreWolf on Windows, you can download the `setup.exe` or a zip file with all the binaries here:
+To install LibreWolf on Windows, just download and run the latest installer
 
-<Button
-  primary
-  href="https://gitlab.com/librewolf-community/browser/windows/-/releases"
->
-  Download
-</Button>
+<DownloadButton />
+
+You can view the version history, release notes and portable binaries on the
+[GitLab releases tab](https://gitlab.com/librewolf-community/browser/windows/-/releases).
+
+To update LibreWolf when a new version is released, just install the new
+`setup.exe`.
 
 ### Chocolatey
 
