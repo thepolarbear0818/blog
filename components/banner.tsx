@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Button from "./button";
 import Head from "next/head";
@@ -11,25 +10,18 @@ export default function Banner() {
       </Head>
       <div className="screenshot">
         <div className="hide-light">
-          <Image
-            src="/screenshot-dark.png"
-            width={900}
-            height={700}
-            alt="Screeenshot"
-          />
+          <img src="/screenshot-dark.png" alt="Screeenshot" />
         </div>
         <div className="hide-dark">
-          <Image
+          <img
             src="/screenshot-light.png"
             className="hide-dark"
-            width={900}
-            height={700}
             alt="Screeenshot"
           />
         </div>
       </div>
       <div className="inner">
-        <Image src="/icon.svg" height={120} width={120} alt="Logo" />
+        <img src="/icon.svg" alt="Logo" />
         <h1>LibreWolf</h1>
         <h4 className="text-gray-600">
           A fork of Firefox, focused on privacy, security and freedom.
@@ -72,6 +64,14 @@ export default function Banner() {
             transparent 0%,
             rgba(255, 255, 255, var(--tw-bg-opacity)) 50%
           );
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .inner img {
+          width: 120px;
+          height: 120px;
         }
 
         :global(.dark) .inner {

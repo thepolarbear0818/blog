@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Features({
   features,
 }: {
@@ -14,12 +12,7 @@ export default function Features({
       <div className="grid">
         {features.map((feature) => (
           <div className="card" key={feature.title}>
-            <Image
-              src={feature.icon}
-              width={80}
-              height={80}
-              alt={`Icon ${feature.title}`}
-            />
+            <img src={feature.icon} alt={`Icon ${feature.title}`} />
             <h5>{feature.title}</h5>
             <p dangerouslySetInnerHTML={{ __html: feature.text }} />
           </div>
@@ -53,6 +46,11 @@ export default function Features({
         .card {
           width: 250px;
           margin: 10px;
+        }
+
+        .card img {
+          width: 80px;
+          height: 80px;
         }
       `}</style>
     </div>

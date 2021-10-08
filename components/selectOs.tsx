@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const systems: {
@@ -36,7 +35,7 @@ export default function SelectOs() {
           <Link href={os.href} passHref key={os.name}>
             <a className="card focus:ring">
               <div className={os.logoDark ? "hide-dark" : ""}>
-                <Image
+                <img
                   src={os.logo}
                   width={60}
                   height={60}
@@ -45,7 +44,7 @@ export default function SelectOs() {
               </div>
               {os.logoDark && (
                 <div className={"hide-light"}>
-                  <Image
+                  <img
                     src={os.logoDark}
                     width={60}
                     height={60}

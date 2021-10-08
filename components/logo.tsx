@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 export default function Logo() {
   const router = useRouter();
 
   return (
     <div className="logo">
-      <Image src="/icon.svg" height={30} width={30} alt="Logo" />
+      <img src="/icon.svg" alt="Logo" />
       <div className="title">
         <h5>LibreWolf</h5>
         {router.pathname.startsWith("/docs") && (
@@ -17,6 +16,11 @@ export default function Logo() {
         .logo {
           display: flex;
           align-items: center;
+        }
+
+        .logo img {
+          width: 30px;
+          height: 30px;
         }
 
         .title {
