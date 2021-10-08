@@ -1,7 +1,3 @@
----
-title: Browser Tests
----
-
 # Browser Tests
 
 There are several good browser testing sites on the Internet. Here are just a few that we find most useful. We're always open for tips on new good ones.

@@ -1,7 +1,3 @@
----
-title: Recommended Addons
----
-
 # Recommended Addons
 
 ## uBlock Origin tweaks

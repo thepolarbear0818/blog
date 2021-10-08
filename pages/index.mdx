@@ -24,7 +24,40 @@ and pocket are removed too.
 
 ## Main Features
 
-<Features />
+<Features
+  features={[
+    {
+      icon: "/icons/no-looking.png",
+      title: "No Telemetry",
+      text: "No experiments, adware, annoyances, or unnecessary distractions.",
+    },
+    {
+      icon: "/icons/search.svg",
+      title: "Private Search",
+      text: `Privacy-conscious search providers: <a href="https://duckduckgo.com/">DuckDuckGo</a>, <a href="https://searx.be/">Searx</a>, <a href="https://www.qwant.com/">Qwant</a> and more.`,
+    },
+    {
+      icon: "/icons/ublock.svg",
+      title: "Ad Block Included",
+      text: `<a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin">uBlock Origin</a> is already included for your convenience.`,
+    },
+    {
+      icon: "/icons/lock.png",
+      title: "Enhanced Security",
+      text: `Extension firewall and other security improvements included, without sacrificing usability.`,
+    },
+    {
+      icon: "/icons/update.png",
+      title: "Fast Updates",
+      text: `LibreWolf is always built from the latest Firefox stable source, for up-to-date security and features along with stability.`,
+    },
+    {
+      icon: "/icons/open-source.svg",
+      title: "Open Source",
+      text: `Everyone can participate in the development of LibreWolf. Join us on <a href="https://gitlab.com/librewolf-community">GitLab</a>, <a href="https://app.element.io/#/room/#librewolf:matrix.org">element.io</a> and <a href="https://gitter.im/librewolf-community/librewolf">gitter</a>.`,
+    },
+  ]}
+/>
 
 ## Contributing
 
@@ -39,3 +72,41 @@ We value discussion, debate, and feedback.
 If you wish to contribute a build for a currently
 unsupported operating system, we will do our best
 to support you.
+
+### Core contributors
+
+<Contributors
+  contributors={[
+    {
+      tag: "@ohfp",
+      avatar:
+        "https://secure.gravatar.com/avatar/c71f2d4c09ce6f7ccfe7ab2f25bed8f1?s=180&d=identicon",
+      link: "https://gitlab.com/ohfp",
+      role: "Project Admin",
+    },
+    {
+      name: "Shreyas Minocha",
+      tag: "@shreyasminocha",
+      avatar:
+        "https://gitlab.com/uploads/-/system/user/avatar/2733085/avatar.png?width=90",
+      link: "https://shreyasminocha.me/",
+      role: "Project Admin",
+    },
+    {
+      name: "Bert van der Weerd",
+      tag: "@stanzabird",
+      avatar:
+        "https://gitlab.com/uploads/-/system/user/avatar/3567002/avatar.png?width=90",
+      link: "https://stanzabird.nl/",
+      role: "Windows Maintainer",
+    },
+    {
+      name: "fabrizio",
+      tag: "@fxbrit",
+      avatar:
+        "https://gitlab.com/uploads/-/system/user/avatar/8320298/avatar.png?width=90",
+      link: "https://gitlab.com/fxbrit",
+      role: "macOS Maintainer",
+    },
+  ]}
+/>
