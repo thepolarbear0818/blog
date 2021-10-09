@@ -6,11 +6,13 @@ export default function Button({
   primary = false,
   href,
   big,
+  margin = 10,
 }: {
   children: ReactNode;
   primary?: boolean;
   href: string;
   big?: boolean;
+  margin?: number;
 }) {
   return (
     <>
@@ -27,7 +29,7 @@ export default function Button({
         .button {
           text-decoration: none;
           padding: 8px 20px;
-          margin: 10px;
+          margin: ${margin}px;
           margin-left: 0;
           border-radius: 0.25rem;
           border: 1px solid rgb(226, 232, 240);

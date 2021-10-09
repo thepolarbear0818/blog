@@ -4,6 +4,14 @@ title: Linux Installation
 
 import ChangeOs from "components/changeOs";
 import Button from "components/button";
+import {
+  DownloadButton,
+  getStaticDownloadButtonProps,
+} from "components/downloadButton";
+
+export const getStaticProps = getStaticDownloadButtonProps("24386000", (link) =>
+  link.name.endsWith("x86_64.AppImage")
+);
 
 # Installation instructions
 
@@ -13,19 +21,22 @@ To install LibreWolf on any other Linux Distribution, you have three options
 
 ### AppImage
 
-The LibreWolf AppImages are found [here](https://gitlab.com/librewolf-community/browser/appimage/-/releases).
-Choose the file that matches your system's architecture (most modern computers use x86_64).
+<DownloadButton />
 
-Then run
-
-```bash
-chmod +x LibreWolf-*.AppImage
-```
-
-to make it executable.
-
-To install LibreWolf permanently via an AppImage,
+Then run `chmod +x LibreWolf-*.AppImage` to make it executable. To install LibreWolf permanently via an AppImage,
 we recommend something like [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher).
+
+#### Updating
+
+AppImage files are now released as gitlab packages as well at
+https://gitlab.com/librewolf-community/browser/appimage/-/packages.
+This allows having stable links (at `https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/latest/$FILE_NAME`)`
+which can be used as update information for the AppImage releases.
+
+This means that from this release onward, AppImage releases can be updated with `AppImageUpdater`.
+
+A release downloaded as `LibreWolf.x86_64.AppImage`, for example, can be
+updated with `./AppImageUpdate-x86_64.AppImage -d ./LibreWolf.x86_64.AppImage`.
 
 ### Flatpak
 

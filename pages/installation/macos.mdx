@@ -4,6 +4,14 @@ title: macOS Installation
 
 import ChangeOs from "components/changeOs";
 import Button from "components/button";
+import {
+  DownloadButton,
+  getStaticDownloadButtonProps,
+} from "components/downloadButton";
+
+export const getStaticProps = getStaticDownloadButtonProps("13853965", (link) =>
+  link.name.endsWith("x86.dmg")
+);
 
 # Installation instructions
 
@@ -21,12 +29,7 @@ brew install --cask librewolf
 
 You can also install LibreWolf via a `.dmg`
 
-<Button
-  primary
-  href="https://gitlab.com/librewolf-community/browser/macos/-/releases"
->
-  Download
-</Button>
+<DownloadButton />
 
 ### Compiling from source
 
