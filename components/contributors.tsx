@@ -8,7 +8,7 @@ export default function Contributors({
     tag: string;
     avatar: string;
     link: string;
-    role: string;
+    roles: string[];
   }[];
 }) {
   return (
@@ -23,14 +23,20 @@ export default function Contributors({
             )}
           </a>
 
-          <div className="role">{contributor.role}</div>
+          <div className="roles">
+            {contributor.roles.map((role) => (
+              <div className="chip" key={role}>
+                {role}
+              </div>
+            ))}
+          </div>
         </div>
       ))}
       <style jsx>{`
         .contributors {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
+          gap: 15px;
           margin: 30px 0;
         }
 
@@ -85,6 +91,21 @@ export default function Contributors({
           font-size: 14px;
           margin-top: -30px;
           height: 30px;
+        }
+
+        .roles {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .chip {
+          background-color: rgba(0, 0, 0, 0.1);
+          display: inline-block;
+          border-radius: 5px;
+          padding: 5px 10px;
+          font-size: 13px;
+          margin-bottom: 10px;
         }
       `}</style>
     </div>
