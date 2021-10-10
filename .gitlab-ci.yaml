@@ -1,0 +1,18 @@
+image: node
+
+before_script:
+  - yarn
+
+cache:
+  paths:
+    - node_modules/
+    - .next/
+
+pages:
+  script:
+    - yarn export
+  artifacts:
+    paths:
+      - out
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
