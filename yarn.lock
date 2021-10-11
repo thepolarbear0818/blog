@@ -3802,8 +3802,10 @@ next@^11.1.2:
     "@next/swc-linux-x64-gnu" "11.1.2"
     "@next/swc-win32-x64-msvc" "11.1.2"
 
-nextra-theme-docs-patch-maltejur@/home/maltejur/Programme/nextra/packages/nextra-theme-docs:
-  version "1.2.6-4"
+nextra-theme-docs-patch-maltejur@^1.2.6-3:
+  version "1.2.6-3"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-1.2.6-3.tgz#8ac7ba29f133c0059f46ebb9047814efc6a71061"
+  integrity sha512-VIfarAB9RQtWKs4UQXtFM1t6eqsnVhG9IfukwzFPZ1CT4ylMmX96hAyz1pQ9SFHjZWuTIoO1pKCwoZfU5BRXOQ==
   dependencies:
     "@mdx-js/react" "^1.6.16"
     "@reach/skip-nav" "^0.11.2"
