@@ -9,8 +9,9 @@ import {
   getStaticDownloadButtonProps,
 } from "components/downloadButton";
 
-export const getStaticProps = getStaticDownloadButtonProps("13853965", (link) =>
-  link.name.endsWith("x86.dmg")
+export const getStaticProps = getStaticDownloadButtonProps(
+  "13853965",
+  "x86.dmg"
 );
 
 <ChangeOs />

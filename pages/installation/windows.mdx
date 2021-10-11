@@ -9,8 +9,9 @@ import {
   getStaticDownloadButtonProps,
 } from "components/downloadButton";
 
-export const getStaticProps = getStaticDownloadButtonProps("13852981", (link) =>
-  link.name.endsWith("setup.exe")
+export const getStaticProps = getStaticDownloadButtonProps(
+  "13852981",
+  "setup.exe"
 );
 
 <ChangeOs />

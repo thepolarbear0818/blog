@@ -1,10 +1,35 @@
 import { GetStaticProps } from "next";
 import { useSSG } from "nextra/ssg";
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import Button from "./button";
 
 export function DownloadButton() {
-  const { downloadLink, downloadName, releasesLink } = useSSG();
+  const {
+    projectId,
+    initialDownloadName,
+    initialDownloadLink,
+    initialReleasesLink,
+    endsWith,
+  } = useSSG();
+
+  const [downloadName, setDownloadName] = useState(initialDownloadName);
+  const [downloadLink, setDownloadLink] = useState(initialDownloadLink);
+  const [releasesLink, setReleasesLink] = useState(initialReleasesLink);
+
+  useEffect(() => {
+    fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
+      .then((res) => res.json())
+      .then((res) => {
+        const asset = res[0].assets.links.find((asset) =>
+          asset.name.endsWith(endsWith)
+        );
+        setDownloadLink(asset.url);
+        setDownloadName(asset.name);
+        setReleasesLink(res[0]._links.self.replace(/\/[^\/]*$/, ""));
+      });
+  }, [endsWith, projectId]);
+
   return (
     <p>
       <Button primary href={downloadLink} margin={0}>
@@ -22,18 +47,22 @@ export function DownloadButton() {
 
 export const getStaticDownloadButtonProps: (
   projectId: string,
-  linkMatch: (link: string) => boolean
-) => GetStaticProps = (projectId, linkMatch) => (ctx) =>
+  endsWith: string
+) => GetStaticProps = (projectId, endsWith) => (ctx) =>
   fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
     .then((res) => res.json())
     .then((res) => {
-      const asset = res[0].assets.links.find(linkMatch);
+      const asset = res[0].assets.links.find((asset) =>
+        asset.name.endsWith(endsWith)
+      );
       return {
         props: {
           ssg: {
-            downloadName: asset.name,
-            downloadLink: asset.url,
-            releasesLink: res[0]._links.self.replace(/\/[^\/]*$/, ""),
+            projectId,
+            initialDownloadName: asset.name,
+            initialDownloadLink: asset.url,
+            initialReleasesLink: res[0]._links.self.replace(/\/[^\/]*$/, ""),
+            endsWith,
           },
         },
         // Revalidate every hour
