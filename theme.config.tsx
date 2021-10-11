@@ -82,11 +82,13 @@ const themeConfig = {
   navlinks: [
     {
       title: "About",
-      route: "/#what-is-librewolf",
+      route: "/",
+      href: "/#what-is-librewolf",
     },
     {
       title: "Docs",
-      route: "/docs/faq",
+      route: "/docs",
+      href: "/docs/faq",
     },
     {
       title: "Installation",

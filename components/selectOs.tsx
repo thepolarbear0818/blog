@@ -1,58 +1,32 @@
 import Link from "next/link";
-
-const systems: {
-  name: string;
-  href: string;
-  logo: string;
-  logoDark?: string;
-}[] = [
-  {
-    name: "Windows",
-    href: "/installation/windows",
-    logo: "/icons/windows.svg",
-  },
-  {
-    name: "Arch Linux",
-    href: "/installation/archlinux",
-    logo: "/icons/archlinux.svg",
-  },
-  { name: "Debian", href: "/installation/debian", logo: "/icons/debian.svg" },
-  { name: "Gentoo", href: "/installation/gentoo", logo: "/icons/gentoo.svg" },
-  { name: "Other Linux", href: "/installation/linux", logo: "/icons/tux.png" },
-  {
-    name: "macOS",
-    href: "/installation/macos",
-    logo: "/icons/apple.svg",
-    logoDark: "/icons/apple-white.svg",
-  },
-];
+import repositories from "lib/repositories";
 
 export default function SelectOs() {
   return (
     <>
       <div className="grid">
-        {systems.map((os) => (
-          <Link href={os.href} passHref key={os.name}>
+        {repositories.map((repo) => (
+          <Link href={`/installation/${repo.slug}`} passHref key={repo.name}>
             <a className="card focus:ring">
-              <div className={os.logoDark ? "hide-dark" : ""}>
+              <div className={repo.logoDark ? "hide-dark" : ""}>
                 <img
-                  src={os.logo}
+                  src={repo.logo}
                   width={60}
                   height={60}
-                  alt={`${os.name} Logo`}
+                  alt={`${repo.name} Logo`}
                 />
               </div>
-              {os.logoDark && (
+              {repo.logoDark && (
                 <div className={"hide-light"}>
                   <img
-                    src={os.logoDark}
+                    src={repo.logoDark}
                     width={60}
                     height={60}
-                    alt={`${os.name} Logo`}
+                    alt={`${repo.name} Logo`}
                   />
                 </div>
               )}
-              <h3>{os.name}</h3>
+              <h3>{repo.name}</h3>
             </a>
           </Link>
         ))}
@@ -60,28 +34,27 @@ export default function SelectOs() {
       <style jsx>{`
         .grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 200px);
+          justify-content: center;
+          justify-items: center;
+          gap: 20px;
         }
 
         @media (max-width: 1000px) {
           .grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 200px);
           }
         }
 
         @media (max-width: 700px) {
           .grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 200px);
           }
         }
 
         @media (max-width: 500px) {
           .grid {
-            grid-template-columns: repeat(1, 1fr);
-          }
-
-          .card {
-            margin: 10px auto !important;
+            grid-template-columns: repeat(1, 200px);
           }
         }
 
@@ -97,7 +70,6 @@ export default function SelectOs() {
         .card {
           width: 200px;
           cursor: pointer;
-          margin: 10px;
         }
       `}</style>
     </>

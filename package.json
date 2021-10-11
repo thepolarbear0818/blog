@@ -14,7 +14,7 @@
     "github-slugger": "^1.4.0",
     "next": "^11.1.2",
     "nextra": "^1.1.0",
-    "nextra-theme-docs-patch-maltejur": "^1.2.6-5",
+    "nextra-theme-docs-patch-maltejur": "^1.2.6-6",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",

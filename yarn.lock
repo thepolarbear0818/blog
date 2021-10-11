@@ -3802,10 +3802,10 @@ next@^11.1.2:
     "@next/swc-linux-x64-gnu" "11.1.2"
     "@next/swc-win32-x64-msvc" "11.1.2"
 
-nextra-theme-docs-patch-maltejur@^1.2.6-5:
-  version "1.2.6-5"
-  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-1.2.6-5.tgz#acf58be03eb51895bc6f2a47a7586dfd1e633e13"
-  integrity sha512-H3eB+6llwGOHg4ZX4f6QEQXqne054sTdr9e2ObhSQXzlHmc/arMytFkPLCHxLFpRXPHz49Pvz+PwlmQ9P6nclA==
+nextra-theme-docs-patch-maltejur@^1.2.6-6:
+  version "1.2.6-6"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-1.2.6-6.tgz#6abcfe74fce2ce6ba520a93c389367af8e1a7a58"
+  integrity sha512-sDH94biWYQrJ6m6cdnblARCFpkDQcocAXmthIANLM4+yQ47a2uNAGS02ni5mdoCH0Hve1TF9eE1UezqIrYIqKw==
   dependencies:
     "@mdx-js/react" "^1.6.16"
     "@reach/skip-nav" "^0.11.2"
@@ -3817,6 +3817,7 @@ nextra-theme-docs-patch-maltejur@^1.2.6-5:
     match-sorter "^4.2.0"
     next-themes "^0.0.8"
     parse-git-url "^1.0.1"
+    prettier "^2.4.1"
     prism-react-renderer "^1.1.1"
     react-innertext "^1.1.5"
     title "^3.4.2"
@@ -4303,6 +4304,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+prettier@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
+  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 prism-react-renderer@^1.1.1, prism-react-renderer@^1.2.1:
   version "1.2.1"

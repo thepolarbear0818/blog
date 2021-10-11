@@ -30,3 +30,11 @@
 .dark .hide-light {
   display: block !important;
 }
+
+h1 {
+  margin-top: 40px !important;
+}
+
+main {
+  width: 768px;
+}
