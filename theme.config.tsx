@@ -5,8 +5,6 @@ import Gitlab from "react-devicons/gitlab/plain";
 import Gitter from "react-devicons/gitter/plain";
 
 const themeConfig = {
-  projectLink: "https://gitlab.com/librewolf-community/browser",
-  projectLinkIcon: <Gitlab />,
   projectIcons: [
     <>
       <Link href="https://gitlab.com/librewolf-community/browser" passHref>
@@ -84,15 +82,15 @@ const themeConfig = {
   navlinks: [
     {
       title: "About",
-      href: "/#what-is-librewolf",
+      route: "/#what-is-librewolf",
     },
     {
       title: "Docs",
-      href: "/docs/faq",
+      route: "/docs/faq",
     },
     {
       title: "Installation",
-      href: "/installation",
+      route: "/installation",
     },
   ],
 };

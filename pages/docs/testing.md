@@ -4,11 +4,13 @@ There are several good browser testing sites on the Internet. Here are just a fe
 
 ## Security/Fingerprint
 
-- The EFF has: [Cover Your Tracks](https://coveryourtracks.eff.org/).
-- From arkenfox: [TorZillaPrint](https://arkenfox.github.io/TZP/index.html).
-- [browserleaks.com](https://browserleaks.com/).
+- EFF's [Cover Your Tracks](https://coveryourtracks.eff.org/)
+- Arkenfox's [TorZillaPrint](https://arkenfox.github.io/TZP/index.html)
+- [browserleaks.com](https://browserleaks.com/)
 - [Device Info](https://www.deviceinfo.me/)
 - Client side [SSLLabs](https://www.ssllabs.com/ssltest/viewMyClient.html)
+
+These tests are not intended to be used as oracles, but rather as a way to check your setup and verify that your changes are applied.
 
 ## Performance
 
