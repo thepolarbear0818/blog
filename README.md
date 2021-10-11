@@ -1,6 +1,6 @@
 # librewolf-website
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The wip new librewolf website built with [Nextra](https://nextra.vercel.app/) and [Next.js](https://nextjs.org/).
 
 ## Getting Started
 
@@ -19,13 +19,6 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the website.
 
 All of the content of the website is located in markdown files in the `/pages` directory (for example, the file for `Recommended Addons` is located under `/pages/docs/addons.md`). You can edit those files and the website will automatically be updated.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 ## How to host
 

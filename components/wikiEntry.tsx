@@ -10,6 +10,7 @@ export function WikiEntry() {
 
   return (
     <p className="root">
+      {/* TODO: Custom <a> component which uses nexts.js's <Link> */}
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
         {wikiContent}
       </ReactMarkdown>
