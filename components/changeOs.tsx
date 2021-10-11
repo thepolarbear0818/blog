@@ -27,7 +27,7 @@ export default function ChangeOs() {
               className="logo hide-dark"
             />
             <img
-              src={repo.logoDark}
+              src={repo.logoDark || repo.logo}
               alt={`${repo.name} Logo`}
               className="logo hide-light"
             />
