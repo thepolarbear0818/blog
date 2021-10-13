@@ -2,12 +2,12 @@
 title: Gentoo Installation
 ---
 
-import ChangeOs from "components/changeOs";
+import InstallationHeader from "components/installationHeader";
 import Button from "components/button";
 
-<ChangeOs />
+<InstallationHeader />
 
-### Manual way
+## Manual way
 
 Create the `/etc/portage/repos.conf/librewolf.conf` file as follows:
 
@@ -22,7 +22,7 @@ auto-sync = Yes
 
 Change `repo-location` to a path of your choosing and then run `emaint -r librewolf sync`, Portage should now find and update the repository.
 
-### Eselect way
+## Eselect way
 
 On terminal:
 

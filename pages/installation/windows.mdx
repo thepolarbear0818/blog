@@ -2,7 +2,7 @@
 title: Windows Installation
 ---
 
-import ChangeOs from "components/changeOs";
+import InstallationHeader from "components/installationHeader";
 import Callout from "nextra-theme-docs-patch-maltejur/callout";
 import {
   DownloadButton,
@@ -14,9 +14,9 @@ export const getStaticProps = getStaticDownloadButtonProps(
   "setup.exe"
 );
 
-<ChangeOs />
+<InstallationHeader />
 
-### Installer
+## Installer
 
 To install LibreWolf on Windows, just download and run the latest installer
 
@@ -28,7 +28,7 @@ If you don't have it already, you probably also need the
 To update LibreWolf when a new version is released, just install the new
 `setup.exe`.
 
-### Chocolatey
+## Chocolatey
 
 Alternatively you can use [Chocolatey](https://chocolatey.org/) to download and keep LibreWolf up to date. After installing Chocolatey, just run:
 

@@ -2,7 +2,7 @@
 title: Linux Installation
 ---
 
-import ChangeOs from "components/changeOs";
+import InstallationHeader from "components/installationHeader";
 import Button from "components/button";
 import {
   DownloadButton,
@@ -14,11 +14,11 @@ export const getStaticProps = getStaticDownloadButtonProps(
   "x86_64.AppImage"
 );
 
-<ChangeOs />
+<InstallationHeader />
 
 To install LibreWolf on any other Linux Distribution, you have three options
 
-### AppImage
+## AppImage
 
 <DownloadButton />
 
@@ -37,7 +37,7 @@ This means that from this release onward, AppImage releases can be updated with 
 A release downloaded as `LibreWolf.x86_64.AppImage`, for example, can be
 updated with `./AppImageUpdate-x86_64.AppImage -d ./LibreWolf.x86_64.AppImage`.
 
-### Flatpak
+## Flatpak
 
 To install [from Flathub](https://flathub.org/apps/details/io.gitlab.librewolf-community):
 
@@ -53,7 +53,7 @@ flatpak run io.gitlab.librewolf-community
 
 Check out [Set up Flatpak](https://www.flatpak.org/setup/) to find out how to prepare flatpak to use on your distribution.
 
-### Compiling from source
+## Compiling from source
 
 Compiling from source is possible for most versions of LibreWolf,
 just head over to the relevant repository, clone it, and read the

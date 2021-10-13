@@ -1,6 +1,6 @@
 {
   "windows": "Windows",
-  "archlinux": "Arch Linux",
+  "arch": "Arch Linux",
   "debian": "Debian",
   "gentoo": "Gentoo",
   "linux": "Other Linux",

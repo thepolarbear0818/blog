@@ -11,7 +11,7 @@ const repositories: {
   },
   {
     name: "Arch Linux",
-    slug: "archlinux",
+    slug: "arch",
     logo: "/icons/archlinux.svg",
   },
   {

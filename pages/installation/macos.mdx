@@ -2,7 +2,7 @@
 title: macOS Installation
 ---
 
-import ChangeOs from "components/changeOs";
+import InstallationHeader from "components/installationHeader";
 import Button from "components/button";
 import {
   DownloadButton,
@@ -14,9 +14,9 @@ export const getStaticProps = getStaticDownloadButtonProps(
   "x86.dmg"
 );
 
-<ChangeOs />
+<InstallationHeader />
 
-### HomeBrew
+## HomeBrew
 
 LibreWolf is available via HomeBrew by entering:
 
@@ -24,7 +24,7 @@ LibreWolf is available via HomeBrew by entering:
 brew install --cask librewolf
 ```
 
-### Disc Image
+## Disc Image
 
 You can also install LibreWolf via a `.dmg`
 

@@ -2,11 +2,11 @@
 title: Arch Linux Installation
 ---
 
-import ChangeOs from "components/changeOs";
+import InstallationHeader from "components/installationHeader";
 import Button from "components/button";
 import Callout from "nextra-theme-docs-patch-maltejur/callout";
 
-<ChangeOs />
+<InstallationHeader />
 
 LibreWolf for Arch Linux can be downloaded from the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository).
 There there are two packages,
@@ -16,7 +16,7 @@ The first one compiles Librewolf from the Firefox source
 code with our patches and modifications while the second one provides
 a binary.
 
-### With [`yay`](https://aur.archlinux.org/packages/yay/)
+## With [`yay`](https://aur.archlinux.org/packages/yay/)
 
 ```bash
 yay -S librewolf
@@ -28,7 +28,7 @@ or alternatively
 yay -S librewolf-bin
 ```
 
-### Without an AUR helper
+## Without an AUR helper
 
 ```bash
 git clone https://aur.archlinux.org/librewolf-bin.git librewolf
