@@ -10,8 +10,13 @@
   "installation": {
     "type": "nav"
   },
-  "license": {
+  "license-disclaimers": {
     "title": "License and Disclaimers",
+    "type": "nav",
+    "hidden": true
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
     "type": "nav",
     "hidden": true
   }

@@ -32,7 +32,7 @@ const themeConfig = {
       </Link>
     </>,
   ],
-  docsRepositoryBase: "https://github.com/maltejur/librewolf-website", // base URL for the docs repository
+  docsRepositoryBase: "https://gitlab.com/librewolf-community/website", // base URL for the docs repository
   titleSuffix: " – LibreWolf",
   nextLinks: true,
   prevLinks: true,
@@ -44,14 +44,15 @@ const themeConfig = {
   footerText: (
     <div style={{ maxWidth: 500 }}>
       <p>
-        <Link href="/license">License and Disclaimers</Link>
+        <Link href="/license-disclaimers">License and Disclaimers</Link>
+        <Link href="/privacy-policy">Privacy Policy</Link>
       </p>
       <p>
         LibreWolf is <b>not</b> affiliated with Mozilla.
       </p>
     </div>
   ),
-  footerEditLink: `Edit this page on GitHub`,
+  footerEditLink: `Edit this page on GitLab`,
   logo: Logo,
   head: (
     <>
