@@ -1,13 +1,18 @@
 {
   "index": {
+    "title": "About",
     "type": "nav",
-    "hidden": true,
-    "title": "About"
+    "hidden": true
   },
   "docs": {
     "type": "nav"
   },
   "installation": {
     "type": "nav"
+  },
+  "license": {
+    "title": "License and Disclaimers",
+    "type": "nav",
+    "hidden": true
   }
 }

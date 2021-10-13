@@ -1,0 +1,20 @@
+---
+title: License and Disclaimers
+---
+
+# LibreWolf License and Disclaimers
+
+The source code of LibreWolf is licensed under the [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0). \
+The source code of this website is licensed under the [GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0-standalone.html). \
+The content of the docs ([`/docs`](/docs/faq)) is licensed under the [GNU FDL 1.3](https://www.gnu.org/licenses/fdl-1.3-standalone.html).
+
+Please note that we are **not** affiliated with Mozilla,
+the creators of the Firefox web browser. The Firefox name
+is a trademark of the Mozilla Foundation.
+
+This also **isn't** Arkenfox. Arkenfox is a template
+user.js, fully documented, and the gold-standard on
+relevant Firefox preferences. We rely heavily on Arkenfox’s
+expertise, research, and knowledge: but we choose out own
+default preferences configuration. We endeavor to keep
+up to date with Arkenfox
