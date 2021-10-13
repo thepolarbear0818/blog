@@ -32,7 +32,8 @@ const themeConfig = {
       </Link>
     </>,
   ],
-  docsRepositoryBase: "https://gitlab.com/librewolf-community/website", // base URL for the docs repository
+  docsRepositoryBase:
+    "https://gitlab.com/librewolf-community/website/-/blob/main/", // base URL for the docs repository
   titleSuffix: " – LibreWolf",
   nextLinks: true,
   prevLinks: true,
