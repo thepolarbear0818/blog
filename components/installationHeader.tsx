@@ -17,7 +17,7 @@ export default function InstallationHeader() {
   }, [currentOs, os, router]);
 
   return (
-    <>
+    <div className="header">
       <h1 className="select">
         Installation instructions for{" "}
         <div className="repo">
@@ -73,6 +73,10 @@ export default function InstallationHeader() {
         </a>
       </div>
       <style jsx>{`
+        .header {
+          margin-bottom: 50px;
+        }
+
         .repo {
           display: inline-flex;
           align-items: center;
@@ -94,7 +98,7 @@ export default function InstallationHeader() {
         }
 
         .links {
-          margin-top: 15px;
+          margin-top: 20px;
         }
 
         .links a {
@@ -109,6 +113,6 @@ export default function InstallationHeader() {
           stroke-width: 2px;
         }
       `}</style>
-    </>
+    </div>
   );
 }
