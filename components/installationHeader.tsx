@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import repositories from "lib/repositories";
+import GitlabPlainIcon from "react-devicons/git/plain";
 
 export default function InstallationHeader() {
   const router = useRouter();
@@ -52,6 +53,7 @@ export default function InstallationHeader() {
       </h1>
       <div className="links">
         <a href={`https://gitlab.com/librewolf-community/browser/${repo.slug}`}>
+          <GitlabPlainIcon color="currentColor" />
           LibreWolf {repo.slug[0].toUpperCase() + repo.slug.slice(1)} Repository
         </a>
         <a
@@ -63,6 +65,10 @@ export default function InstallationHeader() {
               : "gnulinux"
           }`}
         >
+          {/* From @geist-ui/react-icons */}
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M2 13.381h20M8.66 19.05V22m6.84-2.95V22m-8.955 0h10.932M4 19.05h16a2 2 0 002-2V4a2 2 0 00-2-2H4a2 2 0 00-2 2v13.05a2 2 0 002 2z"></path>
+          </svg>
           System Requirements
         </a>
       </div>
@@ -92,7 +98,15 @@ export default function InstallationHeader() {
         }
 
         .links a {
-          margin-right: 10px;
+          margin-right: 15px;
+        }
+
+        .links :global(svg) {
+          display: inline;
+          margin-right: 5px;
+          width: 1em;
+          height: 1em;
+          stroke-width: 2px;
         }
       `}</style>
     </>
