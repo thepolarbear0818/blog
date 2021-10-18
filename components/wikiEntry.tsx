@@ -17,7 +17,8 @@ export function WikiEntry() {
       <style jsx>{`
         // Makes sure to scroll to the right point on the page
         .root :global(h2) :global(a),
-        .root :global(h3) :global(a[name^="q-"]) {
+        .root :global(h3) :global(a[name^="q-"]),
+        .root :global(h4) :global(a) {
           margin-top: 0;
           padding-top: 80px;
         }
