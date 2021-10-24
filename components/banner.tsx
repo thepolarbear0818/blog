@@ -9,11 +9,11 @@ export default function Banner() {
       </Head>
       <div className="screenshot">
         <div className="hide-light">
-          <img src="/screenshot-dark.png" alt="Screeenshot" />
+          <img src="/screenshot-dark.webp" alt="Screeenshot" />
         </div>
         <div className="hide-dark">
           <img
-            src="/screenshot-light.png"
+            src="/screenshot-light.webp"
             className="hide-dark"
             alt="Screeenshot"
           />

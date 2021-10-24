@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Logo from "components/logo";
 import Gitlab from "react-devicons/gitlab/plain";
@@ -8,17 +7,17 @@ const themeConfig = {
   projectIcons: [
     <>
       <Link href="https://gitlab.com/librewolf-community/browser" passHref>
-        <a className="text-current p-2 cursor-pointer">
+        <a className="text-current p-2 cursor-pointer" aria-label="GitLab">
           <Gitlab color="currentColor" size="1.4em" />
         </a>
       </Link>
       <Link href="https://gitter.im/librewolf-community/librewolf" passHref>
-        <a className="text-current p-2 cursor-pointer">
+        <a className="text-current p-2 cursor-pointer" aria-label="Gitter">
           <Gitter color="currentColor" size="1.4em" />
         </a>
       </Link>
       <Link href="https://www.reddit.com/r/LibreWolf" passHref>
-        <a className="text-current p-2 cursor-pointer">
+        <a className="text-current p-2 cursor-pointer" aria-label="Reddit">
           <svg
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
