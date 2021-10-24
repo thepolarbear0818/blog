@@ -1,5 +1,5 @@
 export default function Features({
-  features,
+  features
 }: {
   features: {
     icon: string;

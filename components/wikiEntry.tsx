@@ -1,17 +1,39 @@
 import { GetStaticProps } from "next";
 import { useSSG } from "nextra/ssg";
-import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import NextLink from "next/link";
 
 export function WikiEntry() {
   const { wikiContent } = useSSG();
 
   return (
     <p className="root">
-      {/* TODO: Custom <a> component which uses nexts.js's <Link> */}
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        components={{
+          a: (props) => {
+            let href = props.href;
+
+            [
+              "https://librewolf-community.gitlab.io",
+              "https://librewolf.net"
+            ].forEach((url) => {
+              if (href.startsWith(url)) href = href.replace(url, "");
+            });
+
+            return href.startsWith("/") ? (
+              <NextLink href={href} passHref>
+                <a {...props} />
+              </NextLink>
+            ) : (
+              <a {...props} />
+            );
+          }
+        }}
+      >
         {wikiContent}
       </ReactMarkdown>
       <style jsx>{`
@@ -27,19 +49,18 @@ export function WikiEntry() {
   );
 }
 
-export const getStaticWikiEntryProps: (slug: string) => GetStaticProps =
-  (slug) => (ctx) =>
+export function getStaticWikiEntryProps(slug: string): GetStaticProps {
+  return () =>
     fetch(`https://gitlab.com/api/v4/projects/13852721/wikis/${slug}`)
       .then((res) => res.json())
       .then((res) => res.content)
-      .then((content) => {
-        return {
-          props: {
-            ssg: {
-              wikiContent: content,
-            },
-          },
-          // Revalidate every hour
-          revalidate: 3600,
-        };
-      });
+      .then((content) => ({
+        props: {
+          ssg: {
+            wikiContent: content
+          }
+        },
+        // Revalidate every hour
+        revalidate: 3600
+      }));
+}

@@ -1,4 +1,4 @@
-import { MouseEvent, ReactNode } from "react";
+import { ReactNode } from "react";
 import Link from "next/link";
 
 export default function Button({
@@ -6,7 +6,7 @@ export default function Button({
   primary = false,
   href,
   big,
-  margin = 10,
+  margin = 10
 }: {
   children: ReactNode;
   primary?: boolean;

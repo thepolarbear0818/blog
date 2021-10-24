@@ -7,34 +7,34 @@ const repositories: {
   {
     name: "Windows",
     slug: "windows",
-    logo: "/icons/windows.svg",
+    logo: "/icons/windows.svg"
   },
   {
     name: "Arch Linux",
     slug: "arch",
-    logo: "/icons/archlinux.svg",
+    logo: "/icons/archlinux.svg"
   },
   {
     name: "Debian",
     slug: "debian",
-    logo: "/icons/debian.svg",
+    logo: "/icons/debian.svg"
   },
   {
     name: "Gentoo",
     slug: "gentoo",
-    logo: "/icons/gentoo.svg",
+    logo: "/icons/gentoo.svg"
   },
   {
     name: "Other Linux",
     slug: "linux",
-    logo: "/icons/tux.png",
+    logo: "/icons/tux.png"
   },
   {
     name: "macOS",
     slug: "macos",
     logo: "/icons/apple.svg",
-    logoDark: "/icons/apple-white.svg",
-  },
+    logoDark: "/icons/apple-white.svg"
+  }
 ];
 
 export default repositories;

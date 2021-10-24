@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 export default function Contributors({
-  contributors,
+  contributors
 }: {
   contributors: {
     name?: string;

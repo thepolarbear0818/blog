@@ -1,6 +1,6 @@
 export default function Error({
   code,
-  message,
+  message
 }: {
   code: number;
   message: string;

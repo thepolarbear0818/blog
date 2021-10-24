@@ -30,7 +30,7 @@ const themeConfig = {
           </svg>
         </a>
       </Link>
-    </>,
+    </>
   ],
   docsRepositoryBase:
     "https://gitlab.com/librewolf-community/website/-/blob/main/", // base URL for the docs repository
@@ -70,18 +70,18 @@ const themeConfig = {
     {
       title: "About",
       route: "/",
-      href: "/#what-is-librewolf",
+      href: "/#what-is-librewolf"
     },
     {
       title: "Docs",
       route: "/docs",
-      href: "/docs/faq",
+      href: "/docs/faq"
     },
     {
       title: "Installation",
-      route: "/installation",
-    },
-  ],
+      route: "/installation"
+    }
+  ]
 };
 
 export default themeConfig;

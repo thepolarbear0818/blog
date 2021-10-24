@@ -57,13 +57,16 @@ export default function InstallationHeader() {
           LibreWolf {repo.slug[0].toUpperCase() + repo.slug.slice(1)} Repository
         </a>
         <a
-          href={`https://www.mozilla.org/en-US/firefox/system-requirements#${
-            repo.slug === "windows"
-              ? "windows"
-              : repo.slug === "macos"
-              ? "mac"
-              : "gnulinux"
-          }`}
+          href={`https://www.mozilla.org/en-US/firefox/system-requirements#${(() => {
+            switch (repo.slug) {
+              case "windows":
+                return "windows";
+              case "macos":
+                return "mac";
+              default:
+                return "gnulinux";
+            }
+          })()}`}
         >
           {/* From @geist-ui/react-icons */}
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">

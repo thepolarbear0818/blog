@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { useSSG } from "nextra/ssg";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./button";
 
 export function DownloadButton() {
@@ -10,7 +10,7 @@ export function DownloadButton() {
     initialDownloadName,
     initialDownloadLink,
     initialReleasesLink,
-    endsWith,
+    endsWith
   } = useSSG();
 
   const [downloadName, setDownloadName] = useState(initialDownloadName);
@@ -27,7 +27,8 @@ export function DownloadButton() {
         setDownloadLink(asset.url);
         setDownloadName(asset.name);
         setReleasesLink(res[0]._links.self.replace(/\/[^\/]*$/, ""));
-      });
+      })
+      .catch();
   }, [endsWith, projectId]);
 
   return (
@@ -45,27 +46,30 @@ export function DownloadButton() {
   );
 }
 
-export const getStaticDownloadButtonProps: (
+export function getStaticDownloadButtonProps(
   projectId: string,
   endsWith: string
-) => GetStaticProps = (projectId, endsWith) => (ctx) =>
-  fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
-    .then((res) => res.json())
-    .then((res) => {
-      const asset = res[0].assets.links.find((asset) =>
-        asset.name.endsWith(endsWith)
-      );
-      return {
-        props: {
-          ssg: {
-            projectId,
-            initialDownloadName: asset.name,
-            initialDownloadLink: asset.url,
-            initialReleasesLink: res[0]._links.self.replace(/\/[^\/]*$/, ""),
-            endsWith,
+): GetStaticProps {
+  return () =>
+    fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
+      .then((res) => res.json())
+      .then((res) => {
+        const asset = res[0].assets.links.find(
+          (asset: { name: string; url: string }) =>
+            asset.name.endsWith(endsWith)
+        );
+        return {
+          props: {
+            ssg: {
+              projectId,
+              initialDownloadName: asset.name,
+              initialDownloadLink: asset.url,
+              initialReleasesLink: res[0]._links.self.replace(/\/[^\/]*$/, ""),
+              endsWith
+            }
           },
-        },
-        // Revalidate every hour
-        revalidate: 3600,
-      };
-    });
+          // Revalidate every hour
+          revalidate: 3600
+        };
+      });
+}

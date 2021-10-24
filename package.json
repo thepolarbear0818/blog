@@ -8,7 +8,8 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint ; prettier . -c",
+    "lint:fix": "next lint --fix && prettier . -w"
   },
   "dependencies": {
     "github-slugger": "^1.4.0",
@@ -32,7 +33,12 @@
     "@types/github-slugger": "^1.3.0",
     "@types/react": "^17.0.27",
     "eslint": "7.32.0",
+    "eslint-config-formidable": "^4.0.0",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.3"
   }
 }
