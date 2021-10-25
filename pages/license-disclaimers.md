@@ -12,7 +12,8 @@ content of this website is licensed under the
 Please note that we are **not** affiliated with Mozilla, the creators of the
 Firefox web browser. The Firefox name is a trademark of the Mozilla Foundation.
 
-This also **isn't** Arkenfox. Arkenfox is a template user.js, fully documented,
-and the gold-standard on relevant Firefox preferences. We rely heavily on
-Arkenfox’s expertise, research, and knowledge: but we choose out own default
-preferences configuration. We endeavor to keep up to date with Arkenfox
+This also **isn't** Arkenfox. [Arkenfox](https://github.com/arkenfox/user.js) is
+a template user.js, fully documented, and the gold-standard on relevant Firefox
+preferences. We rely heavily on Arkenfox’s expertise, research, and knowledge,
+but we choose our own default preferences configuration. We endeavor to keep up
+to date with Arkenfox.

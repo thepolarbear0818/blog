@@ -26,7 +26,9 @@ visiting it in full.
   hoshsadiq, prevent JavaScript miners.
 - [DandelionSprout's lists](https://github.com/DandelionSprout/adfilt), which is
   a collection of filter lists that are available on
-  [filterlists.com](https://filterlists.com/).
+  [filterlists.com](https://filterlists.com/). In particular, his
+  [LegitimateURLShortener](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
+  list is a good alternative to extensions like ClearURLs.
 
 ## Recommended Addons
 
@@ -40,7 +42,8 @@ granularly trackers, or to migrate to a good password manager.
   by default.
 - [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/): extension
   that gives _more control_ over what gets blocked than NoScript. Development
-  has recently [restarted](https://github.com/gorhill/uMatrix/releases).
+  has recently [restarted](https://github.com/gorhill/uMatrix/releases),
+  although the repository is currently archived.
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/):
   open source password manager.
 - [KeepassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/):
@@ -58,12 +61,12 @@ granularly trackers, or to migrate to a good password manager.
   [disable RFP](https://gitlab.com/librewolf-community/settings/-/wikis/FAQ#q-disable-rfp)
   or
   [enable WebGL](https://gitlab.com/librewolf-community/settings/-/wikis/FAQ#q-how-do-i-enable-webgl),
-  as reported in our FAQ.
+  as reported in our [FAQ](/docs/faq).
 - [Smart Referer](https://addons.mozilla.org/en-US/firefox/addon/smart-referer/):
   manually control refereres' behavior.
 - [LocalCDN](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/):
   the successor to Decentraleyes. Its functionalities are partially covered by
-  first party isolation which LibreWolf enables by default.
+  dynamic first party isolation, which LibreWolf enables by default.
 
 ### Container addons
 
