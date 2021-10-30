@@ -53,6 +53,7 @@ export default function Banner() {
 
         .screenshot :global(img) {
           border-radius: 5px;
+          height: 600px;
         }
 
         .inner {
