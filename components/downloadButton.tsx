@@ -10,7 +10,8 @@ export function DownloadButton() {
     initialDownloadName,
     initialDownloadLink,
     initialReleasesLink,
-    endsWith
+    endsWith,
+    doesntEndWith
   } = useSSG();
 
   const [downloadName, setDownloadName] = useState(initialDownloadName);
@@ -21,15 +22,17 @@ export function DownloadButton() {
     fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
       .then((res) => res.json())
       .then((res) => {
-        const asset = res[0].assets.links.find((asset) =>
-          asset.name.endsWith(endsWith)
+        const asset = res[0].assets.links.find(
+          (asset) =>
+            asset.name.endsWith(endsWith) &&
+            (!doesntEndWith || !asset.name.endsWith(doesntEndWith))
         );
         setDownloadLink(asset.url);
         setDownloadName(asset.name);
         setReleasesLink(res[0]._links.self.replace(/\/[^\/]*$/, ""));
       })
       .catch();
-  }, [endsWith, projectId]);
+  }, [doesntEndWith, endsWith, projectId]);
 
   return (
     <p>
@@ -48,7 +51,8 @@ export function DownloadButton() {
 
 export function getStaticDownloadButtonProps(
   projectId: string,
-  endsWith: string
+  endsWith: string,
+  doesntEndWith?: string
 ): GetStaticProps {
   return () =>
     fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
@@ -56,8 +60,13 @@ export function getStaticDownloadButtonProps(
       .then((res) => {
         const asset = res[0].assets.links.find(
           (asset: { name: string; url: string }) =>
-            asset.name.endsWith(endsWith)
+            asset.name.endsWith(endsWith) &&
+            (!doesntEndWith || !asset.name.endsWith(doesntEndWith))
         );
+        if (!asset)
+          throw new Error(
+            `Can't find any release asset for GitLab project ${projectId} with filter *${endsWith}`
+          );
         return {
           props: {
             ssg: {
@@ -65,7 +74,8 @@ export function getStaticDownloadButtonProps(
               initialDownloadName: asset.name,
               initialDownloadLink: asset.url,
               initialReleasesLink: res[0]._links.self.replace(/\/[^\/]*$/, ""),
-              endsWith
+              endsWith,
+              ...(doesntEndWith ? { doesntEndWith } : {})
             }
           },
           // Revalidate every hour
