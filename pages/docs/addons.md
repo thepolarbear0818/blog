@@ -33,7 +33,7 @@ visiting it in full.
 ## Recommended Addons
 
 Recommended addons are not bundled and need to be installed manually, depending
-on your needs. The best suggestion is always to keep a very minimal addons
+on your needs. The best suggestion is always to keep a very **minimal** addons
 setup, but you might want to give a try to the ones below, either to block more
 granularly trackers, or to migrate to a good password manager.
 

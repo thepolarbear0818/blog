@@ -11,7 +11,8 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
 - Include only privacy respecting search engines like
   [DuckDuckGo](https://duckduckgo.com/) and
   [Searx](https://searx.github.io/searx/).
-- Include [uBlockOrigin](https://ublockorigin.com/), to block trackers and ads.
+- Include [uBlockOrigin](https://ublockorigin.com/) and Tracking Protection in
+  strict mode, to block trackers and ads.
 - Enable dFPI, also known as
   [Total Cookie Protection](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/).
 - Enable RFP which is part of the
@@ -20,7 +21,7 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
   make users look the same and cover as many metrics as possible, in an effort
   to block fingerprinting techniques.
 - Always display user language as `en-US` for browser, web pages and OS, in
-  order to fit in with the largest possible RFP user base.
+  order to fit in with the largest possible user base.
 - Disable WebGL, as it is a strong fingerprinting vector.
 - Disable location aware browsing, and also prevent access to the location
   services of the OS. When location aware browsing is enabled, use Mozilla's
