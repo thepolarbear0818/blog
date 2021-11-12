@@ -26,7 +26,7 @@ export default function Banner() {
           A fork of Firefox, focused on privacy, security and freedom.
         </h4>
         <div className="buttons">
-          <Button big href="https://gitlab.com/librewolf-community/browser">
+          <Button big href="https://gitlab.com/librewolf-community">
             Source Code
           </Button>
           <Button big href="/docs/faq">
