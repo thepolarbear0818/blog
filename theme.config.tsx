@@ -59,10 +59,11 @@ const themeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
         name="description"
-        content="LibreWolf: A fork of Firefox, focused on privacy, security and freedom."
+        content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
       />
       <meta name="og:title" content="LibreWolf Browser" />
-      <link rel="shortcut icon" href="/icon.svg" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
     </>
   ),
   navlinks: [
