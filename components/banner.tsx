@@ -94,6 +94,13 @@ export default function Banner() {
           }
         }
 
+        @media (max-width: 600px) {
+          .buttons {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
         h1 {
           margin-top: 40px;
           font-size: 50px;

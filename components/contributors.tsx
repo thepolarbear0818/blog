@@ -14,15 +14,16 @@ export default function Contributors({
   return (
     <div className="contributors">
       {contributors.map((contributor) => (
-        <div key={contributor.tag} className="contributor card">
-          <a href={contributor.link}>
-            <img src={contributor.avatar} alt={`Avatar ${contributor.tag}`} />{" "}
-            <div className="name">{contributor.name || contributor.tag}</div>
-            {contributor.name && (
-              <div className="tag text-gray">{contributor.tag}</div>
-            )}
-          </a>
-
+        <a
+          className="contributor card focus:ring"
+          href={contributor.link}
+          key={contributor.tag}
+        >
+          <img src={contributor.avatar} alt={`Avatar ${contributor.tag}`} />{" "}
+          <div className="name">{contributor.name || contributor.tag}</div>
+          {contributor.name && (
+            <div className="tag text-gray">{contributor.tag}</div>
+          )}
           <div className="roles">
             {contributor.roles.map((role) => (
               <div className="chip" key={role}>
@@ -30,7 +31,7 @@ export default function Contributors({
               </div>
             ))}
           </div>
-        </div>
+        </a>
       ))}
       <style jsx>{`
         .contributors {
@@ -64,16 +65,8 @@ export default function Contributors({
           flex-direction: column;
           align-items: center;
           text-align: center;
-        }
-
-        .contributor a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
           text-decoration: none;
-        }
-        .contributor a:hover {
-          text-decoration: underline;
+          color: inherit;
         }
 
         .contributor img {
@@ -85,6 +78,11 @@ export default function Contributors({
 
         .contributor .name {
           margin-bottom: 30px;
+          color: rgba(66, 153, 225, var(--tw-text-opacity));
+        }
+
+        .contributor:hover .name {
+          text-decoration: underline;
         }
 
         .contributor .tag {

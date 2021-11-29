@@ -47,6 +47,20 @@ main {
   width: 768px;
 }
 
-footer .text-gray a {
+@media (max-width: 768px) {
+  /* For "Edit this page on GitLab" */
+  footer .text-sm {
+    align-self: center !important;
+  }
+}
+
+/* For the rest of the footer */
+footer .text-gray-600 a {
   margin-right: 10px;
+}
+
+@media (max-width: 450px) {
+  .mobile-hidden {
+    display: none;
+  }
 }

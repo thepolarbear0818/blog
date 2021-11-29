@@ -80,6 +80,10 @@ export default function InstallationHeader() {
           margin-bottom: 50px;
         }
 
+        h1 {
+          line-height: 1.4em;
+        }
+
         .repo {
           display: inline-flex;
           align-items: center;
@@ -101,11 +105,13 @@ export default function InstallationHeader() {
         }
 
         .links {
-          margin-top: 20px;
+          margin-top: 10px;
         }
 
         .links a {
+          display: inline-block;
           margin-right: 15px;
+          margin-top: 10px;
         }
 
         .links :global(svg) {

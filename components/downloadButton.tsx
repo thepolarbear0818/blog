@@ -41,8 +41,17 @@ export function DownloadButton() {
       </Button>
       <a href={releasesLink}>View all versions and release notes</a>
       <style jsx>{`
+        p :global(.button) {
+          white-space: nowrap;
+          max-width: calc(100vw - 100px);
+          overflow: hidden;
+          margin-right: 15px;
+        }
+
         a {
-          margin-left: 15px;
+          margin-top: 7px;
+          display: inline-block;
+          vertical-align: top;
         }
       `}</style>
     </p>

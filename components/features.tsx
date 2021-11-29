@@ -29,6 +29,7 @@ export default function Features({
         .grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          gap: 20px;
         }
 
         @media (max-width: 850px) {
@@ -41,11 +42,6 @@ export default function Features({
           .grid {
             grid-template-columns: 1fr;
           }
-        }
-
-        .card {
-          width: 250px;
-          margin: 10px;
         }
 
         .card img {
