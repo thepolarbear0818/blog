@@ -3,6 +3,14 @@
   --primary-alt: #0099e6;
 }
 
+.text-gray {
+  color: rgb(92, 101, 112);
+}
+
+.dark .text-gray {
+  color: rgb(160, 174, 192);
+}
+
 .card {
   border: 1px solid rgb(226, 232, 240);
   border-radius: 0.25rem;
@@ -39,6 +47,6 @@ main {
   width: 768px;
 }
 
-footer .text-gray-600 a {
+footer .text-gray a {
   margin-right: 10px;
 }

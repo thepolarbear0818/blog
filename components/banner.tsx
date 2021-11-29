@@ -22,7 +22,7 @@ export default function Banner() {
       <div className="inner">
         <img src="/icon.svg" alt="Logo" />
         <h1>LibreWolf</h1>
-        <h4 className="text-gray-600">
+        <h4 className="text-gray">
           A fork of Firefox, focused on privacy, security and freedom.
         </h4>
         <div className="buttons">

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import repositories from "lib/repositories";
-import GitlabPlainIcon from "react-devicons/git/plain";
+import GitPlainIcon from "react-devicons/git/plain";
 
 export default function InstallationHeader() {
   const router = useRouter();
@@ -53,7 +53,7 @@ export default function InstallationHeader() {
       </h1>
       <div className="links">
         <a href={`https://gitlab.com/librewolf-community/browser/${repo.slug}`}>
-          <GitlabPlainIcon color="currentColor" />
+          <GitPlainIcon color="currentColor" />
           LibreWolf {repo.slug[0].toUpperCase() + repo.slug.slice(1)} Repository
         </a>
         <a

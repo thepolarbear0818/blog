@@ -1,10 +1,14 @@
 const withNextra = require("nextra")({
   theme: "nextra-theme-docs-patch-maltejur",
   themeConfig: "./theme.config.tsx"
-  // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
 });
+const withTM = require("next-transpile-modules")([
+  "nextra-theme-docs-patch-maltejur"
+]);
 
-module.exports = withNextra({
-  reactStrictMode: true,
-  trailingSlash: true
-});
+module.exports = withTM(
+  withNextra({
+    reactStrictMode: true,
+    trailingSlash: true
+  })
+);

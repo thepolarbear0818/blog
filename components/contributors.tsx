@@ -19,7 +19,7 @@ export default function Contributors({
             <img src={contributor.avatar} alt={`Avatar ${contributor.tag}`} />{" "}
             <div className="name">{contributor.name || contributor.tag}</div>
             {contributor.name && (
-              <div className="tag text-gray-600">{contributor.tag}</div>
+              <div className="tag text-gray">{contributor.tag}</div>
             )}
           </a>
 

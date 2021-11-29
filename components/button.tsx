@@ -18,9 +18,9 @@ export default function Button({
     <>
       <Link href={href} passHref>
         <a
-          className={`button text-gray-600 focus:ring ${
-            primary ? "primary" : ""
-          } ${big ? "big" : ""}`}
+          className={`button text-gray focus:ring ${primary ? "primary" : ""} ${
+            big ? "big" : ""
+          }`}
         >
           {children}
         </a>

@@ -4,7 +4,7 @@ import Gitlab from "react-devicons/gitlab/plain";
 import Gitter from "react-devicons/gitter/plain";
 
 const themeConfig = {
-  projectIcons: [
+  projectIcons: (
     <>
       <Link href="https://gitlab.com/librewolf-community/browser" passHref>
         <a className="text-current p-2 cursor-pointer" aria-label="GitLab">
@@ -30,7 +30,7 @@ const themeConfig = {
         </a>
       </Link>
     </>
-  ],
+  ),
   docsRepositoryBase:
     "https://gitlab.com/librewolf-community/website/-/blob/main/", // base URL for the docs repository
   titleSuffix: " – LibreWolf",

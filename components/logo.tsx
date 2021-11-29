@@ -9,7 +9,7 @@ export default function Logo() {
       <div className="title">
         <h5>LibreWolf</h5>
         {router.pathname.startsWith("/docs") && (
-          <span className="text-gray-600">Docs</span>
+          <span className="text-gray">Docs</span>
         )}
       </div>
       <style jsx>{`
