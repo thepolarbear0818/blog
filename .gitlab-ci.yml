@@ -1,11 +1,11 @@
 image: node:16
 
 stages:
-  - build
+  - test
   - deploy
 
 lint:
-  stage: build
+  stage: test
   cache:
     paths:
       - node_modules/
@@ -15,7 +15,7 @@ lint:
     - yarn lint
 
 build:
-  stage: build
+  stage: test
   cache:
     paths:
       - node_modules/
@@ -38,6 +38,6 @@ aws:
   script:
     - aws s3 rm s3://librewolf --recursive
     - aws s3 cp out s3://librewolf --recursive
-    - aws cloudfront create-invalidation
-      --distribution-id ${AWS_CLOUDFRONT_ID}
-      --invalidation-batch "Paths={Quantity=1,Items=[\"/*\"]},CallerReference=$(date +%s)"
+    - aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_ID}
+      --invalidation-batch
+      "Paths={Quantity=1,Items=[\"/*\"]},CallerReference=$(date +%s)"
