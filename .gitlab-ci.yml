@@ -1,37 +1,43 @@
 image: node:16
 
 stages:
-  - test
+  - build
   - deploy
 
-before_script:
-  - yarn
-
-cache:
-  paths:
-    - node_modules/
-    - .next/
-
 lint:
-  stage: test
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  before_script:
+    - yarn
   script:
     - yarn lint
 
 build:
-  stage: test
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+      - .next/
+  before_script:
+    - yarn
   script:
     - yarn export
   artifacts:
     paths:
       - out
 
-pages:
+aws:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   stage: deploy
-  script: cp -rf out/* public
   dependencies:
     - build
-  artifacts:
-    paths:
-      - public
   only:
     - main
+  script:
+    - aws s3 rm s3://librewolf --recursive
+    - aws s3 cp out s3://librewolf --recursive
+    - aws cloudfront create-invalidation
+      --distribution-id ${AWS_CLOUDFRONT_ID}
+      --invalidation-batch "Paths={Quantity=1,Items=[\"/*\"]},CallerReference=$(date +%s)"
