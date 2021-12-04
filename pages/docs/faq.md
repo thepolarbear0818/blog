@@ -61,6 +61,7 @@ be relevant:
 ## Linux specific questions:
 
 - [Can't open links with Librewolf when using Wayland](#cant-open-links-with-librewolf-when-using-wayland)
+- [How do I get native messaging to work?](#how-do-i-get-native-messaging-to-work)
 
 ## macOS specific questons:
 
@@ -553,6 +554,20 @@ but this is not yet tested.
 Exec=env GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 /usr/lib/librewolf/librewolf %u
 Exec=env GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 /usr/lib/librewolf/librewolf --new-window %u
 Exec=env GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 /usr/lib/librewolf/librewolf --private-window %u
+```
+
+### [How do I get native messaging to work?](#linux-specific-questions)
+
+To get
+[native messaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
+to work, for example for the
+[Plasma Integration](https://addons.mozilla.org/en-US/firefox/addon/plasma-integration/),
+create two symlinks by running these commands:
+
+```
+ln -s ~/.mozilla/native-messaging-hosts ~/.librewolf/native-messaging-hosts
+
+sudo ln -s /usr/lib/mozilla/native-messaging-hosts /usr/lib/librewolf/native-messaging-hosts
 ```
 
 ## macOS specific questons:
