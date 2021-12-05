@@ -14,8 +14,8 @@
   "dependencies": {
     "next": "^12.0.4",
     "next-transpile-modules": "^9.0.0",
-    "nextra": "^2.0.0-beta.2",
-    "nextra-theme-docs-patch-maltejur": "^2.0.0-beta.2-patch.2",
+    "nextra": "^2.0.0-beta.5",
+    "nextra-theme-docs-patch-maltejur": "^2.0.0-beta.5-patch.1",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
