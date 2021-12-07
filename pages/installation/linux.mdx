@@ -22,23 +22,31 @@ To install LibreWolf on any other Linux Distribution, you have three options
 
 <DownloadButton />
 
-Then run `chmod +x LibreWolf-*.AppImage` to make it executable. To install
-LibreWolf permanently via an AppImage, we recommend something like
+### Installing
+
+To install LibreWolf permanently via an AppImage, we recommend
 [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher).
 
-#### Updating
+With AppImageLauncher installed, you just need to open the AppImage with
+AppImageLauncher and click `Integrate and run`. LibreWolf should then be
+permanently installed on your system and launchable via the application menu.
 
-AppImage files are now released as gitlab packages as well at
-https://gitlab.com/librewolf-community/browser/appimage/-/packages. This allows
-having stable links (at
-`https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/latest/$FILE_NAME`)`
-which can be used as update information for the AppImage releases.
+![](https://i.imgur.com/gbFJLvM.png)
 
-This means that from this release onward, AppImage releases can be updated with
-`AppImageUpdater`.
+![](https://i.imgur.com/AfbVm1u.png)
 
-A release downloaded as `LibreWolf.x86_64.AppImage`, for example, can be updated
-with `./AppImageUpdate-x86_64.AppImage -d ./LibreWolf.x86_64.AppImage`.
+### Updating or Uninstalling
+
+To update or uninstall LibreWolf from your system, you can just right click the
+LibreWolf application menu entry and click either `Remove AppImage from system`
+or `Update AppImage`.
+
+![](https://i.imgur.com/x4XNVkJ.png)
+
+After pressing the update button, the whole update process will be completely
+automatic and you don't have to do anything else.
+
+![](https://i.imgur.com/0uUML1T.png)
 
 ## Flatpak
 
@@ -61,8 +69,8 @@ prepare flatpak to use on your distribution.
 ## Compiling from source
 
 Compiling from source is possible for most versions of LibreWolf, just head over
-to the relevant repository, clone it, and read the README.md. As LibreWolf is a
-community effort, people are trying out different things in different browser
-repositories. In general tho, most of the compilation issues come from creating
-the build environment, the actual compilation process by Firefox is standard and
-relatively straightforward.
+to the [linux repository](https://gitlab.com/librewolf-community/browser/linux).
+As LibreWolf is a community effort, people are trying out different things in
+different browser repositories. In general tho, most of the compilation issues
+come from creating the build environment, the actual compilation process by
+Firefox is standard and relatively straightforward.
