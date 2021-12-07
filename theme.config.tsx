@@ -6,7 +6,7 @@ import Gitter from "react-devicons/gitter/plain";
 const themeConfig = {
   projectIcons: (
     <>
-      <Link href="https://gitlab.com/librewolf-community/browser" passHref>
+      <Link href="https://gitlab.com/librewolf-community" passHref>
         <a className="text-current p-2 cursor-pointer" aria-label="GitLab">
           <Gitlab color="currentColor" size="1.4em" />
         </a>
