@@ -2,82 +2,61 @@
 
 ## uBlock Origin tweaks
 
-[uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-comes bundled with LibreWolf. We'll mention a few filter lists and entry points
-to the [uBlock wiki](https://github.com/gorhill/uBlock/wiki), but consider
-visiting it in full.
+Once you learn
+[how to import filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web),
+we suggest using:
 
-**Essential reads**:
+- [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
+  to remove tracking elements from URLs.
+- [NoCoin](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt)
+  to block browser-based crypto mining.
 
-- [How to use filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web).
-- [Easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode),
-  the default mode that we ship with the browser.
-- [Dynamic filtering](https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-quick-guide),
-  suggested for enhanced protection.
-- [Medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode),
-  suggested for enhanced protection and might require to fix some websites
-  manually.
-- [JavaScript blocking](https://github.com/gorhill/uBlock/wiki/Per-site-switches#no-scripting)
-  on a per-site basis.
+We also suggest enabling the following lists built into uBlock Origin:
 
-**Filter lists:**
+- AdGuard URL Tracking Protection.
+- Block Outsider Intrusion into LAN.
+- Phishing URL Blocklist.
+- Fanboy’s Annoyance.
 
-- [NoCoin list](https://github.com/hoshsadiq/adblock-nocoin-list) from
-  hoshsadiq, prevent JavaScript miners.
-- [DandelionSprout's lists](https://github.com/DandelionSprout/adfilt), which is
-  a collection of filter lists that are available on
-  [filterlists.com](https://filterlists.com/). In particular, his
-  [LegitimateURLShortener](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
-  list is a good alternative to extensions like ClearURLs.
+Additionally, we **strongly recommend** using
+[medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode)
+to block all third-party scripts and control them manually. Advanced users can
+also
+[block JavaScript](https://github.com/gorhill/uBlock/wiki/Per-site-switches#no-scripting)
+per-site.
 
-## Recommended Addons
+## Password managers
 
-Recommended addons are not bundled and need to be installed manually, depending
-on your needs. The best suggestion is always to keep a very **minimal** addons
-setup, but you might want to give a try to the ones below, either to block more
-granularly trackers, or to migrate to a good password manager.
+We suggest that you use a more robust solution than the built-in password
+manager available in the browser:
 
-- [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/): powerful
-  extension that allows to block scripts granularly. Included into Tor Browser
-  by default.
-- [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/): extension
-  that gives _more control_ over what gets blocked than NoScript. Development
-  has recently [restarted](https://github.com/gorhill/uMatrix/releases),
-  although the repository is currently archived.
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/):
-  open source password manager.
+  open source password manager that allows for synchronization across multiple
+  devices.
 - [KeepassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/):
-  official browser plugin for the KeePassXC password manager.
+  official browser plugin for the open source password manager KeePassXC.
 
 ## Other Addons
 
+The best suggestion is always to keep a very **minimal** addons setup, as every
+extra piece makes your attack surface larger and is likely going to make you
+stand out. For this reason, all the extensions mentioned in this section are
+useful only for certain users, and they are **not** strictly necessary.
+
 ### Privacy addons
 
-- [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/):
-  removes tracking elements from URLs.
-- [Canvas Blocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/):
-  prevents some fingerprinting techniques and it can be especially useful for
-  users that
-  [disable RFP](https://gitlab.com/librewolf-community/settings/-/wikis/FAQ#q-disable-rfp)
-  or
-  [enable WebGL](https://gitlab.com/librewolf-community/settings/-/wikis/FAQ#q-how-do-i-enable-webgl),
-  as reported in our [FAQ](/docs/faq).
 - [Smart Referer](https://addons.mozilla.org/en-US/firefox/addon/smart-referer/):
-  manually control refereres' behavior.
-- [LocalCDN](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/):
-  the successor to Decentraleyes. Its functionalities are partially covered by
-  dynamic first party isolation, which LibreWolf enables by default.
-
-### Container addons
-
-- [Mozilla's Multi Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/):
-  manage containers and assign sites to specific ones. Particularly useful for
-  repeated visits to the same domain across the same session.
-- [Temporary-Containers](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/):
-  maximizing and automating container potential.
+  allows to manually handle refereres' behavior.
+- [Canvas Blocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/):
+  protects against some fingerprinting techniques. Suggested exclusively to
+  users that
+  [disable RFP](/docs/faq/#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting)
+  or [enable WebGL](/docs/faq/#how-do-i-enable-webgl).
 
 ### Other useful addons
 
 - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/):
-  very popular addon, also useful for visually impaired people. We suggest this
-  addon for RFP users that want to enforce dark theme.
+  useful for visually impaired people. It can also be used by RFP users that
+  want to force dark theme, but this will make them stand out.
+- [xBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/): allows to
+  securely store and sync bookmarks across browsers and devices.
