@@ -1393,14 +1393,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-enhanced-resolve@^5.7.0:
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.8.3.tgz#6d552d465cce0423f5b3d718511ea53826a7b2f0"
-  integrity sha512-EGAbGvH7j7Xt2nc0E7D99La1OiEs8LnyimkRgwExpUMScN6O+3x9tIWs7PLQZVNx4YD+00skHXPXi1yQHpAmZA==
-  dependencies:
-    graceful-fs "^4.2.4"
-    tapable "^2.2.0"
-
 enquirer@^2.3.5:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
@@ -2104,7 +2096,7 @@ got@^8.3.1:
     url-parse-lax "^3.0.0"
     url-to-options "^1.0.1"
 
-graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.2.4, graceful-fs@^4.2.6:
+graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.2.6:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
@@ -3466,14 +3458,6 @@ next-themes@^0.0.8:
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.0.8.tgz#2a1748317085afbc2509e2c32bd04af4f0f6cb7d"
   integrity sha512-dyrh+/bZW4hkecFEg2rfwOLLzU2UnE7KfiwcV0mIwkPrO+1n1WvwkC8nabgKA5Eoi8stkYfjmA72FxTaWEOHtg==
 
-next-transpile-modules@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-9.0.0.tgz#133b1742af082e61cc76b02a0f12ffd40ce2bf90"
-  integrity sha512-VCNFOazIAnXn1hvgYYSTYMnoWgKgwlYh4lm1pKbSfiB3kj5ZYLcKVhfh3jkPOg1cnd9DP+pte9yCUocdPEUBTQ==
-  dependencies:
-    enhanced-resolve "^5.7.0"
-    escalade "^3.1.1"
-
 next@^12.0.4:
   version "12.0.4"
   resolved "https://registry.yarnpkg.com/next/-/next-12.0.4.tgz#096578b320f0faf0bd51798decb39aaf00052efe"
@@ -3541,10 +3525,10 @@ next@^12.0.4:
     "@next/swc-win32-ia32-msvc" "12.0.4"
     "@next/swc-win32-x64-msvc" "12.0.4"
 
-nextra-theme-docs-patch-maltejur@^2.0.0-beta.5-patch.1:
-  version "2.0.0-beta.5-patch.1"
-  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-2.0.0-beta.5-patch.1.tgz#decca3dbcbc97b985ec566aa6175ade562fa2b7c"
-  integrity sha512-8t3E50g2mOGuLarKRSqMZKhjTIhnyvpm9PgztUS60a20xhV9qP/AdSAyhirjO0x9Jq8euxHbtQv7UFuNUHoALg==
+nextra-theme-docs-patch-maltejur@^2.0.0-beta.5-patch.3:
+  version "2.0.0-beta.5-patch.3"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-2.0.0-beta.5-patch.3.tgz#0f17d5bb014498cdc5b0a1d9f1bfd55aebc0db9d"
+  integrity sha512-SQ3tfOHdULz91gG4D0lCNBeAuzC2BWSZ24jzFXBt69U76663+zl5sD6y7k6mzbnfRAm38wr6QLK1WTj567hNIg==
   dependencies:
     "@mdx-js/react" "^2.0.0-rc.2"
     "@reach/skip-nav" "^0.11.2"
@@ -4708,11 +4692,6 @@ table@^6.0.9:
     slice-ansi "^4.0.0"
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
-
-tapable@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
-  integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
 tar-stream@^1.5.2:
   version "1.6.2"
