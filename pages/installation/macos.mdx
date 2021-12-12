@@ -4,16 +4,15 @@ title: macOS Installation
 
 import InstallationHeader from "components/installationHeader";
 import Button from "components/button";
+import { getStaticDownloadButtonProps } from "components/downloadButton";
 import {
-  DownloadButton,
-  getStaticDownloadButtonProps
-} from "components/downloadButton";
+  GitlabDownloadButton,
+  getGitlabDownloadProp
+} from "components/gitlabDownloadButton";
 
-export const getStaticProps = getStaticDownloadButtonProps(
-  "13853965",
-  ".dmg",
-  "aarch64_exp.dmg"
-);
+export const getStaticProps = getStaticDownloadButtonProps([
+  getGitlabDownloadProp("13853965", ".dmg", "aarch64_exp.dmg")
+]);
 
 <InstallationHeader />
 
@@ -30,7 +29,7 @@ brew install --cask librewolf
 You can also install LibreWolf via a `.dmg`, but please note that this method
 requires to apply updates manually.
 
-<DownloadButton />
+<GitlabDownloadButton projectId="13853965" />
 
 ## Compiling from source
 

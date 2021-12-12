@@ -15,7 +15,7 @@ const repositories: {
     logo: "/icons/archlinux.svg"
   },
   {
-    name: "Debian",
+    name: "Debian based",
     slug: "debian",
     logo: "/icons/debian.svg"
   },

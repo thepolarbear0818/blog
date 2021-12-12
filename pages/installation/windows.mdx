@@ -4,15 +4,15 @@ title: Windows Installation
 
 import InstallationHeader from "components/installationHeader";
 import Callout from "nextra-theme-docs-patch-maltejur/callout";
+import { getStaticDownloadButtonProps } from "components/downloadButton";
 import {
-  DownloadButton,
-  getStaticDownloadButtonProps
-} from "components/downloadButton";
+  GitlabDownloadButton,
+  getGitlabDownloadProp
+} from "components/gitlabDownloadButton";
 
-export const getStaticProps = getStaticDownloadButtonProps(
-  "13852981",
-  "setup.exe"
-);
+export const getStaticProps = getStaticDownloadButtonProps([
+  getGitlabDownloadProp("13852981", "setup.exe")
+]);
 
 <InstallationHeader />
 
@@ -20,7 +20,7 @@ export const getStaticProps = getStaticDownloadButtonProps(
 
 To install LibreWolf on Windows, just download and run the latest installer
 
-<DownloadButton />
+<GitlabDownloadButton projectId="13852981" />
 
 If you don't have it already, you probably also need the
 [Visual C++ Runtime](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-160#visual-studio-2015-2017-2019-and-2022).
