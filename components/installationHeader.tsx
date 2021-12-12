@@ -13,6 +13,10 @@ export default function InstallationHeader() {
   );
 
   useEffect(() => {
+    setOs((os) => os);
+  }, []);
+
+  useEffect(() => {
     if (os !== currentOs) router.push(`/installation/${os}`);
   }, [currentOs, os, router]);
 
@@ -40,7 +44,7 @@ export default function InstallationHeader() {
             onChange={(event) => setOs(event.target.value)}
             className="focus:ring"
           >
-            <option value="" selected disabled hidden>
+            <option value="" disabled hidden>
               ...
             </option>
             {repositories.map((repo) => (

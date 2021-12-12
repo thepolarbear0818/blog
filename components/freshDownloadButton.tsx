@@ -31,7 +31,7 @@ export function getFreshDownloadProp(
         )})"`
       );
       const match = regex.exec(text);
-      if (match[1])
+      if (match)
         return {
           id: endsWith,
           name: match[1],

@@ -15,7 +15,7 @@ const repositories: {
     logo: "/icons/archlinux.svg"
   },
   {
-    name: "Debian based",
+    name: "Debian",
     slug: "debian",
     logo: "/icons/debian.svg"
   },
@@ -23,6 +23,11 @@ const repositories: {
     name: "Gentoo",
     slug: "gentoo",
     logo: "/icons/gentoo.svg"
+  },
+  {
+    name: "Fedora",
+    slug: "fedora",
+    logo: "/icons/fedora.svg"
   },
   {
     name: "Other Linux",
