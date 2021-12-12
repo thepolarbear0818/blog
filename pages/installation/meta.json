@@ -1,7 +1,7 @@
 {
   "windows": "Windows",
   "arch": "Arch Linux",
-  "debian": "Debian",
+  "debian": "Debian based",
   "gentoo": "Gentoo",
   "linux": "Other Linux",
   "macos": "macOS",
