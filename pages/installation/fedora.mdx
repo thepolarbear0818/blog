@@ -15,6 +15,19 @@ export const getStaticProps = getStaticDownloadButtonProps([
 
 <InstallationHeader />
 
-You can download and install the latest `.rpm` below
+The prefered way to install on Fedora right now are the releases built on the
+_Fedora COPR_ by bgstack. The release page for that is:
+[download here](https://copr.fedorainfracloud.org/coprs/bgstack15/AfterMozilla/).
+Here is how to enable copr and install LibreWolf with `dnf`:
+
+```
+dnf copr enable bgstack15/AfterMozilla
+dnf install librewolf
+```
+
+You can also now download and install the latest `fresh` `.rpm` below
 
 <FreshDownloadButton endsWith=".fc35.x86_64.rpm" />
+
+'[Fresh](https://fresh.librewolf.io/)' also has a version for Fedora 34
+available.
