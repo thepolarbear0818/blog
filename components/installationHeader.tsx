@@ -56,10 +56,12 @@ export default function InstallationHeader() {
         </div>
       </h1>
       <div className="links">
-        <a href={`https://gitlab.com/librewolf-community/browser/${repo.slug}`}>
-          <GitPlainIcon color="currentColor" />
-          LibreWolf {repo.slug[0].toUpperCase() + repo.slug.slice(1)} Repository
-        </a>
+        {repo.repository && (
+          <a href={repo.repository.url}>
+            <GitPlainIcon color="currentColor" />
+            {repo.repository.name}
+          </a>
+        )}
         <a
           href={`https://www.mozilla.org/en-US/firefox/system-requirements#${(() => {
             switch (repo.slug) {
