@@ -23,11 +23,11 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
 - Always display user language as `en-US` for browser, web pages and OS, in
   order to fit in with the largest possible user base.
 - Disable WebGL, as it is a strong fingerprinting vector.
-- Disable location aware browsing, and also prevent access to the location
-  services of the OS. When location aware browsing is enabled, use Mozilla's
-  API, instead of Google's API.
-- Disable WebRTC, and when it is enabled protect the private IP address of the
-  user, instead using the public IP for ICE candidate generation.
+- Prevent access to the location services of the OS, and use Mozilla's location
+  API instead of Google's API.
+- Protect the private IP address of the user when WebRTC is used. Limit ICE
+  candidates generation to the default interface when sharing video or audio
+  during a videoconference.
 - Force DNS and WebRTC inside the proxy, when one is being used.
 - Disable IPv6, as not all Linux distros ship with the
   [Privacy Extension](https://datatracker.ietf.org/doc/html/rfc3041#section-2.3)
@@ -39,10 +39,9 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
 - Disable
   [service workers](https://bugzilla.mozilla.org/show_bug.cgi?id=1320796#c1).
 - Disable disk cache and clear temporary files on close.
-- Disable OCSP, as it sends a request to the CA on each check. In the near
-  future, we are possibly going to switch to
-  [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) as a more
-  robust and privacy respecting certificate revocation mechanism.
+- Disable OCSP, and instead use
+  [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), as it is a
+  more robust and privacy respecting certificate revocation mechanism.
 
 ## Security
 
@@ -81,6 +80,7 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
   prevent Google from controlling another aspect of the internet.
 - Disable [DRM](https://www.eff.org/issues/drm), as it is a limitation to user
   freedom.
-- Only allow outgoing connections necessary to fetch blocking lists and
-  revocation lists (once we switch to CRL).
-- Disable built in password manager and suggest more robust options.
+- Avoid making unnecessary changes that increase the fingerprint without giving
+  any privacy gain.
+- Only allow outgoing connections that are not privacy invading.
+- Disable built-in password manager and suggest more robust options.

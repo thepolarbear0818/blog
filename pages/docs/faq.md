@@ -1,14 +1,14 @@
 # Frequently Asked Questions
 
-This FAQ documents version 3.0 of the settings. Please always upgrade to the
-latest version of the browser available. If your question is not answered here,
-you can try to get answers in our
+This FAQ documents version 4.0 of the settings. Please always upgrade to the
+latest version of the browser. If your question is not answered here, you can
+try to get answers in our
 [Gitter](https://gitter.im/librewolf-community/librewolf) /
 [Matrix](https://app.element.io/#/room/#librewolf:matrix.org) room, or on
 [r/LibreWolf](https://www.reddit.com/r/LibreWolf/) and
 [c/LibreWolf](https://lemmy.ml/c/librewolf).
 
-Alternatively you could check the parts in the firefox documentation that could
+Alternatively, you could check the parts in the Firefox documentation that could
 be relevant:
 
 - [Protect your privacy](https://support.mozilla.org/en-US/products/firefox/protect-your-privacy).
@@ -40,10 +40,9 @@ be relevant:
 - [How do I allow canvas access?](#how-do-i-allow-canvas-access)
 - [What are the most common downsides of RFP (resist fingerprinting)?](#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting)
 - [Why is LibreWolf forcing light theme?](#why-is-librewolf-forcing-light-theme)
-- [What settings are used to enable video conferencing?](#what-settings-are-used-to-enable-video-conferencing)
+- [What should I do if video conferencing is not working?](#what-should-i-do-if-video-conferencing-is-not-working)
 - [How do I enable IPv6?](#how-do-i-enable-ipv6)
 - [How do I enable extensions auto-updating?](#how-do-i-enable-extensions-auto-updating)
-- [How do I enable location aware browsing?](#how-do-i-enable-location-aware-browsing)
 - [How do I disable bookmarks opening in a new tab?](#how-do-i-disable-bookmarks-opening-in-a-new-tab)
 - [How do I enable search suggestions?](#how-do-i-enable-search-suggestions)
 - [How do I add a search engine?](#how-do-i-add-a-search-engine)
@@ -57,6 +56,8 @@ be relevant:
 - [Why is the built-in password manager disabled?](#why-is-the-built-in-password-manager-disabled)
 - [Why isn't First Party Isolate enabled by default?](#why-isnt-first-party-isolate-enabled-by-default)
 - [Does LibreWolf use HTTPS-Only mode?](#does-librewolf-use-https-only-mode)
+- [How do I set a default download directory?](#how-do-i-set-a-default-download-directory)
+- [How do I stop LibreWolf from resuming after a crash?](#how-do-i-stop-librewolf-from-resuming-on-crash)
 
 ## Linux specific questions:
 
@@ -107,17 +108,14 @@ shouldn't install too many add-ons, but we have a few
 
 ### [Does LibreWolf make any outgoing connection?](#general-questions)
 
-Yes, but they aren't in any way privacy invading. Specifically they are needed
-to fetch and update the blocking lists for
-[uBO](https://github.com/gorhill/uBlock/wiki/Can-you-trust-uBlock-Origin%3F) and
-[Tracking Protection](#how-do-i-disable-mozilla-tracking-protection), which we
+Yes, but they aren't in any way privacy invading and they were carefully
+evaluated. Specifically they are needed to fetch and update the blocking lists
+used by
+[uBO](https://github.com/gorhill/uBlock/wiki/Can-you-trust-uBlock-Origin%3F),
+[Tracking Protection](#how-do-i-disable-mozilla-tracking-protection) and
+[CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), which we
 considered more important than disabling all outgoing connections, especially
 ones that are harmless.
-
-In the near future we will probably also allow outgoing connections required for
-[CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), in order to
-increase the security of the browser without compromising privacy (like
-alternatives such as OCSP would require).
 
 With that being said, LibreWolf is still commited to removing all privacy
 invading connections, and to keep all connections to the bare minimum required
@@ -172,21 +170,19 @@ In some releases this message is patched, and you should not see it anymore.
 
 ### [What are some tips on a more hardened setup?](#settings-and-librewolfoverridecfg)
 
-You can disable asm.js and WebAssembly to enhance your security. Please keep in
-mind that having them disabled could increase your fingerprint, as well as
-reduce performance.
-
-```
-defaultPref("javascript.options.asmjs", false);
-defaultPref("javascript.options.wasm", false);
-```
-
 To improve your privacy we suggest enabling letterboxing, in order to prevent
 your real window size from being fingerprinted. This can be especially useful if
 you resize your window.
 
-```
+```js
 defaultPref("privacy.resistFingerprinting.letterboxing", true);
+```
+
+You can also disable asm.js to enhance your security, but please keep in mind
+that having it disabled could increase your fingerprint and impact performance.
+
+```js
+defaultPref("javascript.options.asmjs", false);
 ```
 
 <a name="storage-permissions"></a>
@@ -216,7 +212,7 @@ in general cookies and website data should be cleared with frequency. For this
 reason we suggest to use the default setup, and if you really want to use this
 one consider **clearing your cookies and website data manually with frequency**.
 
-```
+```js
 pref("browser.contentblocking.category", "custom"); // strict would force dFPI
 defaultPref("privacy.firstparty.isolate", true); // enable FPI
 defaultPref("network.cookie.cookieBehavior", 1); // block 3rd party cookies
@@ -239,7 +235,7 @@ when a website is trying to use DRM.
 
 Put this in your _librewolf.overrides.cfg_:
 
-```
+```js
 defaultPref("webgl.disabled", false);
 ```
 
@@ -273,7 +269,7 @@ workaround for keyboard alt-keys.
 Other common problems brought by RFP include: spoofed **timezone**, forced light
 **theme**, fixed **user agent**, smaller and fixed **window size** on startup.
 There's no real workaround for these annoyances as they are intended to protect
-your privacy, and tweaking them using extensions or preferences significantly
+your privacy. Tweaking them using extensions or preferences significantly
 impacts the effectiveness of RFP, both for the user himself/herself, and the
 rest of the userbase: in fact modifications create a subset of users who stand
 out, and they reduce the number of RFP users who look the same, making it worse
@@ -286,10 +282,10 @@ that gets improvements as the result of the
 [Tor Uplift Project](https://wiki.mozilla.org/Security/Tor_Uplift), and it will
 surely benefit your privacy in a **major** way.
 
-Still, if you don't like the downsides of resist fingerprinting, you can disable
-it by adding to your overrides:
+If you don't like the downsides of resist fingerprinting, or if you are not
+concerned about fingerprinting, you can disable RFP by adding to your overrides:
 
-```
+```js
 defaultPref("privacy.resistFingerprinting", false);
 ```
 
@@ -299,37 +295,26 @@ to retain at least a minimum amount of fingerprinting protection.
 
 ### [Why is LibreWolf forcing light theme?](#settings-and-librewolfoverridecfg)
 
-This is a privacy to reduce your fingerprint, which is part of RFP. Please red
+This is a privacy measure which is part of RFP. Please read
 [this](#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting) before
-you go on: as stated there, our stance is that you should **never** alter RFP
-behavior in any way if you want to protect your privacy.
+you go on: as stated there, our stance is that if you care about fingerprinting
+protection you should **never** alter RFP behavior in any way.
 
-If you want dark theme, first of all check wether your favourite websites allow
-to se it manually. Another possible solution is represented by using an
+If you still want the dark theme for web content, first check wether your
+favourite websites allow to set it manually. Alternatively, another possible
+solution is represented by using an
 [extension that enforces a dark theme](/docs/addons#other-useful-addons), but be
-careful as it could make you stand out. Alternatively, LibreWolf has a
-preference which allows to stop `privacy.resistFingerprinting` from forcing the
-light time: the preference is intentionally locked and users should be aware
-that enabling it will cause them to increase their fingerprint, so use extra
-caution, and if you can avoid it.
+careful as it could make you stand out.
 
-To bring back dark theme add to your overrides:
+### [What should I do if video conferencing is not working?](#settings-and-librewolfoverridecfg)
 
-```
-lockPref("privacy.override_rfp_for_color_scheme", true);
-```
+While we do not disable WebRTC, we still protect your private IP. This might
+cause breakage on some video conferencing websites, and in that case you should
+add to your overrides:
 
-### [What settings are used to enable video conferencing?](#settings-and-librewolfoverridecfg)
-
-The following two prefs enable WebRTC and are required by basically all video
-conferencing services:
-
-```
-defaultPref("media.peerconnection.enabled", true);
+```js
 defaultPref("media.peerconnection.ice.no_host", false);
 ```
-
-Please be careful as WebRTC could leak your real IP address while using a VPN.
 
 Other video conferencing services also require to
 [enable WebGL](#how-do-i-enable-webgl) and to allow autoplay, which can be set
@@ -342,7 +327,7 @@ OS level: while macOS and Windows users are already covered, some Linux distros
 do not enable it by default. You can then add the following pref to your
 overrides:
 
-```
+```js
 defaultPref("network.dns.disableIPv6", false);
 ```
 
@@ -351,24 +336,13 @@ defaultPref("network.dns.disableIPv6", false);
 To enable extensions auto-update go to Settings > Extensions and Themes, then
 click on the settings icon and tap 'Update Add-ons automatically'. If you do not
 plan to review the code of your extensions before you install updates, please go
-ahead and enable this.
-
-### [How do I enable location aware browsing?](#settings-and-librewolfoverridecfg)
-
-To enable location aware browsing you need the following preferences:
-
-```
-defaultPref("geo.enabled", true);
-defaultPref("permissions.default.geo", 0);
-```
-
-The permission will still be behind a prompt, and handled on a per-site basis.
+ahead and **enable this**.
 
 ### [How do I disable bookmarks opening in a new tab?](#settings-and-librewolfoverridecfg)
 
 Add to your overrides:
 
-```
+```js
 defaultPref("browser.tabs.loadBookmarksInTabs", true);
 ```
 
@@ -392,32 +366,50 @@ Autoplay can be controlled on a per-site basis from your urlbar.
 ### [How do I enable Google Safe Browing?](#settings-and-librewolfoverridecfg)
 
 We disable Safe Browsing as we consider it a censorship concern, and we would
-rather not let Google control another aspect of the internet.
+rather not let Google control another aspect of the internet. With that being
+said, Safe Browsing is still a good security tool and Mozilla's implementations
+is privacy respecting. For this reason less technical users, and those who feel
+like they need the extra security, can and should safely **enable it**.
 
 If you want to re-enable Google Safe Browsing insert the following prefs in your
 overrides:
 
-```
+```js
 defaultPref("browser.safebrowsing.malware.enabled", true);
 defaultPref("browser.safebrowsing.phishing.enabled", true);
 defaultPref("browser.safebrowsing.blockedURIs.enabled", true);
-defaultPref("browser.safebrowsing.provider.google4.gethashURL", "https://safebrowsing.googleapis.com/v4/fullHashes:find?$ct=application/x-protobuf&key=%GOOGLE_SAFEBROWSING_API_KEY%&$httpMethod=POST");
-defaultPref("browser.safebrowsing.provider.google4.updateURL", "https://safebrowsing.googleapis.com/v4/threatListUpdates:fetch?$ct=application/x-protobuf&key=%GOOGLE_SAFEBROWSING_API_KEY%&$httpMethod=POST");
-defaultPref("browser.safebrowsing.provider.google.gethashURL", "https://safebrowsing.google.com/safebrowsing/gethash?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2");
-defaultPref("browser.safebrowsing.provider.google.updateURL", "https://safebrowsing.google.com/safebrowsing/downloads?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2&key=%GOOGLE_SAFEBROWSING_API_KEY%");
+defaultPref(
+  "browser.safebrowsing.provider.google4.gethashURL",
+  "https://safebrowsing.googleapis.com/v4/fullHashes:find?$ct=application/x-protobuf&key=%GOOGLE_SAFEBROWSING_API_KEY%&$httpMethod=POST"
+);
+defaultPref(
+  "browser.safebrowsing.provider.google4.updateURL",
+  "https://safebrowsing.googleapis.com/v4/threatListUpdates:fetch?$ct=application/x-protobuf&key=%GOOGLE_SAFEBROWSING_API_KEY%&$httpMethod=POST"
+);
+defaultPref(
+  "browser.safebrowsing.provider.google.gethashURL",
+  "https://safebrowsing.google.com/safebrowsing/gethash?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2"
+);
+defaultPref(
+  "browser.safebrowsing.provider.google.updateURL",
+  "https://safebrowsing.google.com/safebrowsing/downloads?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2&key=%GOOGLE_SAFEBROWSING_API_KEY%"
+);
 ```
 
 If you also want Safe Browsing to locally check your downloads add:
 
-```
+```js
 defaultPref("browser.safebrowsing.downloads.enabled", true);
 ```
 
+With the following preferences all the checks made by Safe Browsing will be
+performed **locally**.
+
 ### [How do I enable OCSP certificate revocation?](#settings-and-librewolfoverridecfg)
 
-To enable OCSP certificate revocation add to your overrides:
+To enable OCSP certificate revocation without soft-fail add to your overrides:
 
-```
+```js
 defaultPref("security.OCSP.enabled", 1);
 defaultPref("security.OCSP.require", true);
 ```
@@ -427,9 +419,15 @@ defaultPref("security.OCSP.require", true);
 To enable the extension firewall and prevent internet access to the extensions,
 add to your overrides:
 
-```
-defaultPref("extensions.webextensions.base-content-security-policy", "default-src 'none'; script-src 'none'; object-src 'none';");
-defaultPref("extensions.webextensions.base-content-security-policy.v3", "default-src 'none'; script-src 'none'; object-src 'none';");
+```js
+defaultPref(
+  "extensions.webextensions.base-content-security-policy",
+  "default-src 'none'; script-src 'none'; object-src 'none';"
+);
+defaultPref(
+  "extensions.webextensions.base-content-security-policy.v3",
+  "default-src 'none'; script-src 'none'; object-src 'none';"
+);
 ```
 
 <a name="push"></a>
@@ -439,7 +437,7 @@ defaultPref("extensions.webextensions.base-content-security-policy.v3", "default
 To enable push notifications add the following prefs - which include the push
 server and service workers, required for push notifications - to your overrides:
 
-```
+```js
 defaultPref("dom.push.enabled", true);
 defaultPref("dom.push.serverURL", "wss://push.services.mozilla.com/");
 defaultPref("dom.serviceWorkers.enabled", true);
@@ -451,9 +449,9 @@ defaultPref("dom.serviceWorkers.enabled", true);
 
 In LibreWolf we decided to keep Tracking Protection, as it plays nicely with uBO
 and it can block some extra scripts. Additionaly, when set to strict it includes
-dFPI, shims that reduce breakage, better cookie cleaning and stricter referrer
-policies. For this reason, we always suggest the default **strict** mode, and
-when using it please
+dFPI, SmartBlock, enhanced cookie cleaning and stricter referrer policies. For
+this reason, we always suggest the default **strict** mode, and when using it
+please
 [do not enable FPI](/docs/faq#why-isnt-first-party-isolate-enabled-by-default),
 as it interferes with the more recent dFPI.
 
@@ -465,7 +463,7 @@ work.
 
 If you want, you can block these outgoing connections by using:
 
-```
+```js
 defaultPref("browser.safebrowsing.provider.mozilla.updateURL", "");
 defaultPref("browser.safebrowsing.provider.mozilla.gethashURL", "");
 ```
@@ -510,6 +508,21 @@ the same browsing sessions.
 
 Yes, and you won't need any extension for that. HTTP can still be
 [allowed for certain sites](https://support.mozilla.org/en-US/kb/https-only-prefs#w_turn-off-https-only-mode-for-certain-sites).
+
+### [How do I set a default download directory?](#settings-and-librewolfoverridecfg)
+
+As a security measure, LibreWolf asks for user interaction after each download.
+You can change that in Settings > General > Files and Applications > Downloads >
+Save files to..
+
+### [How do I stop LibreWolf from resuming after a crash?](#settings-and-librewolfoverridecfg)
+
+While that feature is meant to provide a way to keep your tabs after an
+unexpected close event, you can disable it by adding to your overrides:
+
+```js
+defaultPref("browser.sessionstore.resume_from_crash", false);
+```
 
 ## Linux specific questions:
 
@@ -574,9 +587,8 @@ sudo ln -s /usr/lib/mozilla/native-messaging-hosts /usr/lib/librewolf/native-mes
 
 ### [How do I install LibreWolf on macOS?](#macos-specific-questons)
 
-As explained in the
-[install section](https://librewolf-community.gitlab.io/install/) you can either
-build from source following the
+As explained in the [install section](https://librewolf.net/installation/macos/)
+you can either build from source following the
 [build guide](https://gitlab.com/librewolf-community/browser/macos/-/blob/master/build_guide.md),
 install using a disk image from the
 [releases](https://gitlab.com/librewolf-community/browser/macos/-/releases) or
