@@ -26,7 +26,12 @@ export default function SelectOs() {
                   />
                 </div>
               )}
-              <h3>{repo.name}</h3>
+              <h3 style={{ ...(repo.subtitle ? { fontSize: "1.4em" } : {}) }}>
+                {repo.name}
+              </h3>
+              {repo.subtitle && (
+                <span className="subtitle text-gray">{repo.subtitle}</span>
+              )}
             </a>
           </Link>
         ))}
@@ -70,6 +75,11 @@ export default function SelectOs() {
         .card {
           width: 200px;
           cursor: pointer;
+        }
+
+        .subtitle {
+          display: block;
+          margin-top: 10px;
         }
       `}</style>
     </>

@@ -1,5 +1,6 @@
 const repositories: {
   name: string;
+  subtitle?: string;
   slug: string;
   logo: string;
   logoDark?: string;
@@ -28,6 +29,7 @@ const repositories: {
   },
   {
     name: "Debian based",
+    subtitle: "(Debian, Ubuntu, Mint, etc.)",
     slug: "debian",
     logo: "/icons/debian.svg"
   },

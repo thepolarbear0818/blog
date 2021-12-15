@@ -1,5 +1,5 @@
 ---
-title: Debian Installation
+title: Installation on Debian based systems
 ---
 
 import InstallationHeader from "components/installationHeader";
@@ -8,28 +8,57 @@ import Callout from "nextra-theme-docs-patch-maltejur/callout";
 
 <InstallationHeader />
 
-There is a repository available for Debian Unstable. Librewolf can either be
-installed using the .deb file or by adding the repo from the
-[Open Build Service](https://software.opensuse.org//download.html?project=home%3Abgstack15%3Aaftermozilla&package=librewolf).
+## Debian 11, Ubuntu 20 and Mint 20
 
-To add the repo, run:
+For Debian 11, Ubuntu 20 and Mint 20, we now have a Debian repository with which
+you can easily install and update LibreWolf. To add it to your system, you can
+use the following commands:
+
+```bash
+echo "deb [arch=amd64] http://deb.librewolf.net $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+sudo wget http://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+sudo apt update
+sudo apt install librewolf -y
+```
+
+Alternatively, you can download the `.deb` files of these builds directly from
+[fresh.librewolf.io](https://fresh.librewolf.io/).
+
+## Debian Unstable
+
+There also is a independent repository available for Debian Unstable. You can
+add it to your system with the following commands:
 
 ```bash
 echo 'deb http://download.opensuse.org/repositories/home:/bgstack15:/aftermozilla/Debian_Unstable/ /' | sudo tee /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list
-
 curl -fsSL https://download.opensuse.org/repositories/home:bgstack15:aftermozilla/Debian_Unstable/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg > /dev/null
-
 sudo apt update
-
-sudo apt install librewolf
+sudo apt install librewolf -y
 ```
 
-<Callout emoji="">
-  **Note** This is for Debian Unstable only - do not try to install this package
-  on any other branch of Debian or Ubuntu/Mint, or you will have errors about
-  being unable to resolve the dependencies. Instead, try the [instructions for
-  other linux distributions](/installation/linux).
-</Callout>
+You can also download the `.deb` files of these builds directly from the
+[Open Build Service](https://download.opensuse.org/repositories/home:/bgstack15:/aftermozilla/Debian_Unstable/amd64/).
 
-'[Fresh.librewolf.io](https://fresh.librewolf.io/)' has versions for: **Debian
-11**, **Mint 20.2**, and **Ubuntu 20** available for download.
+## Other Debian based distributions
+
+You can try to use the Ubuntu 20 build from the deb.librewolf.net repository by
+running the following commands.
+
+```bash
+echo "deb [arch=amd64] http://deb.librewolf.net focal main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+sudo wget http://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+sudo apt update
+sudo apt install librewolf -y
+```
+
+This may or may not work, depending on how close your system is to Ubuntu 20. If
+it doesn't work, you can always use
+[AppImage or Flatpack version of LibreWolf](/installation/linux/).
+
+<br />
+<br />
+<Callout emoji="">
+  To remove all of the LibreWolf repositories from your system, run: <br />
+  `sudo rm -f /etc/apt/sources.list.d/librewolf.list /etc/apt/trusted.gpg.d/librewolf.gpg
+  /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg`
+</Callout>
