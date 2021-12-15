@@ -11,13 +11,16 @@ import Callout from "nextra-theme-docs-patch-maltejur/callout";
 ## Debian 11, Ubuntu 20 and Mint 20
 
 For Debian 11, Ubuntu 20 and Mint 20, we now have a Debian repository with which
-you can easily install and update LibreWolf. To add it to your system, you can
-use the following commands:
+you can easily install and update LibreWolf. To add it to your system and
+install LibreWolf, run the following commands one by one:
 
 ```bash
 echo "deb [arch=amd64] http://deb.librewolf.net $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+
 sudo wget http://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+
 sudo apt update
+
 sudo apt install librewolf -y
 ```
 
@@ -27,12 +30,15 @@ Alternatively, you can download the `.deb` files of these builds directly from
 ## Debian Unstable
 
 There also is a independent repository available for Debian Unstable. You can
-add it to your system with the following commands:
+add it to your system and install LibreWolf by the following commands:
 
 ```bash
 echo 'deb http://download.opensuse.org/repositories/home:/bgstack15:/aftermozilla/Debian_Unstable/ /' | sudo tee /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list
+
 curl -fsSL https://download.opensuse.org/repositories/home:bgstack15:aftermozilla/Debian_Unstable/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg > /dev/null
+
 sudo apt update
+
 sudo apt install librewolf -y
 ```
 
@@ -41,18 +47,21 @@ You can also download the `.deb` files of these builds directly from the
 
 ## Other Debian based distributions
 
-You can try to use the Ubuntu 20 build from the deb.librewolf.net repository by
-running the following commands.
+You can try installing the Ubuntu 20 build from the deb.librewolf.net repository
+by running the following commands.
 
 ```bash
 echo "deb [arch=amd64] http://deb.librewolf.net focal main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+
 sudo wget http://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+
 sudo apt update
+
 sudo apt install librewolf -y
 ```
 
-This may or may not work, depending on how close your system is to Ubuntu 20. If
-it doesn't work, you can always use
+This may or may not work, depending on how close your distribution is to
+Ubuntu 20. If it doesn't work, you can always use
 [AppImage or Flatpack version of LibreWolf](/installation/linux/).
 
 <br />
