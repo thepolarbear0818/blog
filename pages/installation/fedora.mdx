@@ -15,8 +15,17 @@ export const getStaticProps = getStaticDownloadButtonProps([
 
 <InstallationHeader />
 
-The prefered way to install on Fedora right now are the releases built on the
-_Fedora COPR_ by bgstack. The release page for that is
+We have a fedora repository available:
+
+```
+sudo rpm --import "https://keys.openpgp.org/vks/v1/by-fingerprint/034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3"
+sudo dnf config-manager --add-repo "https://rpm.librewolf.net"
+sudo dnf update
+sudo dnf install librewolf
+```
+
+Another good installation source on Fedora right now are the releases built on
+the _Fedora COPR_ by bgstack. The release page for that is
 [here](https://copr.fedorainfracloud.org/coprs/bgstack15/AfterMozilla/). Here is
 how to enable copr and install LibreWolf with `dnf`:
 
