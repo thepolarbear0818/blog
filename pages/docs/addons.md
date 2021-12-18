@@ -4,12 +4,9 @@
 
 Once you learn
 [how to import filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web),
-we suggest using:
-
-- [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
-  to remove tracking elements from URLs.
-- [NoCoin](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt)
-  to block browser-based crypto mining.
+we suggest using
+[Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
+to remove tracking elements from URLs.
 
 We also suggest enabling the following lists built into uBlock Origin:
 
