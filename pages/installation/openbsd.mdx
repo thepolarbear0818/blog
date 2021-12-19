@@ -1,0 +1,86 @@
+---
+title: OpenBSD Port Installation
+---
+
+import InstallationHeader from "components/installationHeader";
+
+<InstallationHeader />
+
+## 1. First, download and install the signing key:
+
+```
+$ curl -O https://pkg.weird.cafe/pub/OpenBSD/weird-pkg.pub
+$ doas mv weird-pkg.pub /etc/signify/
+```
+
+You can also verify content of the key, it should contain these lines only:
+
+```
+untrusted comment: signify public key
+RWTsyRgJSV/4yBkunNQ7XVQ3p8i8PDHZgjGR35MBzCdza4wMONywiJyP
+```
+
+## 2. Install LibreWolf:
+
+### Temporary set `PKG_PATH`
+
+The easiest way to install the package is to temporary change the `PKG_PATH`
+variable to point to the build server:
+
+```
+$ PKG_PATH="https://pkg.weird.cafe/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/" pkg_add librewolf
+```
+
+To update the package:
+
+```
+$ PKG_PATH="https://pkg.weird.cafe/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/" pkg_add -u librewolf
+```
+
+The downside of this approach is `pkg_add -u` won't update LibreWolf
+automatically, and the command will warn about not being able to find the
+package.
+
+### Persistently set `PKG_PATH`
+
+Alternatively, you can set the `PKG_PATH` variable persistently. If you already
+use it, then just append this URL to the path (using the `:` separator):
+
+```
+https://pkg.weird.cafe/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/
+```
+
+If you use `installurl(5)` (the defaults), export `PKG_PATH` from your
+`.xsession` or `.kshrc` file:
+
+```
+export PKG_PATH="$(cat /etc/installurl)/$(uname -r)/packages-stable/$(uname -p)/:$(cat /etc/installurl)/$(uname -r)/packages/$(uname -p)/:https://pkg.weird.cafe/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/"
+```
+
+Here's an example:
+
+```
+$ cat ~/.xsession
+export PKG_PATH="$(cat /etc/installurl)/$(uname -r)/packages-stable/$(uname -p)/:$(cat /etc/installurl)/$(uname -r)/packages/
+$(uname -p)/:https://pkg.weird.cafe/pub/OpenBSD/$(uname -r)/packages/$(uname -p)/"
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
+
+cwm
+```
+
+This way `pkg_add librewolf` and `pkg_add -u` will work as expected and will
+install and update LibreWolf package automatically.
+
+## 3. Read LibreWolf's pkg-readme:
+
+```
+$ less /usr/local/share/doc/pkg-readmes/librewolf
+```
+
+You'll at least want to enable hardware acceleration and WebRender.
+
+---
+
+The sources and contact info of the LibreWolf OpenBSD Port can be found at
+https://pkg.weird.cafe.

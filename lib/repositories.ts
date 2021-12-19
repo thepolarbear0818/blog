@@ -65,6 +65,11 @@ const repositories: {
       name: "LibreWolf macOS Repository",
       url: "https://gitlab.com/librewolf-community/browser/macos"
     }
+  },
+  {
+    name: "OpenBSD",
+    slug: "openbsd",
+    logo: "/icons/openbsd.png"
   }
 ];
 

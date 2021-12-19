@@ -3,8 +3,10 @@
   "arch": "Arch Linux",
   "debian": "Debian based",
   "gentoo": "Gentoo",
+  "fedora": "Fedora",
   "linux": "Other Linux",
   "macos": "macOS",
+  "openbsd": "OpenBSD",
   "index": {
     "type": "nav",
     "hidden": true
