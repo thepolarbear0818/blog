@@ -64,8 +64,8 @@ our [Gitter](https://gitter.im/librewolf-community/librewolf) /
 - Disable search suggestions and ads in the urlbar.
 - Remove all the distracting and sponsored content from the home page.
 - Remove the Pocket extension at compile time.
-- Remove Firefox accounts and Firefox Sync at compile time.
 - Remove Mozilla VPN ads.
+- Disable Firefox accounts and Firefox Sync through policies.
 - Disable extension recommendations.
 
 ## Others
