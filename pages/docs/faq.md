@@ -63,6 +63,7 @@ be relevant:
 
 - [Can't open links with Librewolf when using Wayland](#cant-open-links-with-librewolf-when-using-wayland)
 - [How do I get native messaging to work?](#how-do-i-get-native-messaging-to-work)
+- [I get the APT error "Certificate verification failed"](#i-get-the-apt-error-certificate-verification-failed)
 
 ## macOS specific questons:
 
@@ -581,6 +582,25 @@ create two symlinks by running these commands:
 ln -s ~/.mozilla/native-messaging-hosts ~/.librewolf/native-messaging-hosts
 
 sudo ln -s /usr/lib/mozilla/native-messaging-hosts /usr/lib/librewolf/native-messaging-hosts
+```
+
+### [I get the APT error "Certificate verification failed"](#linux-specific-questions)
+
+If you get an error message that looks something like this
+
+```
+Err:5 https://deb.librewolf.net uma Release
+  Certificate verification failed: The certificate is NOT trusted. The certificate chain uses expired certificate.  Could not handshake: Error in the certificate verification. [IP: 116.203.248.82 443]
+Reading package lists... Done
+E: The repository 'http://deb.librewolf.net uma Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+
+You can try to fix it by running
+
+```
+sudo apt install ca-certificates
 ```
 
 ## macOS specific questons:
