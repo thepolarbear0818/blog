@@ -435,14 +435,11 @@ defaultPref(
 
 ### [How do I enable push notifications?](#settings-and-librewolfoverridecfg)
 
-To enable push notifications add the following prefs - which include the push
-server and service workers, required for push notifications - to your overrides:
+Starting with v96, push notifications - and service workers, which are necessary
+for push notifications to work - are no longer disabled by default in LibreWolf.
 
-```js
-defaultPref("dom.push.enabled", true);
-defaultPref("dom.push.serverURL", "wss://push.services.mozilla.com/");
-defaultPref("dom.serviceWorkers.enabled", true);
-```
+Allow them by adding a per-site exception,
+[just like with cookies](#how-do-i-stay-logged-into-specific-websites).
 
 <a name="enhanced-tracking-protection"></a> <a name="turn-off-etp-desktop"></a>
 
