@@ -9,7 +9,8 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint ; prettier . -c",
-    "lint:fix": "next lint --fix && prettier . -w"
+    "lint:fix": "next lint --fix && prettier . -w",
+    "prepare": "husky install"
   },
   "dependencies": {
     "compare-versions": "^4.1.2",
@@ -30,6 +31,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4",
     "prettier": "^2.5.0",
     "typescript": "<4.5.0"
   }
