@@ -63,6 +63,7 @@ be relevant:
 
 - [Can't open links with Librewolf when using Wayland](#cant-open-links-with-librewolf-when-using-wayland)
 - [How do I get native messaging to work?](#how-do-i-get-native-messaging-to-work)
+- [How can I get Tridactyl's native messaging to work when I install Librewolf with Flatpak?](#how-can-i-get-tridactyls-native-messaging-to-work-when-i-install-librewolf-with-flatpak)
 - [I get the APT error "Certificate verification failed"](#i-get-the-apt-error-certificate-verification-failed)
 
 ## macOS specific questons:
@@ -579,6 +580,28 @@ create two symlinks by running these commands:
 ln -s ~/.mozilla/native-messaging-hosts ~/.librewolf/native-messaging-hosts
 
 sudo ln -s /usr/lib/mozilla/native-messaging-hosts /usr/lib/librewolf/native-messaging-hosts
+```
+
+### [How can I get Tridactyl's native messaging to work when I install Librewolf with Flatpak?](#linux-specific-questions)
+
+To get [Tridactyl's](https://github.com/tridactyl/tridactyl) native feature to
+work Tridactyl's install script needs to look into Librewolf's app data
+directory and be allowed to read the user's RC file.
+
+Execute the following:
+
+```sh
+curl \
+	https://gitlab.com/librewolf-community/browser/common/-/raw/master/helpers/tridactyl-install.sh \
+	> /tmp/tridactyl-install.sh
+sed -i \
+	's/\.librewolf/\.var\/app\/io\.gitlab\.librewolf-community\/\.librewolf/g' \
+	/tmp/tridactyl-install.sh
+chmod +x /tmp/tridactyl-install.sh
+/tmp/tridactyl-install.sh
+
+# If installed onto the system, rather than the user, then remove `--user`
+flatpak --user override io.gitlab.librewolf-community --filesystem="${XDG_DATA_HOME:-~/.local/share}"/tridactyl
 ```
 
 ### [I get the APT error "Certificate verification failed"](#linux-specific-questions)
