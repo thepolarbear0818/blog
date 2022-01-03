@@ -38,6 +38,7 @@ aws:
         '$CI_PROJECT_NAMESPACE == "librewolf-community" && $CI_COMMIT_BRANCH ==
         $CI_DEFAULT_BRANCH'
   script:
+    - aws s3 rm s3://librewolf --recursive
     - aws s3 sync out s3://librewolf
     - aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_ID}
       --paths "/*"
