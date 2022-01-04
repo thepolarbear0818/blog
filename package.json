@@ -10,6 +10,8 @@
     "start": "next start",
     "lint": "next lint ; prettier . -c",
     "lint:fix": "next lint --fix && prettier . -w",
+    "clean": "rm -rf .next out",
+    "very-clean": "rm -rf .next .husky/_ out node_modules",
     "prepare": "husky install"
   },
   "dependencies": {
