@@ -4,10 +4,14 @@
     "type": "nav",
     "hidden": true
   },
+  "installation": {
+    "type": "nav"
+  },
   "docs": {
     "type": "nav"
   },
-  "installation": {
+  "community-art": {
+    "title": "Community Art",
     "type": "nav"
   },
   "license-disclaimers": {

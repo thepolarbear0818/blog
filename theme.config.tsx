@@ -102,13 +102,18 @@ const themeConfig = {
       href: "/#what-is-librewolf"
     },
     {
+      title: "Installation",
+      route: "/installation"
+    },
+    {
       title: "Docs",
       route: "/docs",
       href: "/docs/faq"
     },
     {
-      title: "Installation",
-      route: "/installation"
+      title: "Community Art",
+      route: "/community-art",
+      href: "/community-art"
     }
   ]
 };
