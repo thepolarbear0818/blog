@@ -2,8 +2,8 @@
 
 This page lists some of the most important features and default settings present
 in LibreWolf. If you have any question check out our [FAQ](/docs/faq), or join
-our [Gitter](https://gitter.im/librewolf-community/librewolf) /
-[Matrix](https://matrix.to/#/#librewolf:matrix.org) room.
+our [Gitter](https://gitter.im/librewolf-community) /
+[Matrix](https://matrix.to/#/#librewolf-community:matrix.org) room.
 
 ## Privacy
 
