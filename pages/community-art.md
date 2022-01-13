@@ -4,6 +4,9 @@ title: Community Art
 
 # Community Art
 
+Most of this art was originally posted to `r/librewolf`. It's probabbly the best
+place to post new stuff, and for us to pick it up.
+
 ## Librewoof
 
 <a href="https://www.reddit.com/r/LibreWolf/comments/qk5jiv/i_like_cute_icons_so_ima_leave_this_here/">
