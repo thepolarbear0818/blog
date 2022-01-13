@@ -10,7 +10,7 @@ const themeConfig = {
           <Gitlab color="currentColor" size="1.4em" />
         </a>
       </Link>
-      <Link href="https://matrix.to/#/#librewolf-community:matrix.org" passHref>
+      <Link href="https://matrix.to/#/#librewolf:matrix.org" passHref>
         <a
           className="text-current p-2 cursor-pointer mobile-hidden"
           aria-label="Matrix"

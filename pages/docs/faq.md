@@ -3,7 +3,7 @@
 This FAQ documents version 4.0 of the settings. Please always upgrade to the
 latest version of the browser. If your question is not answered here, you can
 try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
-[Matrix](https://app.element.io/#/room/#librewolf:matrix.org) room, or on
+[Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
 [r/LibreWolf](https://www.reddit.com/r/LibreWolf/) and
 [c/LibreWolf](https://lemmy.ml/c/librewolf).
 
