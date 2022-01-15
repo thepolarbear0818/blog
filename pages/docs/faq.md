@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This FAQ documents version 4.0 of the settings. Please always upgrade to the
+This FAQ documents version 5.1 of the settings. Please always upgrade to the
 latest version of the browser. If your question is not answered here, you can
 try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
@@ -28,11 +28,9 @@ be relevant:
 - [Where do I find my _librewolf.overrides.cfg_?](#where-do-i-find-my-librewolfoverridescfg)
 - The ~/.librewolf directory does not exist, so
   [where should I put my overrides?](#the-librewolf-directory-does-not-exist-so-where-should-i-put-my-overrides)
-- [Why do I see "Your browser is being managed by your organization" in the settings?](#why-do-i-see-your-browser-is-being-managed-by-your-organization-in-the-settings)
 - [What are some tips on a more hardened setup?](#what-are-some-tips-on-a-more-hardened-setup)
 - My cookies are gone.
   [How do I stay logged into specific websites?](#how-do-i-stay-logged-into-specific-websites)
-- [How do I keep my first-party cookies?](#how-do-i-keep-my-first-party-cookies)
 - [How do I enable DRM?](#how-do-i-enable-drm)
 - [How do I enable WebGL?](#how-do-i-enable-webgl)
 - [Why am I seeing striped images?](#why-am-i-seeing-striped-images)
@@ -41,8 +39,7 @@ be relevant:
 - [Why is LibreWolf forcing light theme?](#why-is-librewolf-forcing-light-theme)
 - [What should I do if video conferencing is not working?](#what-should-i-do-if-video-conferencing-is-not-working)
 - [How do I enable IPv6?](#how-do-i-enable-ipv6)
-- [How do I enable extensions auto-updating?](#how-do-i-enable-extensions-auto-updating)
-- [How do I disable bookmarks opening in a new tab?](#how-do-i-disable-bookmarks-opening-in-a-new-tab)
+- [How do I disable extension auto-updates?](#how-do-i-disable-extension-auto-updates)
 - [How do I enable search suggestions?](#how-do-i-enable-search-suggestions)
 - [How do I add a search engine?](#how-do-i-add-a-search-engine)
 - [How do I allow autoplay of media?](#how-do-i-allow-autoplay-of-media)
@@ -116,7 +113,9 @@ used by
 [Tracking Protection](#how-do-i-disable-mozilla-tracking-protection) and
 [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), which we
 considered more important than disabling all outgoing connections, especially
-ones that are harmless.
+ones that are harmless. LibreWolf also makes an occasional connection to check
+wether you have received push notifications from websites you have subscribed
+to.
 
 With that being said, LibreWolf is still commited to removing all privacy
 invading connections, and to keep all connections to the bare minimum required
@@ -159,31 +158,16 @@ On Windows, in your profile directory:
 You can simply create that directory by going to your home/profile directory and
 entering `mkdir .librewolf`.
 
-### [Why do I see "Your browser is being managed by your organization" in the settings?](#settings-and-librewolfoverridecfg)
-
-That message is displayed when a `policies.json` file is used to enforce some
-settings inside the browser. We specifically
-[use it](https://gitlab.com/librewolf-community/settings/-/blob/master/distribution/policies.json)
-to include uBlockOrigin and the privacy respecting search engines, but also to
-disable some features like telemetry, studies and pocket.
-
-In some releases this message is patched, and you should not see it anymore.
-
 ### [What are some tips on a more hardened setup?](#settings-and-librewolfoverridecfg)
 
 To improve your privacy we suggest enabling letterboxing, in order to prevent
 your real window size from being fingerprinted. This can be especially useful if
 you resize your window.
 
+You can do this in the LibreWolf settings, or by adding to your overrides:
+
 ```js
 defaultPref("privacy.resistFingerprinting.letterboxing", true);
-```
-
-You can also disable asm.js to enhance your security, but please keep in mind
-that having it disabled could increase your fingerprint and impact performance.
-
-```js
-defaultPref("javascript.options.asmjs", false);
 ```
 
 <a name="storage-permissions"></a>
@@ -200,26 +184,6 @@ changes.
 Please notice that these exceptions are bypassed by the settings at Privacy &
 Security > History > Clear history when LibreWolf closes > Settings.
 
-### [How do I keep my first-party cookies?](#settings-and-librewolfoverridecfg)
-
-This setup was designed for users that want to keep **all** cookies across
-multiple browsing sessions, in order to give them a somewhat decent amount of
-protection.
-
-While with the following prefs you are blocking third party cookies and
-isolating them with FPI, using this configuration will still leave you exposed
-to first party tracking across multiple sessions, and you should be aware that
-in general cookies and website data should be cleared with frequency. For this
-reason we suggest to use the default setup, and if you really want to use this
-one consider **clearing your cookies and website data manually with frequency**.
-
-```js
-pref("browser.contentblocking.category", "custom"); // strict would force dFPI
-defaultPref("privacy.firstparty.isolate", true); // enable FPI
-defaultPref("network.cookie.cookieBehavior", 1); // block 3rd party cookies
-defaultPref("network.cookie.lifetimePolicy", 0); // keep cookies untill they expire
-```
-
 <a name="drm-content"></a>
 
 ### [How do I enable DRM?](#settings-and-librewolfoverridecfg)
@@ -234,7 +198,8 @@ when a website is trying to use DRM.
 
 ### [How do I enable WebGL?](#settings-and-librewolfoverridecfg)
 
-Put this in your _librewolf.overrides.cfg_:
+You can do this in the LibreWolf setting, or alternatively add this in your
+_librewolf.overrides.cfg_:
 
 ```js
 defaultPref("webgl.disabled", false);
@@ -284,7 +249,8 @@ that gets improvements as the result of the
 surely benefit your privacy in a **major** way.
 
 If you don't like the downsides of resist fingerprinting, or if you are not
-concerned about fingerprinting, you can disable RFP by adding to your overrides:
+concerned about fingerprinting, you can disable RFP in the LibreWolf settings,
+or by adding to your overrides:
 
 ```js
 defaultPref("privacy.resistFingerprinting", false);
@@ -325,27 +291,23 @@ on a per-site basis from the URL bar.
 
 Before enabling IPv6 make sure you are using **IPv6 privacy extension** at the
 OS level: while macOS and Windows users are already covered, some Linux distros
-do not enable it by default. You can then add the following pref to your
-overrides:
+do not enable it by default.
+
+You can enable IPv6 in the LibreWolf settings, or by adding the following pref
+to your overrides:
 
 ```js
 defaultPref("network.dns.disableIPv6", false);
 ```
 
-### [How do I enable extensions auto-updating?](#settings-and-librewolfoverridecfg)
+### [How do I disable extension auto-updates?](#settings-and-librewolfoverridecfg)
 
-To enable extensions auto-update go to Settings > Extensions and Themes, then
-click on the settings icon and tap 'Update Add-ons automatically'. If you do not
-plan to review the code of your extensions before you install updates, please go
-ahead and **enable this**.
+To disable extension auto-updates you can use the LibreWolf settings, or you can
+go to Settings > Extensions and Themes, then click on the settings icon and tap
+'Update Add-ons automatically'.
 
-### [How do I disable bookmarks opening in a new tab?](#settings-and-librewolfoverridecfg)
-
-Add to your overrides:
-
-```js
-defaultPref("browser.tabs.loadBookmarksInTabs", true);
-```
+If you do not plan to review the code of your extensions before you install
+updates, please **do not** disable this.
 
 ### [How do I enable search suggestions?](#settings-and-librewolfoverridecfg)
 
@@ -372,8 +334,8 @@ said, Safe Browsing is still a good security tool and Mozilla's implementations
 is privacy respecting. For this reason less technical users, and those who feel
 like they need the extra security, can and should safely **enable it**.
 
-If you want to re-enable Google Safe Browsing insert the following prefs in your
-overrides:
+If you want to re-enable Google Safe Browsing you can use LibreWolf settings, or
+you can insert the following prefs in your overrides:
 
 ```js
 defaultPref("browser.safebrowsing.malware.enabled", true);
@@ -397,7 +359,8 @@ defaultPref(
 );
 ```
 
-If you also want Safe Browsing to locally check your downloads add:
+If you also want Safe Browsing to locally check your downloads use the same UI,
+or add:
 
 ```js
 defaultPref("browser.safebrowsing.downloads.enabled", true);
@@ -435,10 +398,7 @@ defaultPref(
 
 ### [How do I enable push notifications?](#settings-and-librewolfoverridecfg)
 
-Starting with v96, push notifications - and service workers, which are necessary
-for push notifications to work - are no longer disabled by default in LibreWolf.
-
-Allow them by adding a per-site exception,
+Push notifications require to set a per-site exception,
 [just like with cookies](#how-do-i-stay-logged-into-specific-websites).
 
 <a name="enhanced-tracking-protection"></a> <a name="turn-off-etp-desktop"></a>
@@ -473,11 +433,8 @@ scripts.
 
 ### [How do I change language in the browser?](#settings-and-librewolfoverridecfg)
 
-At the moment LibreWolf spoofs everything as en-US in order to reduce every
-possible leaking point that fingerprinting techniques could use, regardless of
-the user's locale. If you want to learn more read
-[this issue](https://gitlab.com/librewolf-community/browser/windows/-/issues/64),
-which also contains a solution for those who want to change language.
+You can normally apply language packs from the settings. To protect your
+privacy, LibreWolf will make you appear to websites as a en-US user.
 
 <a name="lockwise-alerts"></a> <a name="primary-password-stored-logins"></a>
 
@@ -495,10 +452,9 @@ FPI is not enabled by default as we use dFPI, and the two do not work well
 togheter. dFPI is a newer implementation and it causes less breakage, plus it is
 included by default when using Tracking Protection in strict mode.
 
-Please also notice that dFPI makes containers and
-[containers extensions](/docs/addons#container-addons) redudant, unless you want
-to protect your privacy when visiting the same website multiple times, during
-the same browsing sessions.
+Please also notice that dFPI makes containers and containers extensions
+redudant, unless you want to protect your privacy when visiting the same website
+multiple times, during the same browsing sessions.
 
 <a name="https-only-prefs"></a>
 

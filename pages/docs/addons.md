@@ -5,10 +5,8 @@
 Once you learn
 [how to import filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web),
 we suggest using
-[Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
-to remove tracking elements from URLs (to get it, use
-[this url](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
-to import in your 'Filter lists' tab).
+[Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+to remove tracking elements from URLs.
 
 We also suggest enabling the following lists built into uBlock Origin:
 

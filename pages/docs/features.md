@@ -36,8 +36,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Disable browsing, search and form history.
 - Disable form autofill.
 - Disable link prefetching and speculative connections.
-- Disable
-  [service workers](https://bugzilla.mozilla.org/show_bug.cgi?id=1320796#c1).
+- Isolate service workers.
 - Disable disk cache and clear temporary files on close.
 - Disable OCSP, and instead use
   [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), as it is a
@@ -54,7 +53,6 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Disable scripting in the built in pdf reader.
 - Protect against
   [IDN homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack).
-- Disable automatic installation of extension updates, to allow code review.
 - Implement optional extension firewall, which can be enabled manually.
 
 ## Annoyances
