@@ -8,11 +8,17 @@ import Callout from "nextra-theme-docs-patch-maltejur/callout";
 
 <InstallationHeader />
 
-## Debian 11, Ubuntu 20 and Mint 20
+## Debian, Ubuntu and Mint
 
-For Debian 11, Ubuntu 20 and Mint 20, we now have a Debian repository with which
-you can easily install and update LibreWolf. To add it to your system and
-install LibreWolf, run the following commands one by one:
+<Callout emoji="">
+  **Attention.** This only works if you use Debian 11, Ubuntu 20/21 or Mint
+  20.2/20.3. If you don't use one of these distros, see [Other Debian based
+  distributions](#other-debian-based-distributions) down below.
+</Callout>
+
+We have a Debian repository with which you can easily install and update
+LibreWolf. To add it to your system and install LibreWolf, run the following
+commands one by one:
 
 ```bash
 echo "deb [arch=amd64] http://deb.librewolf.net $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
@@ -62,10 +68,14 @@ This may or may not work, depending on how close your distribution is to
 Ubuntu 20. If it doesn't work, you can always use
 [AppImage or Flatpack version of LibreWolf](/installation/linux/).
 
-<br />
-<br />
-<Callout emoji="">
-  To remove all of the LibreWolf repositories from your system, run: <br />
-  `sudo rm -f /etc/apt/sources.list.d/librewolf.list /etc/apt/trusted.gpg.d/librewolf.gpg
-  /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg`
-</Callout>
+## Removing the repositories from your system
+
+To remove all of the LibreWolf repositories from your system, run:
+
+```bash
+sudo rm -f \
+    /etc/apt/sources.list.d/librewolf.list \
+    /etc/apt/trusted.gpg.d/librewolf.gpg \
+    /etc/apt/sources.list.d/home:bgstack15:aftermozilla.list \
+    /etc/apt/trusted.gpg.d/home_bgstack15_aftermozilla.gpg
+```
