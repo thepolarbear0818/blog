@@ -1,7 +1,11 @@
 {
   "installation": {},
+  "features": {},
   "faq": {
     "title": "FAQ"
+  },
+  "settings": {
+    "title": "Settings and Overrides"
   },
   "support": {},
   "addons": {
@@ -9,5 +13,8 @@
   },
   "security": {
     "title": "Report a Security Issue"
+  },
+  "testing": {
+    "title": "Browser Tests"
   }
 }
