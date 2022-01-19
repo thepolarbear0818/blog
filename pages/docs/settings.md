@@ -111,10 +111,16 @@ If you enable WebGL, please consider using an extension like
 [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/)
 to retain at least a minimum amount of fingerprinting protection.
 
-### Disable bookmarks opening in a new tab
+### Disable `media.peerconnection.ice.no_host`
+
+This setting was originally intended to protect your private IP address, but it
+became redundant and can be safely disabled unless you're on Windows 7 or 8. You
+may need to disable it to get some
+[video conferencing](/docs/faq/#what-should-i-do-if-video-conferencing-is-not-working)
+websites to work.
 
 ```js
-defaultPref("browser.tabs.loadBookmarksInTabs", true);
+defaultPref("media.peerconnection.ice.no_host", false);
 ```
 
 ### Stop LibreWolf from resuming after a crash

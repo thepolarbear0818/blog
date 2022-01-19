@@ -46,9 +46,8 @@ useful only for certain users, and they are **not** strictly necessary.
   allows to manually handle refereres' behavior.
 - [Canvas Blocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/):
   protects against some fingerprinting techniques. Suggested exclusively to
-  users that
-  [disable RFP](/docs/faq/#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting)
-  or [enable WebGL](/docs/faq/#how-do-i-enable-webgl).
+  users that [disable RFP](/docs/settings/#disable-rfp-resist-fingerprinting) or
+  [enable WebGL](/docs/settings/#enable-webgl).
 
 ### Other useful addons
 
