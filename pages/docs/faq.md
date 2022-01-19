@@ -99,7 +99,7 @@ Yes, but they aren't in any way privacy invading and they were carefully
 evaluated. Specifically they are needed to fetch and update the blocking lists
 used by
 [uBO](https://github.com/gorhill/uBlock/wiki/Can-you-trust-uBlock-Origin%3F),
-[Tracking Protection](#how-do-i-disable-mozilla-tracking-protection) and
+[Tracking Protection](#what-is-mozilla-tracking-protection) and
 [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), which we
 considered more important than disabling all outgoing connections, especially
 ones that are harmless. LibreWolf also makes an occasional connection to check
