@@ -428,3 +428,12 @@ gains.
 
 [Here](https://gitlab.com/librewolf-community/browser/macos/-/issues/19#note_597640488)
 you can find a proposed fix, and the relative discussion.
+
+## General questions
+
+### Why don't you accept donations?
+
+We don't want to deal with the administration required to properly handle
+donations. If we don't need funding, we won't risk becoming dependent on it. And
+also: no donations means no expectations. This means that people working on
+LibreWolf are free to move on to other projects whenever they want.
