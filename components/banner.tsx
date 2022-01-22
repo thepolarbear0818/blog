@@ -61,7 +61,7 @@ export default function Banner() {
           width: 100%;
           background: linear-gradient(
             180deg,
-            transparent 0%,
+            rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, var(--tw-bg-opacity)) 50%
           );
           display: flex;
@@ -77,7 +77,7 @@ export default function Banner() {
         :global(.dark) .inner {
           background: linear-gradient(
             180deg,
-            transparent 0%,
+            rgba(0, 0, 0, 0) 0%,
             rgba(17, 17, 17, 0.8) 25%,
             rgba(17, 17, 17, 0.9) 30%,
             rgba(17, 17, 17, var(--tw-bg-opacity)) 40%
