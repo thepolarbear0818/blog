@@ -246,8 +246,10 @@ LibreWolf provides a selection of privacy respecting search engines, but you can
 add more by following
 [this guide](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox).
 
-Please note that at the moment there doesn't seem to be an easy way of restoring
-Google as a search engine.
+Please note that some search engines, most notably Google, do not comply with
+the OpenSearch standard so you will not be able to add them the usual way. In
+that case, you can also check [The Mycroft Project](https://mycroftproject.com/)
+for an alternative source of search engine plugins.
 
 ### How do I allow autoplay of media?
 
