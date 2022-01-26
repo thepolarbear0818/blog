@@ -132,6 +132,22 @@ can disable it by adding:
 defaultPref("browser.sessionstore.resume_from_crash", false);
 ```
 
+### Enable Autoscroll (safely)
+
+Autoscroll lets you quickly move through a page by clicking the middle mouse
+button: a small circle with two arrows will appear on screen, and simply moving
+your mouse cursor will scroll the page in the same direction. The further way
+the cursor is from the circle, the faster the scroll.
+
+If you want to enable autoscroll, it's best to disable pasting by clicking the
+middle mouse button, as otherwise it'd be easy to accidentally paste data into
+the web page while trying to activate autoscroll.
+
+```js
+defaultPref("middlemouse.paste", false);
+defaultPref("general.autoscroll", true);
+```
+
 ### Enable OCSP certificate revocation
 
 OCSP is disabled by default as we prefer
