@@ -123,6 +123,15 @@ websites to work.
 defaultPref("media.peerconnection.ice.no_host", false);
 ```
 
+### Enable Firefox Sync
+
+For a more in-depth look into Firefox Sync,
+[check the FAQ](/docs/faq/#can-i-use-firefox-sync-with-librewolf-is-it-safe-to-do-so).
+
+```js
+defaultPref("identity.fxaccounts.enabled", true);
+```
+
 ### Stop LibreWolf from resuming after a crash
 
 This feature allows you to keep your tabs after an unexpected close event. You

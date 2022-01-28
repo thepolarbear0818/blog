@@ -283,6 +283,26 @@ As a security measure, LibreWolf asks for user interaction after each download.
 You can change that in Settings > General > Files and Applications > Downloads >
 Save files to..
 
+### Can I use Firefox Sync with LibreWolf? Is it safe to do so?
+
+Yes, you can! There aren't any major privacy or security downsides in doing so,
+as Firefox Sync encrypts your data locally before transmitting it to the server.
+Additionally, you can
+[self-host the old version of the server](https://github.com/mozilla-services/syncserver)
+([Complementary Arch Wiki page](https://wiki.archlinux.org/title/Firefox_Sync_Server))
+if you really don't want to use Mozilla's, and there's work being done to have
+[the new version equally easy to self-host](https://blog.mozilla.org/services/2020/09/15/the-future-of-sync/).
+Find out more about the technical details of Sync's implementation
+[here](https://medium.com/mozilla-tech/how-firefox-sync-keeps-your-secrets-if-tls-fails-14420d45885c)
+and [here](https://hacks.mozilla.org/2018/11/firefox-sync-privacy/).
+
+Enable it in your _about:config_ or
+[your overrides](/docs/settings/#enable-firefox-sync).
+
+If you're skeptical of Sync, you can always use
+[an addon](/docs/addons/#other-useful-addons) like
+[xBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/) instead.
+
 ## Linux specific questions:
 
 ### Can't open links with Librewolf when using Wayland
