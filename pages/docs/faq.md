@@ -362,7 +362,7 @@ ln -s ~/.mozilla/native-messaging-hosts ~/.librewolf/native-messaging-hosts
 sudo ln -s /usr/lib/mozilla/native-messaging-hosts /usr/lib/librewolf/native-messaging-hosts
 ```
 
-### [How can I get Tridactyl's native messaging to work when I install Librewolf with Flatpak?
+### How can I get Tridactyl's native messaging to work when I install Librewolf with Flatpak?
 
 To get [Tridactyl's](https://github.com/tridactyl/tridactyl) native feature to
 work Tridactyl's install script needs to look into Librewolf's app data

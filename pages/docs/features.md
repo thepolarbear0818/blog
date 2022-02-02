@@ -11,8 +11,9 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Include only privacy respecting search engines like
   [DuckDuckGo](https://duckduckgo.com/) and
   [Searx](https://searx.github.io/searx/).
-- Include [uBlockOrigin](https://ublockorigin.com/) and Tracking Protection in
-  strict mode, to block trackers and ads.
+- Include [uBlockOrigin](https://ublockorigin.com/) with custom default filter
+  lists, and Tracking Protection in strict mode, to block trackers and ads.
+- Strip tracking elements from URLs, both natively and through uBO.
 - Enable dFPI, also known as
   [Total Cookie Protection](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/).
 - Enable RFP which is part of the
@@ -20,8 +21,8 @@ our [Gitter](https://gitter.im/librewolf-community) /
   considered the best in class anti-fingerprinting solution, and it's goal is to
   make users look the same and cover as many metrics as possible, in an effort
   to block fingerprinting techniques.
-- Always display user language as `en-US` for browser, web pages and OS, in
-  order to fit in with the largest possible user base.
+- Always display user language as `en-US` to websites, in order to protect the
+  language used in the browser and in the OS.
 - Disable WebGL, as it is a strong fingerprinting vector.
 - Prevent access to the location services of the OS, and use Mozilla's location
   API instead of Google's API.
@@ -63,7 +64,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Remove all the distracting and sponsored content from the home page.
 - Remove the Pocket extension at compile time.
 - Remove Mozilla VPN ads.
-- Disable Firefox accounts and Firefox Sync through policies.
+- Disable Firefox accounts and Firefox Sync.
 - Disable extension recommendations.
 
 ## Others
