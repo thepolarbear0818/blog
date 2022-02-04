@@ -154,7 +154,7 @@ the web page while trying to activate autoscroll.
 
 ```js
 defaultPref("middlemouse.paste", false);
-defaultPref("general.autoscroll", true);
+defaultPref("general.autoScroll", true);
 ```
 
 ### Enable OCSP certificate revocation
