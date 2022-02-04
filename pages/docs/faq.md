@@ -84,7 +84,7 @@ access next to the URL bar, so look for the icon there.
 
 We believe you should use a password manager that is better for your security
 and comfort, please consider some of the options in our
-[recommended addons](/docs/addons#recommended-addons).
+[recommended addons](/docs/addons#password-managers).
 
 <a name="https-only-prefs"></a>
 
