@@ -1,15 +1,21 @@
 # Browser Tests
 
 There are several good browser testing sites on the Internet. Here are just a
-few that we find most useful. We're always open for tips on new good ones.
+few that we find most useful, which might also be useful for troubleshooting and
+when providing details in issues.
 
-## Security/Fingerprint
+## Fingerprinting and Security
 
-- EFF's [Cover Your Tracks](https://coveryourtracks.eff.org/)
-- Arkenfox's [TorZillaPrint](https://arkenfox.github.io/TZP/index.html)
-- [browserleaks.com](https://browserleaks.com/)
-- [Device Info](https://www.deviceinfo.me/)
-- Client side [SSLLabs](https://www.ssllabs.com/ssltest/viewMyClient.html)
+- [TorZillaPrint](https://arkenfox.github.io/TZP/index.html) by Arkenfox is a
+  fingerprinting test suite for Firefox and Tor Browser.
+- [PrivacyTests.org](https://privacytests.org/) by Arthur Edelstein shows
+  results of regular tests run against several browsers, including LibreWolf.
+- [BrowserLeaks](https://browserleaks.com/) is an all in one browser testing
+  tool.
+- [Device Info](https://www.deviceinfo.me/) is another all in one browser
+  testing tool.
+- [SSL Labs](https://www.ssllabs.com/ssltest/viewMyClient.html) is a client side
+  SSL test.
 
 These tests are not intended to be used as oracles, but rather as a way to check
 your setup and verify that your changes are applied.

@@ -141,7 +141,7 @@ can disable it by adding:
 defaultPref("browser.sessionstore.resume_from_crash", false);
 ```
 
-### Enable Autoscroll (safely)
+### Enable Autoscroll safely
 
 Autoscroll lets you quickly move through a page by clicking the middle mouse
 button: a small circle with two arrows will appear on screen, and simply moving

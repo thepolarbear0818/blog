@@ -2,20 +2,14 @@
 
 ## uBlock Origin tweaks
 
-Once you learn
-[how to import filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web),
-we suggest using
-[Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
-to remove tracking elements from URLs.
+LibreWolf customizes the default lists present in uBO, by fetching
+[Legitimate URL Shortener](https://github.com/DandelionSprout/adfilt/discussions/163),
+and by enabling AdGuard URL Tracking Protection and Phishing URL Blocklist, but
+you can also
+[enable more filter lists](https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists)
+in uBO's settings.
 
-We also suggest enabling the following lists built into uBlock Origin:
-
-- AdGuard URL Tracking Protection.
-- Block Outsider Intrusion into LAN.
-- Phishing URL Blocklist.
-- Fanboy’s Annoyance.
-
-Additionally, we **strongly recommend** using
+We **strongly recommend** using
 [medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode)
 to block all third-party scripts and control them manually. Advanced users can
 also
@@ -60,4 +54,5 @@ useful only for certain users, and they are **not** strictly necessary.
   checks for updates of LibreWolf and notifies you about them, which is
   especially useful for LibreWolf versions which don't get updated automatically
   via a package manager like the manual Windows installer. Also deserves the
-  honorable mention as our first community-provided addon.
+  honorable mention as our first community-provided addon, although it's worth
+  noting that we are not affiliated with it in any way.

@@ -34,7 +34,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
   [Privacy Extension](https://datatracker.ietf.org/doc/html/rfc3041#section-2.3)
   enabled by default.
 - Trim cross-origin referrers, so that they don't include the full URI.
-- Disable browsing, search and form history.
+- Disable search and form history.
 - Disable form autofill.
 - Disable link prefetching and speculative connections.
 - Isolate service workers.
@@ -55,6 +55,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Protect against
   [IDN homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack).
 - Implement optional extension firewall, which can be enabled manually.
+- Revert user-triggered TLS downgrades at the end of each session.
 
 ## Annoyances
 

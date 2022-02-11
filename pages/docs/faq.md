@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This FAQ documents version 5.1 of the settings. Please always upgrade to the
+This FAQ documents version 5.5 of the settings. Please always upgrade to the
 latest version of the browser. If your question is not answered here, you can
 try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
@@ -124,14 +124,19 @@ when using it please
 [do not enable FPI](/docs/faq#why-isnt-first-party-isolate-enabled-by-default),
 as it interferes with the more recent dFPI.
 
+Finally, there's no point in changing from strict to any other mode, as strict
+mode doesn't usually cause any kind of breakage, and changing to custom mode to
+block cookies will come at the expense of disabling dFPI: not worth it,
+**don't**. If you change the default strict mode LibreWolf will revert it at the
+end of the session, unless you explicitely force it with overrides, but once
+again we advise against it.
+
 Tracking Protection requires some occasional outgoing connections, in order to
 fetch its blocking lists: these connections are harmless for privacy, and TP has
 a flawless track record in this regard. A particular important connection is the
 one that TP makes on first launch, as without it the feature cannot effectively
-work.
-
-If you want, you can block these outgoing connections by using the following
-[overrides](/docs/settings/):
+work. If you want, you can block these outgoing connections by using the
+following [overrides](/docs/settings/):
 
 ```js
 defaultPref("browser.safebrowsing.provider.mozilla.updateURL", "");
@@ -459,3 +464,32 @@ We don't want to deal with the administration required to properly handle
 donations. If we don't need funding, we won't risk becoming dependent on it. And
 also: no donations means no expectations. This means that people working on
 LibreWolf are free to move on to other projects whenever they want.
+
+### I have a problem. In which repository should I open the issue?
+
+Before opening a new issue read the FAQ in full and make sure to also check out
+the [settings page](/docs/settings). After that, we kindly ask you to look for
+existing issues that address your problem, before opening a new one.
+
+Once you complete the above steps and you are sure you want to open a new issue,
+follow these rules:
+
+- if the problem is OS-specific, use one of
+  [the relative repos](https://gitlab.com/librewolf-community/browser);
+- if the problem is related to the behavior of the browser on web pages, use
+  [the settings repo](https://gitlab.com/librewolf-community/settings);
+- if you have a general feature suggestion, use
+  [the source repo](https://gitlab.com/librewolf-community/browser/source);
+- if you want to ask about a platform which isn't supported yet or you want to
+  help with a new build, use
+  [the bsys5 repo](https://gitlab.com/librewolf-community/browser/bsys5);
+- if you have a suggestion about docs or regarding the website, use
+  [the website repo](https://gitlab.com/librewolf-community/website).
+
+After you open a new issue we ask you to contribute to it, by providing the
+needed details and by respecting the guidelines of the repository.
+
+### Will you provide an Android versions of LibreWolf?
+
+At the moment nobody is working on it, and it is not something we have
+considered investing time in.
