@@ -4,7 +4,8 @@ title: Community Art
 
 # Community Art
 
-Most of this art was originally posted to `r/librewolf`. It's probabbly the best
+Most of these artworks were originally posted to
+[`r/librewolf`](https://www.reddit.com/r/LibreWolf/). It's probably the best
 place to post new stuff, and for us to pick it up.
 
 ## Librewoof
