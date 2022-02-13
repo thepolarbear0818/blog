@@ -132,6 +132,19 @@ For a more in-depth look into Firefox Sync,
 defaultPref("identity.fxaccounts.enabled", true);
 ```
 
+### Preserve browsing and download history
+
+By default, LibreWolf deletes your browsing and download history on shutdown.
+
+```js
+defaultPref("privacy.clearOnShutdown.history", false);
+defaultPref("privacy.clearOnShutdown.downloads", false);
+```
+
+Due to a quirk in how these preferences function, if you clear your browsing
+history, downloads will also be cleared. The opposite, however, is not true: you
+can clear your downloads without clearing history.
+
 ### Stop LibreWolf from resuming after a crash
 
 This feature allows you to keep your tabs after an unexpected close event. You
