@@ -213,6 +213,13 @@ Videoconferencing platforms may require one or more of the following features:
 - [WebGL enabled](/docs/settings/#enable-webgl).
 - [Autoplay allowed](#how-do-i-allow-autoplay-of-media).
 
+### Why is Session Restore not working?
+
+Session restore will not work unless you preserve your browsing history.
+However, LibreWolf deletes history on shutdown by default. If you want to make
+use of session restore, set your browser to not delete history, via settings or
+[overrides](/docs/settings/#preserve-browsing-and-download-history).
+
 <a name="storage-permissions"></a>
 
 ### How do I stay logged into specific websites?
