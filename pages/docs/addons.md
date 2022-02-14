@@ -50,9 +50,9 @@ useful only for certain users, and they are **not** strictly necessary.
   want to force dark theme, but this will make them stand out.
 - [xBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/): allows to
   securely store and sync bookmarks across browsers and devices.
-- [LibreWolf Updater](https://addons.mozilla.org/en-US/firefox/addon/librewolf-updater/):
-  checks for updates of LibreWolf and notifies you about them, which is
-  especially useful for LibreWolf versions which don't get updated automatically
-  via a package manager like the manual Windows installer. Also deserves the
-  honorable mention as our first community-provided addon, although it's worth
-  noting that we are not affiliated with it in any way.
+- [LibreWolf Updater](https://addons.mozilla.org/en-US/firefox/addon/librewolf-updater/)
+  (unofficial): checks for updates of LibreWolf and notifies you about them,
+  which is especially useful for LibreWolf versions which don't get updated
+  automatically via a package manager like the manual Windows installer. Also
+  deserves the honorable mention as our first community-provided addon, although
+  it's worth noting that we are not affiliated with it in any way.
