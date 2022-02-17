@@ -86,20 +86,37 @@ const themeConfig = {
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      {/* Favicon */}
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
-      <meta name="og:title" content="LibreWolf Browser" />
+
+      {/* HTML Meta Tags */}
       <meta
         name="description"
         content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
       />
+
+      {/* Facebook Meta Tags */}
+      <meta property="og:url" content="https://librewolf.net/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="LibreWolf Browser" />
       <meta
-        name="og:description"
+        property="og:description"
         content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
       />
-      <meta name="og:type" content="website" />
-      <meta name="og:url" content="https://librewolf.net" />
-      <meta name="og:image" content="https://librewolf.net/og_image.png" />
+      <meta property="og:image" content="https://librewolf.net/og_image.png" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="librewolf.net" />
+      <meta property="twitter:url" content="https://librewolf.net/" />
+      <meta name="twitter:title" content="LibreWolf Browser" />
+      <meta
+        name="twitter:description"
+        content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
+      />
+      <meta name="twitter:image" content="https://librewolf.net/og_image.png" />
     </>
   ),
   navlinks: [
