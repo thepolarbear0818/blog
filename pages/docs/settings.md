@@ -4,7 +4,7 @@ While you can always tweak your settings in the Settings page as well as in the
 `about:config` page, Librewolf can also be personalized by using a configuration
 file called `librewolf.overrides.cfg`.
 
-Using overiddes is a great way to change your default settings across multiple
+Using overrides is a great way to change your default settings across multiple
 profiles and installations, which means that it also allows you to easily backup
 and port your preferences.
 

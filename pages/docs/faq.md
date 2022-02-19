@@ -39,7 +39,7 @@ sites and general Tor browsing.
 
 <a name="phishing-malware"></a>
 
-### Why do you disable Google Safe Browing?
+### Why do you disable Google Safe Browsing?
 
 We disable Safe Browsing as we consider it a censorship concern, and we would
 rather not let Google control another aspect of the internet. With that being

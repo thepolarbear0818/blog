@@ -7,7 +7,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 
 ## Privacy
 
-- Delete cookies and wesbites data on close.
+- Delete cookies and website data on close.
 - Include only privacy respecting search engines like
   [DuckDuckGo](https://duckduckgo.com/) and
   [Searx](https://searx.github.io/searx/).
