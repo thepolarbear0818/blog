@@ -4,14 +4,6 @@ title: Fedora Installation
 
 import InstallationHeader from "components/installationHeader";
 import { getStaticDownloadButtonProps } from "components/downloadButton";
-import {
-  FreshDownloadButton,
-  getFreshDownloadProp
-} from "components/freshDownloadButton";
-
-export const getStaticProps = getStaticDownloadButtonProps([
-  getFreshDownloadProp(".fc35.x86_64.rpm")
-]);
 
 <InstallationHeader />
 
@@ -28,11 +20,6 @@ sudo dnf update
 
 sudo dnf install librewolf
 ```
-
-You can also now download and install the latest `.rpm` from the same builds
-manually below
-
-<FreshDownloadButton endsWith=".fc35.x86_64.rpm" />
 
 ## COPR (unofficial)
 
