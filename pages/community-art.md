@@ -10,7 +10,7 @@ place to post new stuff, and for us to pick it up.
 
 ## Stylized
 
-<a href="https://www.reddit.com/r/LibreWolf/comments/t8mw4j/quick_draft_of_new_icon_design_with_very_basic/"><img src="https://i.redd.it/zyatszna2yl81.jpg" alt="stylized icon"/></a>
+<a href="https://www.reddit.com/r/LibreWolf/comments/t8mw4j/quick_draft_of_new_icon_design_with_very_basic/"><img src="https://i.redd.it/757hbx8sd4m81.jpg" alt="stylized icon"/></a>
 
 Stylized version, click on it for the reddit post.
 
