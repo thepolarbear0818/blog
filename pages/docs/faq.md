@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This FAQ documents version 5.5 of the settings. Please always upgrade to the
+This FAQ documents version 6.0 of the settings. Please always upgrade to the
 latest version of the browser. If your question is not answered here, you can
 try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
@@ -43,10 +43,20 @@ sites and general Tor browsing.
 
 We disable Safe Browsing as we consider it a censorship concern, and we would
 rather not let Google control another aspect of the internet. With that being
-said, Safe Browsing is still a good security tool and Mozilla's implementations
-is privacy respecting. For this reason less technical users, and those who feel
-like they need the extra security,
-[can and should safely **enable it**](/docs/settings/#enable-google-safe-browsing).
+said, Safe Browsing is still a good **security tool** and Mozilla's
+implementation is privacy respecting: for this reason those who are interested
+in the extra security, and in particular less technical users,
+[can and should safely enable it](/docs/settings/#enable-google-safe-browsing).
+
+Despite the above concerns, we are open to re-evaluating and recommending Safe
+Browsing with the right defaults. Unfortunately, to be fully functional, Safe
+Browsing requires to include a **developer key** at build time: this means that
+a Google account becomes a hard requirement for anyone building from source.
+This also means that LibreWolf cannot provide a fully functional Safe Browsing
+experience at the moment.
+
+More details are available at
+[this link](https://gitlab.com/librewolf-community/settings/-/issues/126#note_806368764).
 
 <a name="addons-help"></a>
 
@@ -65,6 +75,10 @@ To improve your privacy we suggest
 [enabling letterboxing](/docs/settings/#enable-letterboxing), in order to
 prevent your real window size from being fingerprinted. This can be especially
 useful if you resize your window.
+
+It's also possible to further
+[limit the behavior of cross-origin referers](docs/settings/#restrict-cross-origin-referers),
+although it's worth noting that this might cause breakage.
 
 ### Should I allow canvas access? How do I do it?
 
@@ -99,12 +113,11 @@ Yes, but they aren't in any way privacy invading and they were carefully
 evaluated. Specifically they are needed to fetch and update the blocking lists
 used by
 [uBO](https://github.com/gorhill/uBlock/wiki/Can-you-trust-uBlock-Origin%3F),
-[Tracking Protection](#what-is-mozilla-tracking-protection) and
-[CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), which we
-considered more important than disabling all outgoing connections, especially
-ones that are harmless. LibreWolf also makes an occasional connection to check
-wether you have received push notifications from websites you have subscribed
-to.
+[Tracking Protection](#what-is-mozilla-tracking-protection) and certificate
+revocation, which we considered more important than disabling all outgoing
+connections, especially ones that are harmless. LibreWolf also makes an
+occasional connection to check wether you have received push notifications from
+websites you have subscribed to.
 
 With that being said, LibreWolf is still commited to removing all privacy
 invading connections, and to keep all connections to the bare minimum required
@@ -126,10 +139,9 @@ as it interferes with the more recent dFPI.
 
 Finally, there's no point in changing from strict to any other mode, as strict
 mode doesn't usually cause any kind of breakage, and changing to custom mode to
-block cookies will come at the expense of disabling dFPI: not worth it,
-**don't**. If you change the default strict mode LibreWolf will revert it at the
-end of the session, unless you explicitely force it with overrides, but once
-again we advise against it.
+block cookies will come at the expense of disabling dFPI: not worth it, so we
+decided to hide the UI that allows users to change this. You can explicitely
+force other modes with overrides, but once again we advise against it.
 
 Tracking Protection requires some occasional outgoing connections, in order to
 fetch its blocking lists: these connections are harmless for privacy, and TP has
@@ -161,6 +173,13 @@ mode.
 Please also notice that dFPI makes containers and containers extensions
 redudant, unless you want to protect your privacy when visiting the same website
 multiple times, during the same browsing sessions.
+
+### Why can't I use always-on private browsing?
+
+We have decided to hide that option as it doesn't provide any benefit over the
+default cleaning mechanism of LibreWolf. Instead it introduces many regressions,
+as it doesn't respect cookie exceptions and installed addons, while also being
+fingerprintable.
 
 ## Usability
 
@@ -309,11 +328,17 @@ Find out more about the technical details of Sync's implementation
 and [here](https://hacks.mozilla.org/2018/11/firefox-sync-privacy/).
 
 Enable it in your _about:config_ or
-[your overrides](/docs/settings/#enable-firefox-sync).
-
-If you're skeptical of Sync, you can always use
-[an addon](/docs/addons/#other-useful-addons) like
+[your overrides](/docs/settings/#enable-firefox-sync). If you're skeptical of
+Sync, you can always use [an addon](/docs/addons/#other-useful-addons) like
 [xBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/) instead.
+
+### I'm getting the "SSL_ERROR_UNSAFE_NEGOTIATION" error. What can I do?
+
+The server you are trying to reach does not support
+[RFC 5746](https://datatracker.ietf.org/doc/html/rfc5746) and is potentially
+vulnerable to MiTM attacks. You can bypass this warning by flipping
+`security.ssl.require_safe_negotiation` to false in about:config, but we do not
+recommend adding this to your overrides as it is a bad default.
 
 ## Linux specific questions:
 
