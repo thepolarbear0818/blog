@@ -30,7 +30,7 @@ This incredibly cute puppy was drawn by
 
 ## Many different ones
 
-<a href="https://www.reddit.com/r/LibreWolf/comments/rh28rq/new_logo_ideas/"><img src="https://preview.redd.it/5andfhb1bq581.png"/></a>
+<a href="https://www.reddit.com/r/LibreWolf/comments/rh28rq/new_logo_ideas/"><img src="https://preview.redd.it/5andfhb1bq581.png?width=1247&format=png&auto=webp&s=fc61cc75b1bb44dc30c4d427e55796882443170d"/></a>
 
 This earlier submission by `u/rere_dnaw` has many different colors/backgrounds,
 but are in the same style.
@@ -38,7 +38,7 @@ but are in the same style.
 ## Arctic LibreWolf
 
 <a href="https://www.reddit.com/r/LibreWolf/comments/pewxry/fanart/">
-    <img src="https://preview.redd.it/tgaehw7lulk71.png" alt="arctic librewolf icon"/>
+    <img src="https://preview.redd.it/tgaehw7lulk71.png?width=1080&format=png&auto=webp&s=e01840e31d9351c3b89c3af292aa367f42a783ee" alt="arctic librewolf icon"/>
 </a>
 
 Brr! You can really feel the cold! Thanks to
