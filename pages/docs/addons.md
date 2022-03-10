@@ -37,7 +37,8 @@ useful only for certain users, and they are **not** strictly necessary.
 ### Privacy addons
 
 - [Smart Referer](https://addons.mozilla.org/en-US/firefox/addon/smart-referer/):
-  allows to manually handle refereres' behavior.
+  allows to manually handle refereres' behavior. We recommend using strict mode
+  and adding exceptions manually.
 - [Canvas Blocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/):
   protects against some fingerprinting techniques. Suggested exclusively to
   users that [disable RFP](/docs/settings/#disable-rfp-resist-fingerprinting) or

@@ -39,9 +39,11 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Disable link prefetching and speculative connections.
 - Isolate service workers.
 - Disable disk cache and clear temporary files on close.
-- Disable OCSP, and instead use
-  [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list), as it is a
-  more robust and privacy respecting certificate revocation mechanism.
+- Use [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) as the
+  default certificate revocation mechanism, as it is faster and privacy
+  oriented. For security reasons, the browser might fall back to OCSP in some
+  instances: when that happens, OCSP will be
+  [stapled](https://en.wikipedia.org/wiki/OCSP_stapling) to preserve privacy.
 
 ## Security
 
@@ -56,6 +58,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
   [IDN homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack).
 - Implement optional extension firewall, which can be enabled manually.
 - Revert user-triggered TLS downgrades at the end of each session.
+- Set OCSP to hard-fail in case a certain CA cannot be reached.
 
 ## Annoyances
 
@@ -70,14 +73,23 @@ our [Gitter](https://gitter.im/librewolf-community) /
 
 ## Others
 
-- Completely open source and community driven.
+- Completely
+  [open source](https://gitlab.com/librewolf-community/browser/source) and
+  community driven.
+- Easy and Docker-based
+  [build process](https://gitlab.com/librewolf-community/browser/bsys5), so that
+  everyone can build from source in few steps and without local dependencies.
 - Completely disable telemetry, including crash report, normandy, studies and
   personalized recommendations.
 - No data collection of any kind. In fact, as stated in our privacy policy, we
   wouldn't even have the infrastructure to do that, making it impossible from a
   technical standpoint.
 - Disable Google Safe Browsing, over censorship concerns, and in an effort to
-  prevent Google from controlling another aspect of the internet.
+  prevent Google from controlling another aspect of the internet. This would
+  also make a
+  [developer key](/docs/faq/#why-do-you-disable-google-safe-browsing) a
+  requirement to build from source, which is something we are not comfortable
+  with.
 - Disable [DRM](https://www.eff.org/issues/drm), as it is a limitation to user
   freedom.
 - Avoid making unnecessary changes that increase the fingerprint without giving

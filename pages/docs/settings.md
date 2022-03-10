@@ -1,8 +1,8 @@
 # Settings and `librewolf.overrides.cfg`
 
-While you can always tweak your settings in the Settings page as well as in the
-`about:config` page, Librewolf can also be personalized by using a configuration
-file called `librewolf.overrides.cfg`.
+While you can always tweak your settings in the **Settings page** as well as in
+the `about:config` page, Librewolf can also be personalized by using a
+configuration file called `librewolf.overrides.cfg`.
 
 Using overrides is a great way to change your default settings across multiple
 profiles and installations, which means that it also allows you to easily backup
@@ -79,7 +79,8 @@ defaultPref("browser.safebrowsing.downloads.enabled", true);
 ```
 
 With these preferences set, all the checks made by Safe Browsing will be
-performed **locally**.
+performed **locally**, as if you enabled Safe Browsing in
+`about:preferences#librewolf`.
 
 ### Enable letterboxing
 
@@ -90,6 +91,19 @@ users.
 ```js
 defaultPref("privacy.resistFingerprinting.letterboxing", true);
 ```
+
+### Limit cross-origin referers
+
+This override allows you to control when a cross-origin refer will be sent,
+allowing it exclusively when the host matches.
+
+```js
+defaultPref("network.http.referer.XOriginPolicy", 2);
+```
+
+This change might cause breakage: in that case you can revert to the default
+value and rely on the built-in referer trimming, or alternatively you can use
+[Smart Referer](/docs/addons/#privacy-addons).
 
 ### Enable IPv6
 
@@ -168,20 +182,6 @@ the web page while trying to activate autoscroll.
 ```js
 defaultPref("middlemouse.paste", false);
 defaultPref("general.autoScroll", true);
-```
-
-### Enable OCSP certificate revocation
-
-OCSP is disabled by default as we prefer
-[CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) for both
-performance and privacy reasons. You can also read Mozilla's blog about
-[CRL's design and implementation](https://blog.mozilla.org/security/2020/01/09/crlite-part-2-end-to-end-design/).
-
-If you still want to re-enable it, you will need to set these preferences:
-
-```js
-defaultPref("security.OCSP.enabled", 1);
-defaultPref("security.OCSP.require", true); //no soft-fail
 ```
 
 ### Disable RFP (Resist Fingerprinting)
