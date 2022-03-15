@@ -141,7 +141,8 @@ Finally, there's no point in changing from strict to any other mode, as strict
 mode doesn't usually cause any kind of breakage, and changing to custom mode to
 block cookies will come at the expense of disabling dFPI: not worth it, so we
 decided to hide the UI that allows users to change this. You can explicitely
-force other modes with overrides, but once again we advise against it.
+force other modes with overrides, but once again we advise against it. More details
+are available [at this link](https://gitlab.com/librewolf-community/settings/-/issues/149#note_873599441).
 
 Tracking Protection requires some occasional outgoing connections, in order to
 fetch its blocking lists: these connections are harmless for privacy, and TP has
