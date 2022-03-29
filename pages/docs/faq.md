@@ -342,6 +342,25 @@ vulnerable to MiTM attacks. You can bypass this warning by flipping
 `security.ssl.require_safe_negotiation` to false in about:config, but we do not
 recommend adding this to your overrides as it is a bad default.
 
+### I'm getting "SEC_ERROR_OCSP_SERVER_ERROR". What can I do?
+
+We enable
+[OCSP](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) in
+hard-fail mode, meaning that if the revocation status of a certificate cannot be
+verified because the CA cannot be reached, then it will be treated as broken.
+While this improves security, it could also decreases usability as OCSP servers
+tend to be down often.
+
+If you're experiencing this error:
+
+- OCSP servers tend to get blocked by host files and blocking lists by mistake,
+  so check your firewall and blocking lists first.
+- OCSP is not compatible with most proxy and vpn extensions, so that's also
+  something to consider.
+
+If instead a server is actually down, you can consider disabling hard-fail mode
+in the [LibreWolf settings](about:preferences#librewolf), or using overrides.
+
 ## Linux specific questions:
 
 ### Can't open links with Librewolf when using Wayland
@@ -483,12 +502,24 @@ It is possible that M1 users see their recently downloaded LibreWolf flagged as
 broken or unsafe by the OS.
 
 This happens because we do not notarize the macOS version of the browser: we
-don't have a paid Apple Developer license and we don't want to suppose this
+don't have a paid Apple Developer license and we don't want to support this
 signing mechanism that is put behind a paywall without providing significant
 gains.
 
 [Here](https://gitlab.com/librewolf-community/browser/macos/-/issues/19#note_597640488)
 you can find a proposed fix, and the relative discussion.
+
+### How do I get native messaging to work?
+
+You need to add the following symbolic link:
+
+```
+ln -s ~/Library/Application\ Support/Mozilla/NativeMessagingHosts ~/Library/Application\ Support/LibreWolf/NativeMessagingHosts
+```
+
+This is necessary to get
+[KeePassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/)
+extension to work.
 
 ## General questions
 

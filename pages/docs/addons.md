@@ -24,7 +24,7 @@ manager available in the browser:
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/):
   open source password manager that allows for synchronization across multiple
   devices.
-- [KeepassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/):
+- [KeePassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/):
   official browser plugin for the open source password manager KeePassXC.
 
 ## Other Addons

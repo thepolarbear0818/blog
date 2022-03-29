@@ -195,6 +195,14 @@ before going ahead.
 defaultPref("privacy.resistFingerprinting", false);
 ```
 
+### Disable OCSP hard-fail mode
+
+If you are experiencing OCSP issues this will change mode to soft-fail.
+
+```js
+defaultPref("security.OCSP.require", false);
+```
+
 ### Enable the extension firewall
 
 The extension firewall denies internet access to your extensions.
