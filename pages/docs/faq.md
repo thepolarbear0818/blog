@@ -491,10 +491,10 @@ LibreWolf is available as a cask, so you can install entering
 ### Does LibreWolf work on M1 machines?
 
 Yes, we provide native builds for both Intel and ARM based machines. If you own
-a M1 powered MacBook the relative builds are refered to as `aarch64`, and they
-are also marked as `experimental`, as they are cross-compiled on Intel machines
-and we did not test them before release. Please consider that the build time on
-M1 is relatively low, so building from source is probably worth it in any case.
+a M1 powered MacBook the relative builds are refered to as `aarch64`, they are
+cross-compiled and we did not test them before release. Please consider that the
+build time on M1 is relatively low, so building from source is probably worth it
+in any case.
 
 ### Why is LibreWolf marked as broken?
 
@@ -507,7 +507,12 @@ signing mechanism that is put behind a paywall without providing significant
 gains.
 
 [Here](https://gitlab.com/librewolf-community/browser/macos/-/issues/19#note_597640488)
-you can find a proposed fix, and the relative discussion.
+you can find a proposed fix, and the relative discussion. Alternatively, you can
+remove the quarantine attribute directly from brew:
+
+```
+brew install librewolf --no-quarantine
+```
 
 ### How do I get native messaging to work?
 
