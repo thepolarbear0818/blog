@@ -8,20 +8,16 @@ import Callout from "nextra-theme-docs-patch-maltejur/callout";
 
 <InstallationHeader />
 
-## Debian, Ubuntu and Mint
-
-<Callout emoji="">
-  **Attention.** This only works if you use Debian 11, Ubuntu 20/21 or Mint
-  20.2/20.3. If you don't use one of these distros, see [Other Debian based
-  distributions](#other-debian-based-distributions) down below.
-</Callout>
+## Main Debian Repository
 
 We have a Debian repository with which you can easily install and update
 LibreWolf. To add it to your system and install LibreWolf, run the following
 commands one by one:
 
 ```bash
-echo "deb [arch=amd64] http://deb.librewolf.net $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+distro=$(if echo " bullseye focal impish uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
+
+echo "deb [arch=amd64] http://deb.librewolf.net $(distro) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
 
 sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
 
@@ -29,6 +25,12 @@ sudo apt update
 
 sudo apt install librewolf -y
 ```
+
+<Callout emoji="">
+  **Attention.** We only build LibreWolf for Debian 11, Ubuntu 20/21 and Mint
+  20. If you don't use one of those distros, this will install the Debian 20
+  build for you which may or may not work.
+</Callout>
 
 ## Debian Unstable (unofficial)
 
@@ -48,27 +50,6 @@ sudo apt install librewolf -y
 
 You can also download the `.deb` files of these builds directly from the
 [Open Build Service](https://download.opensuse.org/repositories/home:/bgstack15:/aftermozilla/Debian_Unstable/amd64/).
-
-## Other Debian based distributions
-
-You can try installing the Ubuntu 20 build from the deb.librewolf.net repository
-by running the following commands.
-
-```bash
-echo "deb [arch=amd64] http://deb.librewolf.net focal main" | sudo tee /etc/apt/sources.list.d/librewolf.list
-
-sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
-
-sudo apt update
-
-sudo apt install librewolf -y
-```
-
-This may or may not work, depending on how close your distribution is to
-Ubuntu 20. If it doesn't work, you can always use
-[AppImage or Flatpack version of LibreWolf](/installation/linux/).
-
-- [How to Install LibreWolf Browser on LMDE 5](https://www.linuxcapable.com/how-to-install-librewolf-browser-on-lmde-5/).
 
 ## Removing the repositories from your system
 
