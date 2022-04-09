@@ -77,7 +77,7 @@ prevent your real window size from being fingerprinted. This can be especially
 useful if you resize your window.
 
 It's also possible to further
-[limit the behavior of cross-origin referers](docs/settings/#restrict-cross-origin-referers),
+[limit the behavior of cross-origin referers](/docs/settings/#restrict-cross-origin-referers),
 although it's worth noting that this might cause breakage.
 
 ### Should I allow canvas access? How do I do it?
