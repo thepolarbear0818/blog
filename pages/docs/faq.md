@@ -461,7 +461,7 @@ You can try to fix it by running
 sudo apt install ca-certificates
 ```
 
-## macOS specific questons:
+## macOS specific questions:
 
 ### How do I install LibreWolf on macOS?
 
