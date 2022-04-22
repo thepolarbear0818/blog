@@ -15,7 +15,7 @@ LibreWolf. To add it to your system and install LibreWolf, run the following
 commands one by one:
 
 ```bash
-distro=$(if echo " bullseye focal impish uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
+distro=$(if echo " bullseye focal impish jammy uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 echo "deb [arch=amd64] http://deb.librewolf.net $distro main" | sudo tee /etc/apt/sources.list.d/librewolf.list
 
@@ -27,7 +27,7 @@ sudo apt install librewolf -y
 ```
 
 <Callout emoji="">
-  **Attention.** We only build LibreWolf for Debian 11, Ubuntu 20/21 and Mint
+  **Attention.** We only build LibreWolf for Debian 11, Ubuntu 20/21/22 and Mint
   20. If you don't use one of those distros, this will install the Debian 20
   build for you which may or may not work.
 </Callout>
