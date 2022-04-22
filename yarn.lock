@@ -2689,10 +2689,10 @@ next@^12.1.5:
     "@next/swc-win32-ia32-msvc" "12.1.5"
     "@next/swc-win32-x64-msvc" "12.1.5"
 
-nextra-theme-docs-patch-maltejur@^2.0.0-beta.5-patch.6:
-  version "2.0.0-beta.5-patch.6"
-  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-2.0.0-beta.5-patch.6.tgz#9c3eeb2dd7b2a441625e256e01e47bbd71e19237"
-  integrity sha512-fcRsw+rTap7gBZ3Mpr9yz7iMyyBZBFWATjhdY7ZEjAOkM2b2R4G4timGr4b7p1C362Ai0i7YKShEbyCZdUjwxg==
+nextra-theme-docs-patch-maltejur@^2.0.0-beta.5-patch.7:
+  version "2.0.0-beta.5-patch.7"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs-patch-maltejur/-/nextra-theme-docs-patch-maltejur-2.0.0-beta.5-patch.7.tgz#aa7d3b15f8c7af41f7a89b2c8f3731f6c479e798"
+  integrity sha512-lPeYV4esd6aM3yp1OKVARjCK11UU0YEPHntAwdvPYmcxUjVDlG4KVbCKDWI5EN+iBCj6jOahzVD+I/m/0ZKW0Q==
   dependencies:
     "@headlessui/react" "^1.5.0"
     "@mdx-js/react" "^2.0.0-rc.2"
