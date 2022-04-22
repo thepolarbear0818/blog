@@ -43,7 +43,7 @@ export default function Button({
         }
 
         :global(.dark) .button {
-          border: 1px solid rgba(45, 55, 72, var(--tw-border-opacity));
+          border: 1px solid rgb(45, 55, 72);
         }
 
         .button:hover {

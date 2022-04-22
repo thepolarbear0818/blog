@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import Link from "next/link";
 import Logo from "components/logo";
 import Gitlab from "react-devicons/gitlab/plain";
@@ -67,6 +68,8 @@ const themeConfig = {
   prevLinks: true,
   search: true,
   customSearch: null, // customizable, you can use algolia for example
+  unstable_flexsearch: true,
+  searchPlaceholder: "Seach Docs...",
   darkMode: true,
   footer: true,
   floatTOC: true,

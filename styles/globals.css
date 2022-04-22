@@ -19,7 +19,7 @@
 }
 
 .dark .card {
-  border: 1px solid rgba(45, 55, 72, var(--tw-border-opacity));
+  border: 1px solid rgb(26 32 44);
 }
 
 /* Fix for the footer */
@@ -63,8 +63,4 @@ footer .text-gray-600 a {
   .mobile-hidden {
     display: none;
   }
-}
-
-.nextra-search {
-  display: none;
 }
