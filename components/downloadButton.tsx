@@ -10,6 +10,7 @@ export type Download = {
   otherDownloadsUrl?: string;
   otherDownloadsString?: string;
   data?: any;
+  sha256?: string;
 };
 export type DownloadPromise = {
   id: string;
@@ -34,31 +35,38 @@ export function DownloadButton({
   }, [downloadPromise]);
 
   return (
-    <p>
-      <Button primary href={download.url} margin={0}>
-        Download <small>{download.name}</small>
-      </Button>
-      {download.otherDownloadsUrl && (
-        <a href={download.otherDownloadsUrl}>
-          {download.otherDownloadsString || "View all versions"}
-        </a>
+    <>
+      <p>
+        <Button primary href={download.url} margin={0}>
+          Download <small>{download.name}</small>
+        </Button>
+        {download.otherDownloadsUrl && (
+          <a href={download.otherDownloadsUrl}>
+            {download.otherDownloadsString || "View all versions"}
+          </a>
+        )}
+
+        <style jsx>{`
+          p :global(.button) {
+            white-space: nowrap;
+            max-width: calc(100vw - 100px);
+            overflow: hidden;
+            margin-right: 15px;
+          }
+
+          a {
+            margin-top: 7px;
+            display: inline-block;
+            vertical-align: top;
+          }
+        `}</style>
+      </p>
+      {download.sha256 && (
+        <small>
+          SHA256: <code>{download.sha256}</code>
+        </small>
       )}
-
-      <style jsx>{`
-        p :global(.button) {
-          white-space: nowrap;
-          max-width: calc(100vw - 100px);
-          overflow: hidden;
-          margin-right: 15px;
-        }
-
-        a {
-          margin-top: 7px;
-          display: inline-block;
-          vertical-align: top;
-        }
-      `}</style>
-    </p>
+    </>
   );
 }
 

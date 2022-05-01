@@ -11,7 +11,7 @@ export function getGitlabDownloadProp(
     getDownload: () =>
       fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
         .then((res) => res.json())
-        .then((res) => {
+        .then(async (res) => {
           const asset = res[0].assets.links.find(
             (asset: { name: string; url: string }) =>
               asset.name.endsWith(endsWith) &&
@@ -21,7 +21,7 @@ export function getGitlabDownloadProp(
             throw new Error(
               `Can't find any release asset for GitLab project ${projectId} with filter *${endsWith}`
             );
-          return {
+          const download: Download = {
             id: projectId,
             name: asset.name,
             url: asset.url,
@@ -33,6 +33,16 @@ export function getGitlabDownloadProp(
               ...(doesntEndWith ? { doesntEndWith } : {})
             }
           };
+          async function fetchSha256(url: string) {
+            const response = await fetch(url);
+            if (!response.ok) return;
+            download.sha256 = (await response.text()).split(" ")[0];
+          }
+          await Promise.all([
+            fetchSha256(`${download.url}.sha256`),
+            fetchSha256(`${download.url}.sha256sum`)
+          ]);
+          return download;
         })
   };
 }
