@@ -535,14 +535,20 @@ donations. If we don't need funding, we won't risk becoming dependent on it. And
 also: no donations means no expectations. This means that people working on
 LibreWolf are free to move on to other projects whenever they want.
 
-### I have a problem. In which repository should I open the issue?
+### Do you have any contribution guidelines?
 
-Before opening a new issue read the FAQ in full and make sure to also check out
-the [settings page](/docs/settings). After that, we kindly ask you to look for
-existing issues that address your problem, before opening a new one.
+Before opening a new issue we require that you read the FAQ in full and that you
+check out the [settings page](/docs/settings). We also ask you to look for
+existing issues that address your problem, before opening redundant ones. After you
+open a new issue we ask you to contribute to it, by providing the
+needed details and by respecting the guidelines of the repository.
 
-Once you complete the above steps and you are sure you want to open a new issue,
-follow these rules:
+When these simple rules are not respected, issues might be closed.
+
+### I have a problem. Where do I open a new issue?
+
+Once you have red the contribution guidelines and you are sure you want to open a
+new issue, follow these rules:
 
 - if the problem is OS-specific, use one of
   [the relative repos](https://gitlab.com/librewolf-community/browser);
@@ -555,9 +561,6 @@ follow these rules:
   [the bsys5 repo](https://gitlab.com/librewolf-community/browser/bsys5);
 - if you have a suggestion about docs or regarding the website, use
   [the website repo](https://gitlab.com/librewolf-community/website).
-
-After you open a new issue we ask you to contribute to it, by providing the
-needed details and by respecting the guidelines of the repository.
 
 ### Will you provide an Android versions of LibreWolf?
 
