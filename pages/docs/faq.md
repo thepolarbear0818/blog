@@ -539,15 +539,20 @@ LibreWolf are free to move on to other projects whenever they want.
 
 Before opening a new issue we require that you read the FAQ in full and that you
 check out the [settings page](/docs/settings). We also ask you to look for
-existing issues that address your problem, before opening redundant ones. After
-you open a new issue we ask you to contribute to it, by providing the needed
-details and by respecting the guidelines of the repository.
+existing issues that address your problem, before opening redundant ones. When opening
+a new issue make sure you follow the template if it exists, and after
+you did we ask you to contribute to it, by providing the needed
+details. 
+When these simple rules are not respected, issues might be **closed** by mantainers.
 
-When these simple rules are not respected, issues might be closed.
+Suggestions, improvements and contributions to LibreWolf are appreciated in the form
+of merge requests, or alternatively well documented issues. We suggest interested
+contributors to join us on Matrix.
+
 
 ### I have a problem. Where do I open a new issue?
 
-Once you have red the contribution guidelines and you are sure you want to open
+Once you have read the contribution guidelines and you are sure you want to open
 a new issue, follow these rules:
 
 - if the problem is OS-specific, use one of
