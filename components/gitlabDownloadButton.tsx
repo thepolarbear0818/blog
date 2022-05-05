@@ -34,8 +34,8 @@ export function getGitlabDownloadProp(
             }
           };
           async function fetchSha256(url: string) {
-            const response = await fetch(url);
-            if (!response.ok) return;
+            const response = await fetch(url).catch(() => {});
+            if (!response || !response.ok) return;
             download.sha256 = (await response.text()).split(" ")[0];
           }
           await Promise.all([

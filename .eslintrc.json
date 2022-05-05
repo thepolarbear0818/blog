@@ -6,6 +6,7 @@
     "no-shadow": "off",
     "promise/always-return": "off",
     "no-magic-numbers": "off",
-    "func-style": ["error", "declaration"]
+    "func-style": ["error", "declaration"],
+    "promise/no-nesting": "off"
   }
 }
