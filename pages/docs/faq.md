@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-This FAQ documents version 6.0 of the settings. Please always upgrade to the
+This FAQ documents version 6.4 of the settings. Please always upgrade to the
 latest version of the browser. If your question is not answered here, you can
 try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
@@ -13,8 +13,6 @@ be relevant:
 - [Protect your privacy](https://support.mozilla.org/en-US/products/firefox/protect-your-privacy).
 - [Manage preferences and add-ons](https://support.mozilla.org/en-US/products/firefox/manage-preferences-and-add-ons-firefox).
 - [Fix slowness, crashing, error messages and other problems](https://support.mozilla.org/en-US/products/firefox/fix-problems).
-- <a name="performance"></a>[Tweak the performance](https://support.mozilla.org/en-US/kb/performance-settings?as=u&utm_source=inproduct).
-- <a name="prefs-connection-settings"></a>[Network settings](https://support.mozilla.org/en-US/kb/connection-settings-firefox).
 
 ## Security and Privacy:
 
@@ -37,8 +35,6 @@ LibreWolf or any other browser would make you stand out. From a personal
 security perspective it's also a good idea to have a seperate browser for .onion
 sites and general Tor browsing.
 
-<a name="phishing-malware"></a>
-
 ### Why do you disable Google Safe Browsing?
 
 We disable Safe Browsing as we consider it a censorship concern, and we would
@@ -57,8 +53,6 @@ experience at the moment.
 
 More details are available at
 [this link](https://gitlab.com/librewolf-community/settings/-/issues/126#note_806368764).
-
-<a name="addons-help"></a>
 
 ### Do you recommend using any extensions?
 
@@ -87,20 +81,14 @@ fingerprinting vector; however, if you are already logged into a website you
 shouldn't stress too much about giving it canvas access because they already
 know who you are.
 
-Canvas can be handled on a per-site basis thank to RFP. You will be prompted for
-access next to the URL bar, so look for the icon there.
-
-<a name="lockwise-alerts"></a>
-
-<a name="primary-password-stored-logins"></a>
+Canvas can be handled on a **per-site** basis thank to RFP. You will be prompted
+for access next to the URL bar, so look for the icon there.
 
 ### Why is the built-in password manager disabled?
 
 We believe you should use a password manager that is better for your security
 and comfort, please consider some of the options in our
 [recommended addons](/docs/addons#password-managers).
-
-<a name="https-only-prefs"></a>
 
 ### Does LibreWolf use HTTPS-Only mode?
 
@@ -123,10 +111,6 @@ With that being said, LibreWolf is still commited to removing all privacy
 invading connections, and to keep all connections to the bare minimum required
 to maximize and balance privacy and security.
 
-<a name="enhanced-tracking-protection"></a>
-
-<a name="turn-off-etp-desktop"></a>
-
 ### What is Mozilla Tracking Protection?
 
 In LibreWolf we decided to enable Tracking Protection, as it plays nicely with
@@ -140,7 +124,7 @@ as it interferes with the more recent dFPI.
 Finally, there's no point in changing from strict to any other mode, as strict
 mode doesn't usually cause any kind of breakage, and changing to custom mode to
 block cookies will come at the expense of disabling dFPI: not worth it, so we
-decided to hide the UI that allows users to change this. You can explicitely
+decided to hide the UI that allows users to change this. You can explicitly
 force other modes with overrides, but once again we advise against it. More
 details are available
 [at this link](https://gitlab.com/librewolf-community/settings/-/issues/149#note_873599441).
@@ -161,8 +145,6 @@ As stated above, and despite what you see in the Settings UI, blocking these
 connections will cause TP to **stop working**, as it won't be able to use the
 lists that allow it to block known tracking, cryptomining and fingerprinting
 scripts.
-
-<a name="containers"></a>
 
 ### Why isn't First Party Isolate enabled by default?
 
@@ -237,11 +219,9 @@ Videoconferencing platforms may require one or more of the following features:
 ### Why is Session Restore not working?
 
 Session restore will not work unless you preserve your browsing history.
-However, LibreWolf deletes history on shutdown by default. If you want to make
-use of session restore, set your browser to not delete history, via settings or
+However, LibreWolf deletes history on shutdown by default. If you want to use
+session restore, set your browser to not delete history, via settings or
 [overrides](/docs/settings/#preserve-browsing-and-download-history).
-
-<a name="storage-permissions"></a>
 
 ### How do I stay logged into specific websites?
 
@@ -252,21 +232,15 @@ logged into `www.example.com` enter `example.com` and click on "Allow": you
 should then see the two versions listed, and you can go ahead and save the
 changes.
 
-Please notice that these exceptions are bypassed by the settings at Privacy &
-Security > History > Clear history when LibreWolf closes > Settings.
-
 ### Why is LibreWolf forcing light theme?
 
 This is one of the privacy measure that come with RFP (Resist Fingerprinting).
-Please read
-[this](#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting) before
-you go on: as stated there, our stance is that if you care about fingerprinting
-protection you should **never** alter RFP behavior in any way.
+[Our stance](#what-are-the-most-common-downsides-of-rfp-resist-fingerprinting)
+is that if you care about fingerprinting protection you should **never** alter
+RFP behavior in any way.
 
-If you still want the dark theme for web content, first check whether your
-favourite websites allow to set it manually. Alternatively, you could
-[use an extension](/docs/addons#other-useful-addons), but be careful as it could
-make you stand out.
+If you still want the dark theme for web content, check whether your favourite
+websites allow to set it manually.
 
 ### How do I enable search suggestions?
 
@@ -293,8 +267,6 @@ Autoplay can be controlled on a per-site basis from your urlbar.
 Push notifications require to set a per-site exception,
 [just like with cookies](#how-do-i-stay-logged-into-specific-websites).
 
-<a name="drm-content"></a>
-
 ### How do I enable DRM?
 
 We disable DRM by default, as we consider it a limitation to user freedom. Take
@@ -308,7 +280,7 @@ when a website is trying to use DRM.
 ### Can I safely change language in the browser?
 
 Yes, you can normally apply language packs from the settings. To protect your
-privacy, LibreWolf will make you appear to websites as a en-US user.
+privacy, LibreWolf will make you appear to websites as a `en-US` user.
 
 ### Can I set a default download directory?
 
@@ -318,21 +290,19 @@ Save files to..
 
 ### Can I use Firefox Sync with LibreWolf? Is it safe to do so?
 
-Yes, you can! There aren't any major privacy or security downsides in doing so,
-as Firefox Sync encrypts your data locally before transmitting it to the server.
-Additionally, you can
+Yes, you can enable it in your the LibreWolf specific UI or in
+[your overrides](/docs/settings/#enable-firefox-sync). There aren't significant
+downsides as Firefox Sync encrypts your data locally before transmitting it to
+the server. Additionally, you can
 [self-host the old version of the server](https://github.com/mozilla-services/syncserver)
-([Complementary Arch Wiki page](https://wiki.archlinux.org/title/Firefox_Sync_Server))
 if you really don't want to use Mozilla's, and there's work being done to have
 [the new version equally easy to self-host](https://blog.mozilla.org/services/2020/09/15/the-future-of-sync/).
 Find out more about the technical details of Sync's implementation
 [here](https://medium.com/mozilla-tech/how-firefox-sync-keeps-your-secrets-if-tls-fails-14420d45885c)
 and [here](https://hacks.mozilla.org/2018/11/firefox-sync-privacy/).
 
-Enable it in your _about:config_ or
-[your overrides](/docs/settings/#enable-firefox-sync). If you're skeptical of
-Sync, you can always use [an addon](/docs/addons/#other-useful-addons) like
-[xBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/) instead.
+When using Sync across multiple installations you might want to disable settings
+synchronization to avoid unintentional changes.
 
 ### I'm getting the "SSL_ERROR_UNSAFE_NEGOTIATION" error. What can I do?
 
@@ -542,7 +512,7 @@ check out the [settings page](/docs/settings). We also ask you to look for
 existing issues that address your problem, before opening redundant ones. When
 opening a new issue make sure you follow the template if it exists, and after
 you did we ask you to contribute to it, by providing the needed details. When
-these simple rules are not respected, issues might be **closed** by mantainers.
+these simple rules are not respected, issues might be **closed** by maintainers.
 
 Suggestions, improvements and contributions to LibreWolf are appreciated in the
 form of merge requests, or alternatively well documented issues. We suggest

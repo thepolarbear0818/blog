@@ -1,8 +1,7 @@
 # Browser Tests
 
-There are several good browser testing sites on the Internet. Here are just a
-few that we find most useful, which might also be useful for troubleshooting and
-when providing details in issues.
+There are many browser testing sites on the Internet. Here are just a few that
+we find most useful, which might also help providing details in issues.
 
 ## Fingerprinting and Security
 
@@ -18,7 +17,9 @@ when providing details in issues.
   SSL test.
 
 These tests are not intended to be used as oracles, but rather as a way to check
-your setup and verify that your changes are applied.
+your setup and verify that your changes are applied. You should not read too
+much into the results unless you are sure you understand them, as explained
+[in this article](https://matt.traudt.xyz/posts/2019-01-19-about-to-use-tor/#testing-your-fingerprint).
 
 ## Performance
 

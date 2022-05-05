@@ -18,7 +18,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
   [Total Cookie Protection](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/).
 - Enable RFP which is part of the
   [Tor Uplift project](https://wiki.mozilla.org/Security/Fingerprinting). RFP is
-  considered the best in class anti-fingerprinting solution, and it's goal is to
+  considered the best in class anti-fingerprinting solution, and its goal is to
   make users look the same and cover as many metrics as possible, in an effort
   to block fingerprinting techniques.
 - Always display user language as `en-US` to websites, in order to protect the
@@ -41,8 +41,8 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Disable disk cache and clear temporary files on close.
 - Use [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) as the
   default certificate revocation mechanism, as it is faster and privacy
-  oriented. For security reasons, the browser might fall back to OCSP in some
-  instances: when that happens, OCSP will be
+  oriented. For security and usability reasons, the browser might fall back to
+  OCSP in some instances: when that happens, OCSP will be
   [stapled](https://en.wikipedia.org/wiki/OCSP_stapling) to preserve privacy.
 
 ## Security
@@ -68,7 +68,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Remove all the distracting and sponsored content from the home page.
 - Remove the Pocket extension at compile time.
 - Remove Mozilla VPN ads.
-- Disable Firefox accounts and Firefox Sync.
+- Disable Firefox Sync, unless explicitly enabled by the user.
 - Disable extension recommendations.
 
 ## Others
@@ -79,6 +79,8 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Easy and Docker-based
   [build process](https://gitlab.com/librewolf-community/browser/bsys5), so that
   everyone can build from source in few steps and without local dependencies.
+- LibreWolf specific UI that exposes the most important privacy and security
+  settings, to allow you to easily control them.
 - Completely disable telemetry, including crash report, normandy, studies and
   personalized recommendations.
 - No data collection of any kind. In fact, as stated in our privacy policy, we
