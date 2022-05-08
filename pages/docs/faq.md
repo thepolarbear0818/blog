@@ -535,7 +535,7 @@ a new issue, follow these rules:
 - if you have a suggestion about docs or regarding the website, use
   [the website repo](https://gitlab.com/librewolf-community/website).
 
-### Will you provide an Android versions of LibreWolf?
+### Will you provide an Android version of LibreWolf?
 
 At the moment nobody is working on it, and it is not something we have
 considered investing time in.
