@@ -69,7 +69,7 @@ const themeConfig = {
   search: true,
   customSearch: null, // customizable, you can use algolia for example
   unstable_flexsearch: true,
-  searchPlaceholder: "Seach Docs...",
+  searchPlaceholder: "Search Docs...",
   darkMode: true,
   footer: true,
   floatTOC: true,
