@@ -413,6 +413,7 @@ chmod +x /tmp/tridactyl-install.sh
 /tmp/tridactyl-install.sh
 
 # If installed onto the system, rather than the user, then remove `--user`
+flatpak --user override io.gitlab.librewolf-community --filesystem="${XDG_CONFIG_HOME:-~/.config}"/tridactyl
 flatpak --user override io.gitlab.librewolf-community --filesystem="${XDG_DATA_HOME:-~/.local/share}"/tridactyl
 ```
 
