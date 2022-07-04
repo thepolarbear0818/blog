@@ -84,6 +84,10 @@ know who you are.
 Canvas can be handled on a **per-site** basis thank to RFP. You will be prompted
 for access next to the URL bar, so look for the icon there.
 
+![](https://i.imgur.com/wKwKI79.png)
+
+![](https://i.imgur.com/FiBWEzv.png)
+
 ### Why is the built-in password manager disabled?
 
 We believe you should use a password manager that is better for your security
