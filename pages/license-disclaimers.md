@@ -2,7 +2,19 @@
 title: License and Disclaimers
 ---
 
-# LibreWolf License and Disclaimers
+
+
+
+# Legal Disclaimers for this blog
+
+This blog website was forked from the librewolf website. I will leave their disclaimer in.
+
+I am not responsible for whatever happens to you when you use this website. 
+
+##
+
+
+
 
 The source code of LibreWolf itself is licensed under the
 [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0), while the source code and

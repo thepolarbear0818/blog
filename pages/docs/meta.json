@@ -1,20 +1,24 @@
 {
-  "installation": {},
-  "features": {},
+  "installation": {
+    "title": "The OS judgement"
+  },
+  "features": {
+    "title": "Blog 1"
+  },
   "faq": {
-    "title": "FAQ"
+    "title": "Blog 2"
   },
   "settings": {
-    "title": "Settings and Overrides"
+    "title": "Blog 3"
   },
   "support": {},
   "addons": {
-    "title": "Recommended Addons"
+    "title": "Blog 4"
   },
   "security": {
-    "title": "Report a Security Issue"
+    "title": "Blog 5"
   },
   "testing": {
-    "title": "Browser Tests"
+    "title": "Blog 6"
   }
 }

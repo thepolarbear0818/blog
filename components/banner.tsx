@@ -5,35 +5,35 @@ export default function Banner() {
   return (
     <div className="root">
       <Head>
-        <title>LibreWolf</title>
+        <title>overfl0w's blog</title>
       </Head>
       <div className="screenshot">
         <div className="hide-light">
-          <img src="/screenshot-dark.webp" alt="Screeenshot" />
+          <img src="/homebanner.jpg" alt="random home banner" />
         </div>
         <div className="hide-dark">
           <img
-            src="/screenshot-light.webp"
+            src="/homebanner.jpg"
             className="hide-dark"
             alt="Screeenshot"
           />
         </div>
       </div>
       <div className="inner">
-        <img src="/icon.svg" alt="Logo" />
-        <h1>LibreWolf</h1>
+        <img src="/avatars/overfl0w.png" alt="Logo" />
+        <h1>overfl0w's blog</h1>
         <h4 className="text-gray">
-          A fork of Firefox, focused on privacy, security and freedom.
+          The massive container for all my google docs, now in a website
         </h4>
         <div className="buttons">
-          <Button big href="https://gitlab.com/librewolf-community">
-            Source Code
+          <Button big href="https://github.com/thepolarbear0818">
+            My Github
           </Button>
-          <Button big href="/docs/faq">
-            Documentation
+          <Button big primary href="/docs/faq">
+            The Blogs
           </Button>
-          <Button big primary href="/installation">
-            Installation
+          <Button big href="/installation">
+            The OS Opinions
           </Button>
         </div>
       </div>

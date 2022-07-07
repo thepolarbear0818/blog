@@ -5,9 +5,9 @@ export default function Logo() {
 
   return (
     <div className="logo">
-      <img src="/icon.svg" alt="Logo" />
+      <img src="/avatars/overfl0w.png" alt="Logo" />
       <div className="title">
-        <h5>LibreWolf</h5>
+        <h5>overflow's blog</h5>
         {router.pathname.startsWith("/docs") && (
           <span className="text-gray">Docs</span>
         )}

@@ -14,8 +14,8 @@ const repositories: {
     slug: "windows",
     logo: "/icons/windows.svg",
     repository: {
-      name: "LibreWolf Windows Repository",
-      url: "https://gitlab.com/librewolf-community/browser/windows"
+      name: "Windows Download",
+      url: "https://www.microsoft.com/en-us/software-download/windows10?d2784474-fdb0-4e9d-9e47-5e88c0e053ec=True"
     }
   },
   {
@@ -23,37 +23,46 @@ const repositories: {
     slug: "arch",
     logo: "/icons/archlinux.svg",
     repository: {
-      name: "LibreWolf Arch Repository",
-      url: "https://gitlab.com/librewolf-community/browser/arch"
+      name: "Arch Linux Download",
+      url: "https://archlinux.org/download/"
     }
   },
   {
     name: "Debian based",
     subtitle: "(Debian, Ubuntu, Mint, etc.)",
     slug: "debian",
-    logo: "/icons/debian.svg"
+    logo: "/icons/debian.svg",
+    repository: {
+      name: "Debian Download",
+      url: "https://www.debian.org/distrib/"
+    }
+    
   },
   {
     name: "Gentoo",
     slug: "gentoo",
     logo: "/icons/gentoo.svg",
     repository: {
-      name: "LibreWolf Gentoo Repository",
-      url: "https://gitlab.com/librewolf-community/browser/gentoo"
+      name: "Gentoo Download",
+      url: "https://www.gentoo.org/downloads/"
     }
   },
   {
     name: "Fedora",
     slug: "fedora",
-    logo: "/icons/fedora.svg"
+    logo: "/icons/fedora.svg",
+    repository: {
+      name: "Fedora Download",
+      url: "https://getfedora.org/en/workstation/download/"
+    }
   },
   {
     name: "Other Linux",
     slug: "linux",
     logo: "/icons/tux.png",
     repository: {
-      name: "LibreWolf Linux Repository",
-      url: "https://gitlab.com/librewolf-community/browser/linux"
+      name: "go deal with it yourself",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
   },
   {
@@ -62,14 +71,18 @@ const repositories: {
     logo: "/icons/apple.svg",
     logoDark: "/icons/apple-white.svg",
     repository: {
-      name: "LibreWolf macOS Repository",
-      url: "https://gitlab.com/librewolf-community/browser/macos"
+      name: "go buy a macbook",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
   },
   {
     name: "OpenBSD",
     slug: "openbsd",
-    logo: "/icons/openbsd.png"
+    logo: "/icons/openbsd.png",
+    repository: {
+      name: "just dont use BSD",
+      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
   }
 ];
 

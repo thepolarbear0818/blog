@@ -1,12 +1,12 @@
 {
-  "windows": "Windows",
-  "arch": "Arch Linux",
-  "debian": "Debian based",
-  "gentoo": "Gentoo",
-  "fedora": "Fedora",
+  "windows": "Windows/ Custom Windows ISO's",
+  "arch": "Arch Linux/Arch Based",
+  "debian": "Debian/Debian based",
+  "gentoo": "Gentoo/Gentoo Based",
+  "fedora": "Fedora/Fedora Based",
   "linux": "Other Linux",
   "macos": "macOS",
-  "openbsd": "OpenBSD",
+  "openbsd": "BSD Variations",
   "index": {
     "type": "nav",
     "hidden": true

@@ -7,6 +7,8 @@
     "promise/always-return": "off",
     "no-magic-numbers": "off",
     "func-style": ["error", "declaration"],
-    "promise/no-nesting": "off"
+    "promise/no-nesting": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
   }
 }
