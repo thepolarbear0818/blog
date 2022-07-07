@@ -26,8 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install --save next@^12.1.5 --include=optional
     - run: npm ci
     - run: npm run build
+    
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
