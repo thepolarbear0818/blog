@@ -12,11 +12,7 @@ export default function Banner() {
           <img src="/homebanner.jpg" alt="random home banner" />
         </div>
         <div className="hide-dark">
-          <img
-            src="/homebanner.jpg"
-            className="hide-dark"
-            alt="Screeenshot"
-          />
+          <img src="/homebanner.jpg" className="hide-dark" alt="Screeenshot" />
         </div>
       </div>
       <div className="inner">

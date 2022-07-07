@@ -7,27 +7,4 @@ import { getStaticDownloadButtonProps } from "components/downloadButton";
 
 <InstallationHeader />
 
-We have a fedora repository available with which you can install LibreWolf. You
-can add it to your system and install LibreWolf by running the following
-commands one by one:
-
-```bash
-sudo rpm --import https://keys.openpgp.org/vks/v1/by-fingerprint/034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3
-
-sudo dnf config-manager --add-repo https://rpm.librewolf.net
-
-sudo dnf install --refresh librewolf
-```
-
-## COPR (unofficial)
-
-Another good installation source on Fedora right now are the independent and
-unofficial releases built on the _Fedora COPR_ by bgstack. The release page for
-that is [here](https://copr.fedorainfracloud.org/coprs/bgstack15/AfterMozilla/).
-Here is how to enable copr and install LibreWolf with `dnf`:
-
-```bash
-dnf copr enable bgstack15/AfterMozilla
-
-dnf install librewolf
-```
+Good enough, slow ahh package manager and hellish installer. 

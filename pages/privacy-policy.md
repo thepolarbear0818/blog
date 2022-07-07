@@ -1,3 +1,3 @@
 # Privacy Policy
 
-There is no telemetry on this website. Rest assured. 
+I am using Vercel's data collection on this page.

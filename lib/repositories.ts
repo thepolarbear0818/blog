@@ -36,7 +36,6 @@ const repositories: {
       name: "Debian Download",
       url: "https://www.debian.org/distrib/"
     }
-    
   },
   {
     name: "Gentoo",

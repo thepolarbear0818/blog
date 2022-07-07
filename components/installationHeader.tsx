@@ -23,7 +23,7 @@ export default function InstallationHeader() {
   return (
     <div className="header">
       <h1 className="select">
-        My Opinion On {" "}
+        My Opinion On{" "}
         <div className="repo">
           {repo && (
             <>

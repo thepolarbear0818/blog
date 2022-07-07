@@ -3,22 +3,35 @@
     "title": "The OS judgement"
   },
   "features": {
-    "title": "Blog 1"
+    "title": "Why I swiched Back to windows as a linux user"
   },
   "faq": {
-    "title": "Blog 2"
+    "title": "Book review: From blood and Ash"
   },
   "settings": {
-    "title": "Blog 3"
+    "title": "Book Review: The 7 husbands of evelyn hugo"
   },
   "support": {},
   "addons": {
-    "title": "Blog 4"
+    "title": "Goverment Spying (7th grade argument writing piece)"
   },
   "security": {
-    "title": "Blog 5"
+    "title": "I Don't Care about your sexuality "
   },
   "testing": {
-    "title": "Blog 6"
-  }
+    "title": "The legend of Mrs.McFlurry (Video Script Archive)"
+  },
+   "antitrustday":{
+    "title": "Antitrust Day "
+   },
+
+   "sythe":{
+    "title": "Book Review: Sythe "
+   },
+
+   "1984.md":{
+    "title": "Book Review: 1984"
+   }
+
+  
 }

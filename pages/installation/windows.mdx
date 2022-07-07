@@ -10,61 +10,12 @@ import {
   getGitlabDownloadProp
 } from "components/gitlabDownloadButton";
 
-export const getStaticProps = getStaticDownloadButtonProps([
-  getGitlabDownloadProp("13852981", "setup.exe")
-]);
 
 <InstallationHeader />
 
-## Installer
 
-To install LibreWolf on Windows, just download and run the latest installer
+Windows is not my favorite, but it does the job well and looks nice.
 
-<GitlabDownloadButton projectId="13852981" />
+It is a pain installing develper tool, and privacy is a nightmare on the stock ISO 
 
-This won't update LibreWolf automatically. When a new version is released, you
-have to manually install the new `setup.exe` again. If you want to get notified
-when a new version is released, you can get the **unofficial**
-[LibreWolf Updater extension](https://addons.mozilla.org/en-US/firefox/addon/librewolf-updater/)
-. You can also take a look at the **unofficial**
-[LibreWolf-WinUpdater](https://github.com/ltGuillaume/LibreWolf-WinUpdater),
-which automatically updates LibreWolf on Windows when its not running.
-
-Currently we also release a portable version of LibreWolf, useful in cases where
-installation at system level is not possible, or for just testing some aspect of
-LibreWolf. It's also found on the
-[releases page](https://gitlab.com/librewolf-community/browser/windows/-/releases).
-
-## Package Managers
-
-Alternatively you can use a package manager to download LibreWolf and keep it up
-to date.
-
-### With [Chocolatey](https://chocolatey.org/)
-
-```
-choco install librewolf
-```
-
-To see the current status of the Chocolatey package, you can visit the
-[LibreWolf chocolatey page](https://community.chocolatey.org/packages/librewolf).
-
-### With [winget](https://github.com/microsoft/winget-cli)
-
-```
-winget install librewolf
-```
-
-The winget command line tool is only supported on Windows 10 1709 (build 16299)
-or later at this time. Using winget is explained in
-[this Microsoft article](https://docs.microsoft.com/en-us/windows/package-manager/winget/#production-recommended).
-
-### With [Scoop](https://scoop.sh)
-
-```
-scoop bucket add extras
-scoop install librewolf
-```
-
-The Scoop manifest for LibreWolf can be found
-[on GitHub](https://github.com/ScoopInstaller/Extras/blob/master/bucket/librewolf.json).
+I reccomend using an unofficial ISO, like ReviOS. It removes the bloat. (I even have a video on it)
