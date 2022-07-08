@@ -21,17 +21,15 @@
   "testing": {
     "title": "The legend of Mrs.McFlurry (Video Script Archive)"
   },
-   "antitrustday":{
+  "antitrustday": {
     "title": "Antitrust Day "
-   },
+  },
 
-   "sythe":{
+  "sythe": {
     "title": "Book Review: Sythe "
-   },
+  },
 
-   "1984.md":{
+  "1984.md": {
     "title": "Book Review: 1984"
-   }
-
-  
+  }
 }
