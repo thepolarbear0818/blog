@@ -4,6 +4,7 @@ import Logo from "components/logo";
 import Gitlab from "react-devicons/gitlab/plain";
 
 const themeConfig = {
+  
   projectIcons: (
     <>
       <Link href="https://github.com/thepolarbear0818" passHref>
@@ -38,6 +39,13 @@ const themeConfig = {
   logo: Logo,
   head: (
     <>
+        <title>Overfl0w Blog</title>
+    <meta content="Overfl0w's BLog" property="og:title" />
+    <meta content="A website used to host overfl0w's blogs/rants" property="og:description" />
+    <meta content="https://blog-thepolarbear0818.vercel.app/" property="og:url" />
+    <meta content="https://imgur.com/a/SGHLj3R" property="og:image" />
+
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* Favicon */}
