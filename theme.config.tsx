@@ -15,7 +15,7 @@ const themeConfig = {
   ),
   docsRepositoryBase:
     "https://gitlab.com/librewolf-community/website/-/blob/main/", // base URL for the docs repository
-  titleSuffix: " – LibreWolf",
+  titleSuffix: " – overfl0w's blog",
   nextLinks: true,
   prevLinks: true,
   search: true,
@@ -31,9 +31,7 @@ const themeConfig = {
         <Link href="/license-disclaimers">License and Disclaimers</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
       </p>
-      <p>
-       overfl0w, 2022 revision - 22.07
-      </p>
+      <p>overfl0w, 2022 revision - 22.07</p>
     </div>
   ),
   footerEditLink: `Original Page Gitlab`,
@@ -47,25 +45,28 @@ const themeConfig = {
       <link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
 
       {/* HTML Meta Tags */}
-      <meta
-        name="description"
-        content="Overfl0w's blog site "
-      />
+      <meta name="description" content="Overfl0w's blog site " />
 
       {/* Facebook Meta Tags */}
-      <meta property="og:url" content="https://blog-thepolarbear0818.vercel.app/" />
+      <meta
+        property="og:url"
+        content="https://blog-thepolarbear0818.vercel.app/"
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="overfl0w's blog site" />
-      <meta
-        property="og:description"
-        content="overflow's blog site."
-      />
-      <meta property="og:image" content="https://librewolf.net/og_image.png" />
+      <meta property="og:description" content="overflow's blog site." />
+      <meta property="og:image" content="https://imgur.com/a/SGHLj3R" />
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content="blog-thepolarbear0818.vercel.app" />
-      <meta property="twitter:url" content="https://blog-thepolarbear0818.vercel.app" />
+      <meta
+        property="twitter:domain"
+        content="blog-thepolarbear0818.vercel.app"
+      />
+      <meta
+        property="twitter:url"
+        content="https://blog-thepolarbear0818.vercel.app"
+      />
       <meta name="twitter:title" content="overfl0w's blog" />
       <meta
         name="twitter:description"
